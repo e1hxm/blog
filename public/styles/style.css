@@ -2,12 +2,12 @@
 .author {
     font-family: "JetBrains Mono";
     text-align: center;
-    margin-top: 20px;
     margin-bottom: 5px;
 }
 .author-avatar {
     width: 80px;
     height: 80px;
+    margin-top: 20px;
     border-radius: 100%;
     user-select: none;
   }
