@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set в JavaScript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Set в JavaScript</h2>
+        
+
+        
+            <time class="h5 gray title__date">23 November 2024</time>
+        
+
+        <div><p>Task в RS School по JavaScript про Set</p>
+            <p>
+              Объект Set — это уникальный тип коллекции, представляющий собой «множество» значений,
+              в котором каждое значение хранится только один раз и не имеет ключей.
+            </p>
+            <p>Основные методы Set</p>
+            <ul>
+              <li>
+                <p>
+                  "new Set(iterable)" &rsaquo; создаёт Set, и если в качестве аргумента был
+                  предоставлен итерируемый объект, обычно это [массив], то копирует его значения в
+                  новый Set.
+                </p>
+              </li>
+              <li>
+                <p>
+                  "set.add(value)" &rsaquo; Добавляет значение в множество (если оно уже
+                  присутствует, изменений не происходит) и возвращает сам объект Set.
+                </p>
+              </li>
+              <li>
+                <p>
+                  "set.delete(value)" &rsaquo; Удаляет значение из множества и возвращает true, если
+                  указанное значение присутствовало в множестве на момент вызова, иначе возвращает
+                  false.
+                </p>
+              </li>
+              <li>
+                <p>
+                  "set.has(value)" &rsaquo; Возвращает true, если указанное значение находится в
+                  множестве; в противном случае — false.
+                </p>
+              </li>
+              <li>
+                <p>"set.clear()" &rsaquo; удаляет все имеющиеся значения.</p>
+              </li>
+              <li>
+                <p>"set.size" &rsaquo; возвращает количество элементов в множестве.</p>
+              </li>
+            </ul>
+            <p>
+              Главная особенность заключается в том, что при многократных вызовах "set.add()" с
+              одинаковым значением ничего не изменяется, благодаря чему каждое значение хранится в
+              единственном экземпляре.
+            </p>
+            <p>
+              Например, мы ждём гостей и хотим сделать список всех кто к нам должен
+              прийти, но в список не должны попасть записи о повнорных посещениях. Тут нам поможет
+              Set
+            </p>
+            <pre>
+<code>let set = new Set();
+let john = { name: "John" };
+let mia = { name: "Mariah" };
+let ann = { name: "Ann" };
+// считаем гостей, некоторые приходят несколько раз    
+set.add(john);
+set.add(ann);
+set.add(mia);
+set.add(john);
+set.add(mia);
+// set хранит только 3 уникальных значения
+alert(set.size); // 3
+for (let user of set) {
+  alert(user.name); // John (потом Ann и Mariah)
+}</code></pre>
+            <h3>Перебор объекта Set</h3>
+            <p>
+              Содержимое объекта set можно перебирать как с помощью цикла for..of, так и через метод
+              forEach:
+            </p>
+            <pre>
+<code>let set = new Set(["апельсин", "яблоко", "банан"]);
+for (let value of set) alert(value);
+// то же самое с forEach:
+set.forEach((value, valueAgain, set) => {
+  alert(value);
+});
+</code></pre>
+            <p>
+              Интересный факт: функция, передаваемая в forEach для объекта Set, принимает три
+              аргумента: значение value, снова то же значение valueAgain, и только затем сам объект.
+              Значение действительно появляется дважды в списке аргументов.
+            </p>
+            <p>
+              Это сделано для совместимости с объектом Map, где колбэк для forEach также принимает
+              три аргумента. Хотя это может выглядеть необычно, такая структура позволяет легко
+              переключаться между использованием Map и Set.
+            </p>
+            <p>Объект Set имеет те же методы для перебора, что и Map:</p>
+            <ul>
+              <li>
+                <p>
+                  "set.values()" &rsaquo; возвращает перебираемый объект, содержащий значения
+                  множества;
+                </p>
+              </li>
+              <li>
+                <p>
+                  "set.keys()" &rsaquo; работает так же, как set.values(), добавлено для
+                  совместимости с Map;
+                </p>
+              </li>
+              <li>
+                <p>
+                  "set.entries()" &rsaquo; возвращает перебираемый объект, содержащий пары вида
+                  [значение, значение], также для совместимости с Map.
+                </p>
+              </li>
+            </ul></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

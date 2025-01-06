@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первичная настройка Git</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Первичная настройка Git</h2>
+        
+
+        
+            <time class="h5 gray title__date">03 October 2024</time>
+        
+
+        <div><p>Укажем имя пользователя</p>
+<p>Задаёт имя пользователя, от которого будут идти коммиты. Нужно написать свои данные на
+латинице. Если имя состоит из одного слова, кавычки можно не ставить.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">global</span> <span class="nx">user</span><span class="p">.</span><span class="nx">name</span> <span class="s2">&#34;Dxrkd3v&#34;</span>
+</span></span></code></pre></div><p>Укажем почту</p>
+<p>Задаёт почту пользователя. Нужно указать тот адрес почты который зарегистрирован на
+GitHub.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">global</span> <span class="nx">user</span><span class="p">.</span><span class="nx">email</span> <span class="s2">&#34;dxrkd3v@mail.com&#34;</span>
+</span></span></code></pre></div><p>Посмотрим внесенные изменения</p>
+<p>Параметры можно посмотреть и в файле с конфигом, но этот способ быстрее.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">list</span>
+</span></span></code></pre></div><h3 id="работа-с-репозиторием">Работа с репозиторием</h3>
+<p>Создадим новый репозиторий</p>
+<p>Инициализируем git</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">git</span> <span class="nt">init</span>
+</span></span></code></pre></div><p>Клонируем репозиторий с GitHub</p>
+<p>Проект появится в текучей директории.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">git</span> <span class="nt">clone</span> <span class="o">[</span><span class="nt">ссылка</span> <span class="nt">на</span> <span class="nt">репозиторий</span><span class="o">]</span>
+</span></span></code></pre></div><p>Привяжем репозиторий на GitHub с локальной версией</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">git</span> <span class="nt">remote</span> <span class="nt">add</span> <span class="nt">origin</span> <span class="o">[</span><span class="nt">ссылка</span> <span class="nt">на</span> <span class="nt">репозиторий</span><span class="o">]</span>
+</span></span></code></pre></div><h3 id="работа-с-изменениями">Работа с изменениями</h3>
+<p>Подтянем изминения</p>
+<p>Эта команда тенет все изминения в проект из GitHub</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">pull</span>
+</span></span></code></pre></div><p>Посмотрим на статус файлов</p>
+<p>Показывает какие файлы были удалены, изменены или добавлены кроме закомиченных.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">status</span>
+</span></span></code></pre></div><p>Примерный ответ</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="nx">dxrkd3v</span> <span class="nx">git</span><span class="o">:</span><span class="p">(</span><span class="nx">main</span><span class="p">)</span> <span class="err">✗</span> <span class="nx">git</span> <span class="nx">status</span>
+</span></span><span class="line"><span class="cl"><span class="nx">On</span> <span class="nx">branch</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl"><span class="nx">Your</span> <span class="nx">branch</span> <span class="nx">is</span> <span class="nx">up</span> <span class="nx">to</span> <span class="nx">date</span> <span class="kd">with</span> <span class="s1">&#39;origin/main&#39;</span><span class="p">.</span>
+</span></span></code></pre></div><p>Добавим файлы в индекс, или по другому в стейдж</p>
+<p>Команда добавит все файлы в индекс. Если нужно добавить отдельный файл, то вместо
+точки пишем имя файла с расширением. После добавления в индекс, можно сохраняться.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">add</span> <span class="p">.</span>
+</span></span></code></pre></div><p>Закомитим изминения</p>
+<p>Команда зафиксирует изминения. Сохранит всю работу. До выполнения этой команды
+сохранений на локалке не будет.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s2">&#34;Комментарий к коммиту&#34;</span>
+</span></span></code></pre></div><p>Посмотрим на историю коммитов</p>
+<p>Команда выведет список всех коммитов. У этой команды есть разные опции, самая
+используемая из них &lsquo;&ndash;oneline&rsquo;. Она показывает хеш в укороченном формате, ветку, в
+которой сделан коммит, а также текст коммита.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">log</span>
+</span></span></code></pre></div><p>Запушим изминения</p>
+<p>Команда отправит все зафиксированные изминения с локалки на GitHub.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">push</span>
+</span></span></code></pre></div><p>Отменим изменения не добавленные в индекс.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">git</span> <span class="nt">restore</span> <span class="o">[</span><span class="nt">имя-файла</span><span class="o">]</span>
+</span></span></code></pre></div><p>Отменим изменения добавленные в индекс.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">git</span> <span class="nt">reset</span> <span class="nt">--hard</span>
+</span></span></code></pre></div><p>Удаляем коммит</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">revert</span> <span class="p">[</span><span class="nx">хеш</span><span class="o">-</span><span class="nx">коммита</span><span class="p">]</span>
+</span></span></code></pre></div></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

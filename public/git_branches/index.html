@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команды для веток в GIT</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Команды для веток в GIT</h2>
+        
+
+        
+            <time class="h5 gray title__date">03 October 2024</time>
+        
+
+        <div><p>
+                            В системе контроля версий Git постоянно приходится
+                            создавать и перемещаться по веткам, удалять и сливать. 
+                        </p>
+                        <p>
+                            Еще ветки в Git негласно называют бренчой. 
+                        </p>
+                        <p>
+                            Создадим ветку
+                        </p>
+                        <p>
+                            Команда создает ветку и сразу переключает на нее. 
+                        </p>
+                        <pre><code>git switch --create [имя-ветки]</code></pre>
+                        <p>
+                            Переключаемся между веток
+                        </p>
+                        <p>
+                            Команда перекинет на уже заранее созданную ветку.
+                            Для создания и переключения веток также можно 
+                            использовать git checkout.
+                        </p>
+                        <pre><code>git switch [имя ветки]</code></pre>
+                        <p>
+                            Выведем список всех веток на локалке
+                        </p>
+                        <pre><code>git branch</code></pre>
+                        <p>
+                            Переименуем ветку
+                        </p>
+                        <pre><code>git branch -m [старое-название-ветки] [новое-название-ветки]</code></pre>
+                        <p>
+                            Пушаем ветку на Github
+                        </p>
+                        <pre><code>git push origin [имя-ветки]</code></pre>
+                        <p>
+                            Удаляем ветку 
+                        </p>
+                        <p>
+                            Команда удалит ветку на локалке
+                        </p>
+                        <pre><code>git branch --delete [имя-ветки]</code></pre>
+                        <p>
+                            Если нужно удалить ветку на Github
+                            то поможет следующая команда 
+                        </p>
+                        <pre><code>git push --delete origin [имя-ветки]</code></pre>
+                        <p>
+                            Слияние ветки 
+                        </p>
+                        <pre><code>git merge [имя-ветки]</code></pre>
+                        <p>
+                            Перебазируем коммиты. 
+                        </p>
+                        <p>
+                            Команда перекинет все комиты на ту которую указать на 
+                            месте [имя-ветки]
+                        </p>
+                        <pre><code>git rebase [имя-ветки]</code></pre>
+                        <p>
+                            Создадим точную копию все коммитов
+                        </p>
+                        <p>
+                            Команду часто совмещают с git merge и git rebase, 
+                            чтобы сохранить линейную историю коммитов.
+                        </p>
+                        <pre><code>git cherry-pick</code></pre></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

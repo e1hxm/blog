@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Типы значений в CSS</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Типы значений в CSS</h2>
+        
+
+        
+            <time class="h5 gray title__date">08 October 2024</time>
+        
+
+        <div><h3>Абсолютные значения</h3>
+                        <p>
+                            Простейший тип значений — это абсолютные величины, 
+                            например, пиксели. Они используются для 
+                            определения размеров элементов, 
+                            текста и других параметров.
+                        </p>
+                        <pre><code>width: 1000px;
+font-size: 16px;</code></pre>
+                    <p>
+                        Абсолютные значения обладают 
+                        преимуществом в том, что они 
+                        представляют собой конечные, понятные и 
+                        легко воспринимаемые величины.
+                    </p>
+                    <h3>Относительные значения</h3>
+                    <p>
+                        Величину относительных зачений сразу и не 
+                        представишь, сначала нужно узнать предидущее 
+                        значение потом перемножить его 
+                        и уже после этого идет вывод. 
+                    </p>
+                    <p>
+                        Относительные значения, 
+                        в отличие от абсолютных, 
+                        представляют собой более сложный тип, 
+                        поскольку они не являются 
+                        конечными или фиксированными, 
+                        а зависят от других величин. 
+                    </p>
+                    <p>
+                        Например, ширина элемента, 
+                        указанная в процентах, 
+                        зависит от ширины его родительского элемента. 
+                        Браузер вычисляет ширину элемента, 
+                        умножая ширину родителя на заданный процент, 
+                        и таким образом получает 
+                        абсолютное значение в пикселях.
+                    </p>
+                    <p>
+                        Важно отметить, 
+                        что при рендеринге страницы 
+                        все относительные значения в 
+                        конечном итоге преобразуются в абсолютные, 
+                        иначе страница не может быть корректно отображена.
+                    </p>
+                    <p>
+                        Помимо процентов есть и 
+                        другие относительные единицы измерения.
+                    </p>
+                    <pre><code>width: 50%;      /* От ширины родителя */
+width: 100vw;    /* От ширины вьюпорта */
+height: 100vh;   /* От высоты вьюпорта */
+font-size: 2em;  /* От размера шрифта родителя */
+font-size: 2rem; /* От размера шрифта корневого элемента (html) */</code></pre>
+                    <p>
+                        Единицы 'vh' и 'vw' определяют 
+                        зависимость от размеров области просмотра 
+                        (вьюпорта), то есть видимой части окна браузера. 
+                        Единица 'vh' зависит от высоты вьюпорта и 
+                        часто используется для создания полноэкранных секций.
+                    </p>
+                    <p>
+                        Единица 'em' определяет зависимость 
+                        от размера шрифта родительского элемента. 
+                        Например, если у родителя размер шрифта составляет 
+                        '20px', а у вложенного элемента размер шрифта задан 
+                        как '2em', то вычисленный размер шрифта будет равен '40px'.
+                    </p>
+                    <p>
+                        Подобная единица 'rem' определяет 
+                        зависимость от размера шрифта так называемого 
+                        "корневого элемента". 
+                        В случае обычной веб-страницы корневым 
+                        элементом является тег 'html'.
+                    </p>
+                    <p>
+                        Если у корневого элемента страницы 
+                        размер шрифта составляет '16px', 
+                        а у определенного тега на странице 
+                        мы задаем размер шрифта как '2rem', 
+                        то вычисленный размер шрифта будет равен '32px'.
+                    </p>
+                    <h3>Значение с ключевыми словами</h3>
+                    <p>
+                        Следующий тип значений — это ключевые слова. 
+                        Они достаточно просты и требуют лишь 
+                        постепенного запоминания.
+                    </p>
+                    <pre><code>text-transform: uppercase;
+text-align: center;
+display: block;
+color: red;</code></pre>
+                    <h3>Цветовые значения</h3>
+                    <p>
+                        Ещё один специфический тип значений — это цвета, 
+                        которые могут быть представлены 
+                        в нескольких различных формах.
+                    </p>
+                    <pre><code>color: #f00;       /* #f  0  0 */
+color: #ff0000;    /* #ff 00 00 */
+color: rgb(255, 0, 0);
+color: rgba(255, 0, 0, 0.5);
+color: hsl(0, 100%, 50%);
+color: hsla(0, 100%, 50%, 0.5);</code></pre>
+                    <p>
+                        Цвета могут быть представлены в нескольких форматах, 
+                        включая шестнадцатеричную запись, rgb и rgba. 
+                        В шестнадцатеричной записи, например, #ff0000, 
+                        каждые две шестнадцатеричные цифры кодируют красный, 
+                        зеленый и синий каналы с диапазоном от 0 до ff (или от 0 до 255). 
+                        Сокращенная шестнадцатеричная запись дублирует каждую цифру, например, 
+                        #f00 соответствует #ff0000.
+                    </p>
+                    <p>
+                        В форматах rgb и rgba цветовые каналы 
+                        кодируются десятичными числами от 0 до 255, 
+                        что упрощает восприятие человеком. 
+                        Например, color: #ff0000 и color: rgb(255, 0, 0) 
+                        обозначают один и тот же цвет. 
+                        В формате rgba добавляется четвертая часть, 
+                        которая задает степень непрозрачности от 0 до 1, 
+                        где 0 означает полную прозрачность, 
+                        а 1 — полную непрозрачность.
+                    </p>
+                    <p>
+                        Форматы hsl и hsla аналогичны rgb и rgba, 
+                        но более привычны для дизайнеров-полиграфистов. 
+                        Кроме того, цвета можно задавать 
+                        с помощью ключевых слов.
+                    </p>
+                    <h3>Значения-функции</h3>
+                    <p>
+                        Следующий тип значений — это функции. 
+                        Хотя их не так много, среди них 
+                        особенно полезными являются 
+                        функции calc и linear-gradient.
+                    </p>
+                    <pre><code>/* Получает содержимое атрибута */
+content: attr(href);
+/* Любые расчёты */
+width: calc(100% - 100px);
+/* Линейный градиент */
+background-image:
+linear-gradient(45deg, yellow, green);</code></pre>
+                    <p>
+                        С помощью функции calc можно 
+                        создавать очень сложное поведение. 
+                        Например, вычислять размер элемента, 
+                        комбинируя разные единицы измерения: 
+                        "ширина 200px плюс 10em".
+                    </p>
+                    <p>
+                        Функция attr используется значительно реже.
+                    </p>
+                    <h3>CSS директивы и @media запросы</h3>
+                    <p>
+                        Специальные конструкции, начинающиеся 
+                        с символа @, называются директивами. 
+                        Они чаще всего влияют на весь документ, 
+                        но сами по себе не выполняют стилизацию. 
+                        Например, директива @font-face позволяет 
+                        подключать на страницу нестандартные шрифты, 
+                        которые затем можно использовать в свойстве font-family. 
+                        Другой пример — директива @media, которая активирует 
+                        или деактивирует определенные CSS-правила в 
+                        зависимости от условий, таких как размер экрана.
+                    </p>
+                    <pre><code>@font-face {
+  font-family: "Open Sans";
+  src:
+    url("OpenSans-Regular.woff2") format("woff2"),
+    url("OpenSans-Regular.woff") format("woff");
+}
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}</code></pre></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

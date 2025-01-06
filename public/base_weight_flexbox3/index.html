@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Применение автоматических отступов flexbox</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Применение автоматических отступов flexbox</h2>
+        
+
+        
+            <time class="h5 gray title__date">25 December 2024</time>
+        
+
+        <div><p>Алгоритм расчёта размеров флекс-элементов и их распределения внутри флекс-контейнера включает три последовательных этапа. Этот процесс значительно сложнее, чем в традиционной блочной модели.</p>
+<h3 id="шаг-третий---применение-автоматических-отступов">Шаг третий - Применение автоматических отступов</h3>
+<p>Если во флекс-контейнере остаётся свободное место, то автоматически применяются отступы с помощью свойства <code>margin</code>, установленного в значение <code>auto</code> для флекс-элементов.</p>
+<p>Во флексбоксе автоматические отступы <code>margin: auto</code> функционируют значительно эффективнее, чем в стандартной блочной модели. Во-первых, они применяются во всех направлениях, в отличие от блочной модели, где они работают только по горизонтали. Во-вторых, автоматические отступы могут взаимодействовать между собой: если на одной оси присутствует несколько таких отступов (у разных элементов или с разных сторон одного элемента), то свободное пространство распределяется между ними равномерно.</p>
+<p>Рассмотрим пример. Здесь проявляется эффект от использования автоматических отступов: <code>margin-top: auto</code> и <code>margin-left: auto</code>. Эти свойства смещают элемент, заставляя его занять оставшееся свободное пространство по вертикали и горизонтали.</p>
+<pre tabindex="0"><code>.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container div:nth-child(2) {
+  margin-top: auto;
+  margin-left: auto;
+  width: 200px;
+}
+</code></pre><p><img src="/images/margin_auto_flexbox.png" alt=""></p>
+<p>Браузеры всегда преобразуют значение отступов <code>auto</code> в конкретные пиксельные значения. В нашем примере браузер уже «определил» размеры свободного пространства в пикселях по обеим осям. По главной оси он вычел ширину элементов из ширины контейнера, а по поперечной оси — высоту флекс-элемента (включая высоту строки текста и вертикальные отступы) из высоты контейнера. При этом расчёты по поперечной оси проще, так как у каждого элемента своя собственная поперечная ось.</p>
+<p>По главной оси присутствует только один автоматический отступ (слева у второго элемента), поэтому его размер стал равен всему доступному свободному пространству. В результате это свободное пространство полностью перешло в отступ, и вдоль главной оси его больше не осталось. Второй элемент отодвинулся от первого, а третий элемент прижался к правому краю флекс-контейнера.</p>
+<p>По поперечной оси второго элемента также присутствует только один автоматический отступ (сверху), поэтому его размер стал равен всему доступному свободному пространству. В результате это свободное пространство полностью перешло в отступ, и вдоль поперечной оси второго элемента его больше не осталось. Элемент прижался к концу своей поперечной оси.</p>
+<p>Первый и третий элементы растягиваются на всю высоту контейнера из-за свойства <code>align-items</code>, которое по умолчанию имеет значение <code>stretch</code>. Это значение растягивает флекс-элементы вдоль поперечной оси, если им не задан фиксированный размер по этой оси и если вдоль поперечной оси есть свободное пространство.</p>
+<p>Второй элемент перестал растягиваться на всю высоту, несмотря на то, что ему не задана фиксированная высота. Это означает, что вдоль его поперечной оси не осталось свободного пространства — оно полностью перешло в автоматический отступ сверху. Из этого примера важно запомнить, что свойства для выравнивания и распределения применяются после автоматических отступов. Если бы отступы работали после выравнивания, второй элемент не уменьшился бы по высоте.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

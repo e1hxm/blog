@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on El&#39;ham</title>
+    <link>http://localhost:1313/vim/</link>
+    <description>Recent content in Vim on El&#39;ham</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Sat, 04 Jan 2025 18:53:24 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Команды из VimTutor</title>
+      <link>http://localhost:1313/vimtutor/</link>
+      <pubDate>Sat, 04 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/vimtutor/</guid>
+      <description>&lt;p&gt;Список команд из урока VimTutor&lt;/p&gt;&#xA;&lt;h4 id=&#34;выход-из-vim&#34;&gt;Выход из Vim&lt;/h4&gt;&#xA;&lt;p&gt;:q › Выход если не было изминений&lt;/p&gt;&#xA;&lt;p&gt;:q! › Выйти из Vim и сбросить все внесенные изминения&lt;/p&gt;&#xA;&lt;p&gt;:wq › Сохранить изминения и закрыть файл&lt;/p&gt;&#xA;&lt;p&gt;:w › Сохранить файл.&lt;/p&gt;&#xA;&lt;h4 id=&#34;редактирование-и-навигация&#34;&gt;Редактирование и навигация&lt;/h4&gt;&#xA;&lt;p&gt;k › Для движения наверх&lt;/p&gt;&#xA;&lt;p&gt;h › Для движения влево&lt;/p&gt;&#xA;&lt;p&gt;l › Для движения вправо&lt;/p&gt;&#xA;&lt;p&gt;j › Для движения вниз&lt;/p&gt;&#xA;&lt;p&gt;х › Удаляет символ на котором курсор&lt;/p&gt;&#xA;&lt;p&gt;i › Переводит в INSERT MODE слева от курсора&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

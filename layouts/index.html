@@ -1,0 +1,27 @@
+
+
+{{ define "main" }}
+<div>
+    <h2 class="mt5">
+        blog
+    </h2>
+    <p>
+        Моя база знаний, которую я создаю изучая курсы по веб разработке, 
+        языков программирования и новых технологий. 
+    </p>
+</div>
+<div class="list">
+    {{ range .Pages.GroupByDate "2006-01" }}
+    <h3>{{ dateFormat "January 2006" (time (printf "%s-01" .Key)) }}</h3> <!-- Заголовок с месяцем и годом -->
+    <ul>
+        {{ range .Pages }}
+        {{ if not .Params.hidden }}
+            <li>
+                <time class="gray">{{ dateFormat "02" .Date }}</time> <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
+{{ end }}

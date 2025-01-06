@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микросетки в Grid</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Микросетки в Grid</h2>
+        
+
+        
+            <time class="h5 gray title__date">26 December 2024</time>
+        
+
+        <div><h3 id="repeat">repeat</h3>
+<p>Если все колонки в грид-контейнере должны быть одинаковой ширины, удобно использовать функцию <code>repeat</code>. В скобках после <code>repeat</code> указывают количество колонок и их ширину, разделяя значения запятой. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="nt">количество</span> <span class="nt">колонок</span><span class="o">,</span> <span class="nt">ширина</span> <span class="nt">колонки</span><span class="o">);</span>
+</span></span></code></pre></div><p>Это создаст три колонки одинаковой ширины, где <code>1fr</code> означает, что каждая колонка займет равную долю доступного пространства.</p>
+<h3 id="auto-fit">auto-fit</h3>
+<p>Если количество колонок должно автоматически подстраиваться под ширину контейнера, используют значение <code>auto-fit</code>. Его указывают в функции <code>repeat</code> вместо фиксированного числа колонок. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="nt">auto-fit</span><span class="o">,</span> <span class="nt">minmax</span><span class="o">(</span><span class="nt">200px</span><span class="o">,</span> <span class="nt">1fr</span><span class="o">));</span>
+</span></span></code></pre></div><p>В этом случае браузер автоматически создаст столько колонок, сколько поместится в контейнер, при этом каждая колонка будет иметь минимальную ширину <code>200px</code> и равномерно распределит оставшееся пространство (<code>1fr</code>). Это особенно полезно для создания адаптивных макетов.</p>
+<p><img src="/images/grid_repeat.png" alt="grid repeat"></p>
+<h3 id="minmax">minmax</h3>
+<p>Чтобы ширина колонок динамически изменялась в зависимости от доступного пространства в контейнере, используют функцию <code>minmax</code>. Она позволяет задать минимальную и максимальную ширину для каждой колонки. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">grid-template-columns</span><span class="o">:</span> <span class="nt">repeat</span><span class="o">(</span><span class="nt">auto-fit</span><span class="o">,</span> <span class="nt">minmax</span><span class="o">(</span><span class="nt">150px</span><span class="o">,</span> <span class="nt">1fr</span><span class="o">));</span>
+</span></span></code></pre></div><p>В этом примере каждая колонка будет иметь минимальную ширину <code>150px</code>, но если в контейнере останется свободное пространство, оно будет распределено пропорционально между колонками (благодаря <code>1fr</code>). Это обеспечивает гибкость и адаптивность макета.</p>
+<h3 id="свойства-grid-column-и-grid-row">Свойства grid-column и grid-row</h3>
+<p>Чтобы растянуть элемент на несколько колонок, используют свойство <code>grid-column</code>. С помощью ключевого слова <code>span</code> и числа указывают, сколько колонок должен занять элемент. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="n">span</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Этот код растянет элемент на две колонки.</p>
+<p>Аналогично, чтобы растянуть элемент на несколько рядов, используют свойство <code>grid-row</code>. Ключевое слово <code>span</code> указывает количество рядов, которые элемент должен занять. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">long-element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="n">span</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Этот код растянет элемент на два ряда.</p>
+<p>Свойства <code>grid-column</code> и <code>grid-row</code> можно комбинировать, чтобы одновременно управлять растяжением элемента по колонкам и рядам. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">large-element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="n">span</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="n">span</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Этот код растянет элемент на две колонки и два ряда одновременно.</p>
+<h3 id="свойство-grid-auto-flow">Свойство grid-auto-flow</h3>
+<p>Свойство <code>grid-auto-flow</code> управляет тем, как элементы автоматически размещаются в грид-контейнере. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-auto-flow</span><span class="p">:</span> <span class="kc">row</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Значение по умолчанию <code>row</code> указывает, что элементы должны располагаться в порядке, в котором они идут в разметке, заполняя ряды последовательно. Если элементы не помещаются в текущий ряд, создается новый ряд. Это обеспечивает привычное поведение, при котором элементы выстраиваются слева направо и сверху вниз.</p>
+<p>Если указать значение <code>dense</code> для свойства <code>grid-auto-flow</code>, контейнер будет заполняться таким образом, чтобы минимизировать пустые пространства. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-auto-flow</span><span class="p">:</span> <span class="n">dense</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>В этом случае, если некоторые элементы занимают больше места (например, растянуты на несколько колонок или рядов), оставшиеся элементы будут автоматически размещаться в свободных ячейках, чтобы избежать пропусков. Это особенно полезно, когда элементы имеют разный размер и нужно эффективно использовать доступное пространство.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

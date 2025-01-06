@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приминение гибких размеров flexbox</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Приминение гибких размеров flexbox</h2>
+        
+
+        
+            <time class="h5 gray title__date">25 December 2024</time>
+        
+
+        <div><p>Алгоритм расчёта размеров флекс-элементов и их распределения внутри флекс-контейнера включает три последовательных этапа. Этот процесс значительно сложнее, чем в традиционной блочной модели.</p>
+<h3 id="шаг-второй---применение-гибких-размеров">Шаг второй - Применение гибких размеров</h3>
+<p>Начнём с примера. Ширина флекс-контейнера составляет 500px. Внутри него находятся три флекс-элемента, каждый из которых имеет исходный базовый размер 100px. Отступы <code>padding</code> отсутствуют. Таким образом, во флекс-контейнере остаётся 500px - 300px = 200px свободного места.</p>
+<p><img src="/images/base_weight_flex2.png" alt="Применение гибких размеров"></p>
+<p>В стандартной блочной модели эти 200px остались бы неиспользованными, так как размеры элементов определяются за один проход. Во флексбоксе же размеры элементов пересчитываются несколько раз. На втором этапе происходит перераспределение свободного пространства, но только для «гибких» элементов. При этом «гибкость» может быть двух типов: на растяжение и на сжатие.</p>
+<p>Свойство <code>flex-grow</code> отвечает за гибкость на растяжение, то есть за способность флекс-элемента занимать дополнительное свободное пространство. Оно может принимать числовые значения и по умолчанию равно нулю, что означает, что элементы изначально не претендуют на дополнительное пространство. Если задать <code>flex-grow</code> значение больше нуля, флекс-элемент начинает захватывать оставшееся свободное пространство во флекс-контейнере.</p>
+<p><img src="/images/flex_grow.png" alt="flex grow"></p>
+<p>Посмотрите на картинку. Внутри флекс-контейнера находятся два флекс-элемента, и осталось свободное пространство. Мы задаём одному из элементов <code>flex-grow: 1</code>, и он занимает это свободное пространство. Если же мы зададим обоим элементам <code>flex-grow: 1</code>, то они разделят свободное пространство поровну.</p>
+<p><img src="/images/flex_grow1.1.png" alt="flex grow"></p>
+<p>Если флекс-элементам задать одинаковые значения <code>flex-grow</code>, они поделят свободное пространство поровну. При разных значениях пространство распределяется пропорционально.</p>
+<p>Вернёмся к примеру с флекс-контейнером шириной 500px и флекс-элементами с исходным базовым размером 100px. Если задать этим элементам <code>flex-grow: 1</code>, они поделят 200px свободного пространства поровну, то есть каждому достанется по 66.6px. В результате базовый размер каждого элемента станет 166.6px. Обратите внимание, что это уже не исходный, а итоговый базовый размер (который в дальнейшем может быть изменён).</p>
+<p><img src="/images/base_weight_flexbox1.2.png" alt=""></p>
+<p><code>flex-grow</code> применяется для создания «резиновых» интерфейсов, когда не требуется точное соблюдение пропорций колонок. Если нужно точно контролировать ширину, например, чтобы каждая колонка занимала ровно 30% родителя, используют <code>width: 30%</code> или <code>flex-basis: 30%</code>, но не <code>flex-grow</code>.</p>
+<p>Свойство <code>flex-shrink</code> отвечает за гибкость на сжатие. Оно может принимать числовые значения и по умолчанию равно единице, что означает, что все флекс-элементы изначально могут сжиматься, если после определения исходных базовых размеров выяснится, что места во флекс-контейнере недостаточно. При этом сжимается только область содержимого, а отступы, паддинги и границы остаются неизменными.</p>
+<p>Свойство <code>flex-shrink</code> используется редко, так как его применение обычно не требуется. Если в микросетке предполагается большое количество элементов, лучше включить многострочный флекс-контейнер, что сделает <code>flex-shrink</code> неактуальным (за исключением редких случаев). При создании сеток рекомендуется отключить возможность сжатия у элементов-колонок.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

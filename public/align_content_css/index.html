@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свойство align-content</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Свойство align-content</h2>
+        
+
+        
+            <time class="h5 gray title__date">23 November 2024</time>
+        
+
+        <div><p>Лекция в HTML Academy про align-content</p>
+<p>Свойство <code class="code_line">justify-content</code> управляет распределением флекс-элементов вдоль главной оси,
+а <code class="code_line">align-content</code> — выравниванием рядов флекс-элементов вдоль поперечной оси. Оба
+свойства имеют схожие значения:</p>
+<ol>
+<li>1 <code class="code_line">flex-start</code></li>
+<li>2 <code class="code_line">flex-end</code></li>
+<li>3 <code class="code_line">center</code></li>
+<li>4 <code class="code_line">space-between</code></li>
+<li>5 <code class="code_line">stretch</code> - доступно только для <code class="code_line">align-content</code> и является значением по умолчанию.</li>
+</ol>
+<p>Свойство <code class="code_line">align-content</code> переопределяет значение <code class="code_line">align-items</code>, которое управляет
+выравниванием отдельных флекс-элементов вдоль поперечной оси. Это происходит как для
+одного ряда флекс-элементов, так и для нескольких рядов.</p>
+<p>Однако есть один нюанс: <code class="code_line">align-content</code> перестаёт работать, если для флекс-контейнера
+установлено свойство <code class="coe_line">flex-wrap: nowrap</code>. Это происходит потому, что в таком случае
+высота строки равна высоте флекс-контейнера, и на поперечной оси не остаётся
+свободного пространства.</p>
+<p>В результате <code class="code_line">align-content</code> не может применяться. Вместо этого будут работать
+свойства <code class="code_line">align-items</code> и <code class="code_line">align-self</code>, если размеры флекс-элементов позволяют, и мы увидим результат их выравнивания.</p>
+<h3 id="свойство-align-content-stretch-и-align-items">Свойство align-content: stretch и align-items</h3>
+<p>Когда одновременно задаются свойства <code class="code_line">align-items</code> и <code class="code_line">align-content</code>, <code class="code_line">align-items</code> не отключается полностью, а может влиять на отображение флекс-элементов внутри рядов.</p>
+<p>Это особенно заметно, когда для <code class="coe_line">align-content</code> используется значение по умолчанию —
+<code class="code_line">stretch</code>. В этом случае ряды флекс-элементов растягиваются, занимая всё доступное
+пространство поперечной оси, а оставшееся свободное место между рядами делится поровну.</p>
+<p>Поведение строк при <code class="code_line">align-content: stretch</code> зависит от значения <code class="code_line">align-items</code>:</p>
+<ol>
+<li>
+<p>1 Если <code class="code_line">align-items</code> имеет значение <code class="code_line">stretch</code>, элементы внутри строк растягиваются на всю высоту своей строки.</p>
+</li>
+<li>
+<p>2 Если значение <code class="code_line">align-items</code> отлично от <code class="code_line">stretch</code>, элементы внутри
+строк сжимаются под своё содержимое и выравниваются в строках в соответствии с заданным значением
+<code class="code_line">align-items</code> (например, <code class="code_line">flex-start</code>, <code class="code_line">center</code>, <code class="code_line">flex-end</code> и т.д.).</p>
+</li>
+</ol>
+<p>Таким образом, <code class="code_line">align-items</code> продолжает влиять на выравнивание элементов внутри строк,
+даже если <code class="code_line">align-content</code> установлено на <code class="code_line">stretch</code>.</p>
+<h3 id="свойство-order-порядковый-номер-flex-элемента">Свойство order, порядковый номер flex-элемента</h3>
+<p>Еще одно свойство - это <code class="code_line">order</code>, которое определяет порядковый номер флекс-элемента.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">.</span><span class="nx">flex</span><span class="o">-</span><span class="nx">element</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// этот элемент станет отображаться первым в контейнере
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">order</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> 
+</span></span></code></pre></div><p>По умолчанию порядковый номер флекс-элементов равен &ldquo;0&rdquo;, и они сортируются по
+возрастанию этого номера.</p>
+<p>Это свойство очень полезно, так как позволяет изменять порядок следования
+флекс-элементов в потоке, не изменяя при этом HTML-код.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

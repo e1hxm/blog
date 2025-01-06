@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логические орераторы в JavaScript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Логические орераторы в JavaScript</h2>
+        
+
+        
+            <time class="h5 gray title__date">05 March 2024</time>
+        
+
+        <div><p>Лекция про логические операторы c Udemy</p>
+            <p>
+              Логические выражения на языке JavaScript могут быть объединены, для использования в
+              качестве проверки, например паролей. Возьмём к примеру проверку пароля при
+              регистрации. Если мы хотим чтобы пароль был не менее 8 символов и более 20 то функция
+              выполняющая такую проверку будет такой
+            </p>
+            <pre><code>const isStrongPassword = (password) => {
+const length = password.length;
+  return length > 8 && length < 20;
+};
+isStrongPassword('qwerty'); // false
+isStrongPassword('qwerty1234'); // true
+isStrongPassword('zxcvbnmasdfghjkqwertyui'); // false</code></pre>
+            <p>
+              && - означает «И». Все выражение считается истинным только в том случае, когда истинен
+              каждый операнд — и слева и справа. Иными словами, && означает «и то, и другое».
+            </p>
+            <p>
+              Кроме &&, часто используется оператор || — «ИЛИ». Он означает «или то, или другое, или
+              оба». Операторов И и ИЛИ может быть сколько угодно и их можно комбинировать в любом
+              количестве и любой последовательности.
+            </p>
+            <p>
+              Приоритет операторов И и ИЛИ ниже чем приоритет операторов сравнения, поэтому при
+              комбинировании лучше их ставить в скобки. Вот улучшенный пример для проверки пароля
+            </p>
+            <pre><code>const isStrongPassword = (password) => {
+const length = password.length;
+return length > 8 && (hasSpecialChars(password) || hasCapitalChars(password));
+};</code></pre>
+            <p>Ниже таблица истинности поведения оператора && И</p>
+            <pre><code>(a, true) && (b, true) // ==> true
+(a, true) && (b, false) // ==> false
+(a, false) && (b, true) // ==> false
+(a, false) && (b, false) // ==> false</code></pre>
+            <p>И таблица истинности оператора || ИЛИ</p>
+            <pre><code>(a, true) || (b, true) // ==> true
+(a, true) || (b, false) // ==> true
+(a, false) || (b, true) // ==> true
+(a, false) || (b, false) // ==> false</code></pre>
+          </div>
+          <h3>Оператор отрицания</h3>
+          <p>
+            Помимо операторов && И и || ИЛИ в JavaScript встречается оператор отрицания. Он
+            позволяет менять логическое значение на противоположное. Обозначается знаком восклицания
+            !
+          </p>
+          <p>
+            Например если есть функция, которая проверяет четность числа, то с помощью унарного
+            отрицания можно проверить обратное
+          </p>
+          <pre><code>const isEven = (number) => number % 2 === 0;
+isEven(10);  // true
+!isEven(10); // false
+</code></pre>
+          <p>
+            В этом примере просто добавив знак унарного отрицания перед вызовом функции мы получили
+            обратное действие.
+          </p>
+          <p>
+            Данный оператор позволяет писать задуманные правила в коде без необходимости добавления
+            новых функций.
+          </p></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

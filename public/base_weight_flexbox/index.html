@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исходные базовые размеры flex-элементов</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Исходные базовые размеры flex-элементов</h2>
+        
+
+        
+            <time class="h5 gray title__date">24 December 2024</time>
+        
+
+        <div><p>Алгоритм расчёта размеров флекс-элементов и их распределения внутри флекс-контейнера включает три последовательных этапа. Этот процесс значительно сложнее, чем в традиционной блочной модели.</p>
+<h3 id="первый-шаг---определение-исходных-базовых-размеров-флекс-элементов">Первый шаг - Определение исходных базовых размеров флекс-элементов</h3>
+<p>Базовый размер — это размер элемента, измеряемый вдоль основной оси.</p>
+<p>Исходный базовый размер — это размер, который флекс-элемент принимает без использования дополнительных функций флекс-модели. Он определяется стандартными свойствами блочной модели (например, <code>width</code>, <code>height</code>, <code>padding</code>, <code>border</code>) и содержимым элемента.</p>
+<p>Если основная ось расположена горизонтально, то на исходный базовый размер влияют:</p>
+<ul>
+<li>
+<p>свойство <code>width</code> или, если оно не задано, ширина содержимого (например, длина самого длинного слова)</p>
+</li>
+<li>
+<p>горизонтальные отступы <code>padding</code></p>
+</li>
+<li>
+<p>горизонтальные границы <code>border</code></p>
+</li>
+</ul>
+<p>Если основная ось направлена вертикально, то на исходный базовый размер влияют:</p>
+<ul>
+<li>
+<p>свойство <code>height</code> или, если оно не задано, высота содержимого например, количество текстовых строк</p>
+</li>
+<li>
+<p>вертикальные отступы <code>padding</code></p>
+</li>
+<li>
+<p>вертикальные границы <code>border</code></p>
+</li>
+</ul>
+<p>С отступами и границами всё достаточно логично: в зависимости от направления основной оси в исходном размере учитываются либо вертикальные, либо горизонтальные компоненты отступов или границ.</p>
+<p>Что касается ширины и высоты содержимого, то есть свойств <code>width</code> или <code>height</code>, ситуация оказалась не столь однозначной. Основная ось направлена горизонтально — используем одно свойство, повернули ось вертикально — применяем другое. В связи с этим было введено дополнительное свойство — <code>flex-basis</code>.</p>
+<p>Оно определяет размер области содержимого вдоль основной оси, независимо от её направления. Свойство <code>flex-basis</code> имеет приоритет над <code>width</code> и <code>height</code>, переопределяя их, если они заданы одновременно на одном флекс-элементе.</p>
+<p>Можно использовать <code>width</code>/<code>height</code> без применения <code>flex-basis</code>, и наоборот — это также допустимо. Важно помнить о поведении этих свойств и направлении основной оси.</p>
+<p><img src="/images/base_weight.png" alt="Определение исходных базовых размеров флекс-элементов"></p>
+<p>Исходный базовый размер флекс-элемента определяется следующим образом:</p>
+<p>Шаг первый:</p>
+<ul>
+<li>Если задано свойство <code>flex-basis</code> (и его значение отличается от <code>auto</code>), то в качестве размера области содержимого используется значение <code>flex-basis</code>, и далее переходим к шагу 5. В противном случае переходим к шагу 2.</li>
+</ul>
+<p>Шаг второй:</p>
+<ul>
+<li>Если основная ось направлена горизонтально и задано свойство <code>width</code> (его значение отличается от <code>auto</code>), то в качестве размера области содержимого используется значение <code>width</code>, и далее переходим к шагу 5. В противном случае переходим к шагу 3.</li>
+</ul>
+<p>Шаг третий:</p>
+<ul>
+<li>Если основная ось направлена вертикально и задано свойство <code>height</code> (его значение отличается от <code>auto</code>), то в качестве размера области содержимого используется значение <code>height</code>, и далее переходим к шагу 5. В противном случае переходим к шагу 4.</li>
+</ul>
+<p>Шаг четвертый:</p>
+<ul>
+<li>Размер области содержимого определяется исходя из размера самого содержимого флекс-элемента вдоль соответствующей оси. Этот процесс может быть нетривиальным, поэтому при создании сеток лучше избегать таких ситуаций, чтобы сохранить контроль над размерами элементов. Переходим к шагу 5.</li>
+</ul>
+<p>Шаг пятый:</p>
+<ul>
+<li>К размеру области содержимого добавляем отступы и границы вдоль соответствующего направления основной оси, чтобы получить исходный базовый размер.</li>
+</ul>
+<p>Важное правило: при создании сеток всегда следует задавать либо <code>flex-basis</code>, либо <code>width</code>/<code>height</code>.</p>
+<p>После определения исходного базового размера всех флекс-элементов браузер вычисляет, сколько свободного места остаётся во флекс-контейнере. Если есть свободное место или, наоборот, его недостаточно, начинает работать «гибкость» флекс-элементов. Это уже второй этап.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

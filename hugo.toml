@@ -1,0 +1,35 @@
+baseURL = 'https://elham.ru'
+languageCode = 'ru'
+title = "El'ham"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noHl = true
+    style = "monokai"
+
+
+[permalinks]
+  categories   = "/:slug/"
+
+
+[taxonomies]
+  category = "categories"
+
+[params.categories]
+  economy       = "Лекции по экономике из Университета Synergy"
+  english       = "Лекции английского языка из Университета Synergy. Практика в переводах песен, рассказов и стихотворений."
+  tis           = "Лекции по теории информационных систем в Университете Synergy"

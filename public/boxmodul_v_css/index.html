@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Боксовая модель в CSS</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Боксовая модель в CSS</h2>
+        
+
+        
+            <time class="h5 gray title__date">11 November 2024</time>
+        
+
+        <div><p>Лекция в HTMLAcademy про боксовую модель документа в CSS</p>
+<p>Каждому элементу на веб-странице соответствует прямоугольная область, известная как
+бокс (от английского &ldquo;box&rdquo; — «коробка»).</p>
+<p>Бокс включает в себя:</p>
+<ol>
+<li>1 Содержимое (content) — непосредственно контент элемента;</li>
+<li>2 Внутренние отступы (padding) — пространство между содержимым и рамкой;</li>
+<li>3 Рамка (border) — линия, окружающая содержимое и внутренние отступы;</li>
+<li>4 Внешние отступы (margin) — пространство за пределами рамки, отделяющее данный
+элемент от других.</li>
+</ol>
+<p><img src="../images/box-model.png" alt="Боксовая модель в CSS"></p>
+<p>Внешний вид бокса на странице во многом определяется его типом или типом его
+родительского элемента.</p>
+<p>Блочные боксы начинаются с новой строки и занимают всю доступную ширину родительского
+элемента. К таким элементам по умолчанию относятся теги <code>p</code>, <code>div</code> и <code>h1</code>.</p>
+<p>Строчные боксы размещаются в одной строке друг за другом, а их ширина зависит от
+содержимого. По умолчанию строчными элементами являются теги <code>a</code>, <code>span</code> и <code>b</code>.</p>
+<h3 id="поток-сетки-и-макет-страницы">Поток, сетки и макет страницы</h3>
+<p>Взаимодействие боксов между собой и их расположение на странице определяется понятием
+&ldquo;поток&rdquo;. Поток можно контролировать, изменяя типы боксов и их свойства по умолчанию.</p>
+<p>Сетка представляет собой структуру, определяющую расположение основных блоков на
+веб-странице. К таким блокам обычно относятся шапка, подвал сайта, основное
+содержание, боковая панель, а также различные секции и разделы. Количество элементов
+сетки, как правило, фиксировано, а их размеры задаются в соответствии с макетом.</p>
+<p>Макет — это графическое представление веб-страницы, создаваемое дизайнером. Он служит
+образцом для веб-разработчика при верстке страницы.</p>
+<p>Макеты страниц делают в Figma или в Photoshop</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

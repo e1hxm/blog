@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поперечная ось flexbox</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Поперечная ось flexbox</h2>
+        
+
+        
+            <time class="h5 gray title__date">03 November 2024</time>
+        
+
+        <div><p>Лекция из HTML Academy про поперечную ось flexbox в CSS</p>
+<p>Во флексбоксе вместо направлений «верх» и «низ» используется понятие «поперечная ось».</p>
+<p>Вдоль этой оси происходит «вертикальное» выравнивание элементов.</p>
+<p>Пример на картинке:</p>
+<p><img src="../images/axis-flexbox.png" alt="Поперечная ось flexbox"></p>
+<p>Поперечная ось всегда перпендикулярна главной оси и поворачивается вместе с ней если:</p>
+<ol>
+<li>1 Главная ось направлена горизонтально, то поперечная ось смотрит вниз.</li>
+<li>2 Главная ось направлена вертикально, то поперечная ось смотрит направо.</li>
+</ol>
+<p>Это поведение может показаться не совсем интуитивным, и к нему нужно привыкнуть.</p>
+<p>В результате поперечная ось никогда не направлена вверх или влево.</p>
+<h3 id="выравнивание-по-пореченой-оси-flexbox">Выравнивание по пореченой оси flexbox</h3>
+<p>Css-свойство <code class="code_line">align-items</code> определяет, как элементы будут выровнены вдоль поперечной оси.</p>
+<p>Доступные значения для <code class="code_line">align-items</code> включают:</p>
+<ol>
+<li><code>stretch</code>  - Значение по умолчанию, которое заставляет элементы растягиваться на всю &ldquo;высоту&rdquo; флекс-контейнера.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">align</span><span class="o">-</span><span class="nx">items</span><span class="o">:</span> <span class="nx">stretch</span><span class="p">;</span>
+</span></span></code></pre></div><ol start="2">
+<li><code>flex-start</code> — элементы выравниваются по верхнему краю контейнера (при расположении
+в строку) или по левому краю (при расположении в столбик).</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">align</span><span class="o">-</span><span class="nx">items</span><span class="o">:</span> <span class="nx">flex</span><span class="o">-</span><span class="nx">start</span><span class="p">;</span>
+</span></span></code></pre></div><ol start="3">
+<li><code>flex-end</code> — выравнивает элементы по нижнему краю контейнера вдоль поперечной оси.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">align</span><span class="o">-</span><span class="nx">items</span><span class="o">:</span> <span class="nx">flex</span><span class="o">-</span><span class="nx">end</span><span class="p">;</span>
+</span></span></code></pre></div><ol start="4">
+<li><code>center</code> — элементы выравниваются по центру</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">align</span><span class="o">-</span><span class="nx">items</span><span class="o">:</span> <span class="nx">center</span><span class="p">;</span>
+</span></span></code></pre></div><ol start="5">
+<li><code>baseline</code> — элементы выравниваются по базовой линии текста внутри них. Эта линия
+проходит по нижней части букв.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">align</span><span class="o">-</span><span class="nx">items</span><span class="o">:</span> <span class="nx">baseline</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="свойство-align-self">Свойство <code>align-self</code></h3>
+<p>Свойство <code>align-self</code> позволяет индивидуально выравнивать элементы по поперечной оси.</p>
+<p>В отличие от распределения по главной оси, которое задаётся для всего флекс-контейнера
+и действует одинаково на все элементы.</p>
+<p><code>align-self</code> позволяет задать разные значения выравнивания для отдельных элементов.</p>
+<p>Это свойство применяется к самим флекс-элементам, а не к контейнеру, и имеет те же
+значения, что и <code>align-items</code>.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

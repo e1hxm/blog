@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массивы в JavaScript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Массивы в JavaScript</h2>
+        
+
+        
+            <time class="h5 gray title__date">17 November 2024</time>
+        
+
+        <div><p>Task в RS School по JavaScript про Массивы</p>
+<p>Для хранения упорядоченных наборов
+данных используется специальная структура,
+называемая массивом (Array).</p>
+<h3 id="создание-массива">Создание массива</h3>
+<p>Для создания пустого массива можно
+использовать два варианта синтаксиса:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span></code></pre></div><p>Как правило, предпочтение
+отдают второму варианту синтаксиса.
+В квадратных скобках можно задать
+начальные значения элементов:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;Апельсин&#34;</span><span class="p">,</span> <span class="s2">&#34;Слива&#34;</span><span class="p">];</span>
+</span></span></code></pre></div><p>Нумерация элементов массива
+начинается с нуля.</p>
+<p>Чтобы получить элемент,
+нужно указать его индекс
+в квадратных скобках:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;Апельсин&#34;</span><span class="p">,</span> <span class="s2">&#34;Слива&#34;</span><span class="p">];</span>  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">);</span> <span class="c1">// Яблоко
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">);</span> <span class="c1">// Апельсин
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">);</span> <span class="c1">// Слива
+</span></span></span></code></pre></div><p>Элемент массива можно
+заменить следующим образом:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">fruits</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Груша&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// массив стал таким:
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;Апельсин&#34;</span><span class="p">,</span> <span class="s2">&#34;Груша&#34;</span><span class="p">]</span>
+</span></span></code></pre></div><p>Так же можно добавить элемент
+в уже существующий массив:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">fruits</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Лимон&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// теперь массив выглядит так
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;Апельсин&#34;</span><span class="p">,</span> <span class="s2">&#34;Груша&#34;</span><span class="p">,</span> <span class="s2">&#34;Лимон&#34;</span><span class="p">]</span>
+</span></span></code></pre></div><p>Общее количество элементов которое содержит массив,
+можно вывести с помощью свойства <code class="code_line">length</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;Апельсин&#34;</span><span class="p">,</span> <span class="s2">&#34;Слива&#34;</span><span class="p">];</span>   
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">length</span> <span class="p">);</span> <span class="c1">// 3
+</span></span></span></code></pre></div><p>Вывести все данные из массива можно через <code class="code_line">console.log</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;Апельсин&#34;</span><span class="p">,</span> <span class="s2">&#34;Слива&#34;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">fruits</span> <span class="p">);</span> <span class="c1">// Яблоко, Апельсин, Слива
+</span></span></span></code></pre></div><p>Массив может содержать элементы различных типов.</p>
+<p>Пример:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// элементы разных типов
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;Яблоко&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Джон&#39;</span> <span class="p">},</span> <span class="kc">true</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;привет&#39;</span><span class="p">);</span> <span class="p">}</span> <span class="p">];</span>   
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="c1">// получение элемента с индексом 1 (объект) и вывод его свойства
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">name</span> <span class="p">);</span> <span class="c1">// Джон
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl"><span class="c1">// получение элемента с индексом 3 (функция) и её выполнение
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">arr</span><span class="p">[</span><span class="mi">3</span><span class="p">]();</span> <span class="c1">// привет
+</span></span></span></code></pre></div></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

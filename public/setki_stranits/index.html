@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сетки страниц и поток документа</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Сетки страниц и поток документа</h2>
+        
+
+        
+            <time class="h5 gray title__date">27 November 2024</time>
+        
+
+        <div><p>Лекция в HTML Academy про сетки страниц</p>
+<p>Сеткой или раскладкой обычно обозначают структуру взаимного расположения крупных
+визуальных блоков на странице.</p>
+<p>Представим, что макет мысленно разбивается на не пересекающиеся прямоугольники.</p>
+<p>Сначала выделяются самые большие области, затем эти области делятся на более мелкие, и
+так далее, пока не будут выделены самые маленькие прямоугольники, которые обозначают
+отдельные слова или элементы.</p>
+<p>В итоге вся страница будет выглядеть как набор вложенных друг в друга прямоугольников,
+начиная от самых крупных и заканчивая самыми мелкими.</p>
+<p><img src="../images/setki_stranits.png" alt="Сетки страниц"></p>
+<p>Фактически, верстка сетки сайта подразумевает организацию порядка и расположения этих
+прямоугольников относительно друг друга и границ экрана. В CSS существует несколько
+методов создания таких сеток, каждый из которых имеет свои преимущества и недостатки.</p>
+<p>Прежде чем приступить к построению сеток, необходимо разобраться с
+понятием потока документа.</p>
+<h3 id="поток-документа">Поток документа</h3>
+<p>Поток документа определяет, как элементы отображаются на веб-странице и как этот
+порядок отображения соотносится с HTML-кодом.</p>
+<p><img src="../images/setki-na-flex.png" alt="html code"></p>
+<p>Отображение данного кода на странице:</p>
+<p><img src="../images/potok-doc-1.png" alt="Поток документа на странице"></p>
+<p>Все элементы располагаются в том же порядке, в котором они присутствуют в коде.</p>
+<p>В потоке документа теги взаимодействуют друг с другом, причем каждый последующий тег
+учитывает предыдущий (но не наоборот). Теги отталкивают друг друга. Если элемент,
+расположенный выше, увеличить по высоте, он сместит все нижележащие элементы.</p>
+<p>Управление потоком осуществляется с помощью различных CSS-свойств, позволяющих
+изменять размеры элементов или даже менять направление потока.</p>
+<p>Рассмотрим другой вариант потока для той же разметки. Поток идёт как обычно сверху
+вниз, затем &ldquo;поворачивает&rdquo; слева направо, и снова идет вниз:</p>
+<p><img src="../images/potok-doc-2.png" alt="Поток документа на странце"></p>
+<p>Те же элементы кода, но в другом представлении с 3 колонками:</p>
+<p><img src="../images/potok-doc-3.png" alt=""></p>
+<p>Хотя исходный HTML-код не менялся, было создано три различных варианта потока.</p>
+<h3 id="управление-потоком">Управление потоком</h3>
+<p>Для управления потоком доступны две группы CSS-свойств.</p>
+<p>Хотя разделение условно, можно сказать, что первая группа изменяет поведение элементов
+в потоке, а вторая группа свойств регулирует размеры самих элементов.</p>
+<p>К первой группе относятся свойства <code>display</code> и <code>float</code>.</p>
+<p>Во вторую группу входят свойства <code>width</code>, <code>height</code>, <code>margin</code>, <code>padding</code>, <code>border</code> и
+<code>box-sizing</code>.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

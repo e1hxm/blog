@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git - основные команды для контроля версий</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+
+        
+
+        <div><h2 id="git">Git</h2>
+<p>Git — это система управления версиями, позволяет отслеживать изменения в исходном коде. Она позволяет создавать коммиты проекта, ветвления и слияния изменений. Тут основные тезисы и команды для работы с гитом из учебника.</p>
+<p>Установка Git в Linux</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">git</span>
+</span></span></code></pre></div><p>После установки, проверяем версию</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="o">--</span><span class="nx">version</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Ответ 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">git</span> <span class="nx">version</span> <span class="mf">2.43</span><span class="p">.</span><span class="mi">0</span>
+</span></span></code></pre></div><p>Конфиг лежит в файле ~/.gitconfig Сюда Git запишет настройки, например алиасы, ник пользователя, объем буфера и прочее.</p>
+<p>В новой системе после установки укажем пользователя и почту. Эту инфу Git будет включать в коммиты.</p>
+<pre tabindex="0"><code>git config --global user.name &#34;Dxrkd3v&#34; &lt;-- Имя пользователя
+git config --global user.email &#34;dxrkd3v@mail.com&#34; &lt;-- Email пользователя
+</code></pre><p>Ключ <code>--global</code> указывает что эти данные будут использоваться для всех файлов в системе.</p>
+<p>Посмотеть изминения в файле <code>~/.gitconfig</code> можно через ключ <code>--list</code> например</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git config --list
+</span></span><span class="line"><span class="cl">// ответ
+</span></span><span class="line"><span class="cl">user.name=Dxrkd3v
+</span></span><span class="line"><span class="cl">user.email=dxrkd3v@mail.com
+</span></span></code></pre></div><p>Чтобы начать работу с Git нужно его проинициализировать командой находясь в директории.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git init
+</span></span></code></pre></div><p>Эта команда создаст пустую папку с расширением <code>.git</code> в вашем проекте.</p>
+<h4 id="добавление-в-стейдж">Добавление в стейдж</h4>
+<p>Чтобы начать управлять изминениями файлов нужно добавить их в стейдж или индекс командой <code>git add .</code> она добавит все файлы в стейдж, либо после <code>git add</code> прописать нужные файлы вручную, например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git add index.html
+</span></span></code></pre></div><p>и после этого можно делать коммит, то есть сохранение состояния</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s2">&#34;text of your commit&#34;</span>
+</span></span></code></pre></div><p>Проверить состояние файлов позволяет команда <code>status</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">status</span>
+</span></span></code></pre></div><p>Команда <code>git status</code> дает исчерпывающий ответ, в Гите есть флаг позволяющий
+получить ту же инфу но в сокращенном виде это <code>--short</code></p>
+<pre tabindex="0"><code>git status --short
+//ответ
+m index.html
+a style.css
+
+m &lt;-- modded
+a &lt;-- added
+</code></pre><h4 id="gitignore">Gitignore</h4>
+<p>Для исключения слежения за отдельными файлами или директориями используют <code>.gitignore</code> со списком паттернов</p>
+<p>Пример файла <code>gitignore</code></p>
+<pre tabindex="0"><code># это комментарий
+*.md &lt;-- пропускать markdown файлы 
+*.png &lt;-- пропускать картинки с расширением png
+</code></pre><h4 id="diff">diff</h4>
+<p>Чтобы узнать что было отредактировано но не добавлено в индекс и что проиндексировано
+и готово для добавления в стейдж используется команда <code>diff</code></p>
+<p>Чтобы посмотреть что из проиндексированного войдет в следующий коммит нужна команда <code>git diff --staged</code></p>
+<p>После добавления в стейдж <code>git diff</code> ничего не вернет.</p>
+<p>Выйти из меню с <code>git diff</code> нужно нажать :q  ;)</p>
+<p>A команда <code>git diff --cached</code> покажет проиндексированные изминения</p>
+<h4 id="коммит">Коммит</h4>
+<p>Когда все настроено, можно делать первый коммит.
+Для этого используется команда <code>git commit</code> она откроет редактор который указан в <code>.gitconfig</code> можно поменять редактор если нужно</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">config</span> <span class="o">--</span><span class="nx">global</span> <span class="nx">core</span><span class="p">.</span><span class="nx">editor</span> <span class="nx">vim</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//укажет vim редактором по умолчанию
+</span></span></span></code></pre></div><p>Команда <code>git commit</code> откроет vim и в нем нужно набрать сообщение для коммита</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">Пожалуйста</span><span class="p">,</span> <span class="nx">введите</span> <span class="nx">сообщение</span> <span class="nx">коммита</span> <span class="nx">для</span> <span class="nx">ваших</span> <span class="nx">изменений</span><span class="p">.</span> <span class="nx">Строки</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">начинающиеся</span> <span class="nx">с</span> <span class="err">#</span> <span class="nx">будут</span> <span class="nx">проигнорированы</span><span class="p">,</span> <span class="nx">а</span> <span class="nx">пустое</span> <span class="nx">сообщение</span>
+</span></span><span class="line"><span class="cl"><span class="err">#</span> <span class="nx">отменяет</span> <span class="nx">процесс</span> <span class="nx">коммита</span><span class="p">.</span>
+</span></span></code></pre></div><p>Сообщение для коммита можно также указать через консоль поставив флаг <code>-m</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s2">&#34;текст сообщения коммита&#34;</span>
+</span></span></code></pre></div><h4 id="пропуск-файлов">Пропуск файлов</h4>
+<p>Если набрать команду <code>git commit</code> с флагом <code>-a</code> то система Git начнет автоматически индексировать
+все отслеживаемые файлы перед их фиксацией что позволяет обойтись без команды <code>git add</code> но как по мне то лучше так не стоит делать ;)</p>
+<h4 id="удаление-файлов-из-проекта">Удаление файлов из проекта</h4>
+<p>Чтобы Git перестал следить за изминениями в файле его нужно удалить из индекса и зафиксировать данное изминение. Это делает команда <code>git rm</code> заодно удаляет файл из рабочей папки.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">git</span> <span class="n">rm</span> <span class="n">index</span><span class="p">.</span><span class="n">html</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//rm сокращенно remove
+</span></span></span></code></pre></div><p>При следующей фиксации изминений файл пропадет и перестанет отслеживаться.</p>
+<p>Если файл отредактирован и уже в индексе нужно воспользоваться параметром <code>-f</code> т.е. <code>force</code> чтобы
+принудительно стереть все данные и не было возможности восстановления средствами Git.</p>
+<p>Чтобы оставить файл в папке проекта но удалить из индекса и сделать его невидимым для Git
+нужна команда <code>git rm</code> с параметром <code>--cached</code> например</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git rm --cached index.html
+</span></span></code></pre></div><h4 id="перемещение-файлов">Перемещение файлов</h4>
+<p>После переименования файла у системы Git не сохранятся никаких метаданных что
+этот файл был переименован. При этом в гите есть команда <code>mv</code> то есть <code>move</code>
+которая позволяет переименовать файл, например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git mv oldFileName.html newFileName.html 
+</span></span></code></pre></div><p>Эта команда выполнит те же действия что и следующие 3 строчки</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">mv oldFileName.html newFileName.html
+</span></span><span class="line"><span class="cl">git rm oldFileName.html
+</span></span><span class="line"><span class="cl">git add newFileName.html
+</span></span></code></pre></div><h4 id="просмотр-истории-версий">Просмотр истории версий</h4>
+<p>После нескольких сохранений или клонирования файлов можно взглянуть
+на список действий которые были сделаны с помощью команды <code>git log</code></p>
+<p>Эта команда выведет информацию о коммитах созданных ранее,
+содержит контольную сумму SHA-1, имя автора, почту, дату создания и сообщение коммита.</p>
+<p>У <code>git log</code> есть очень много параметров. Рассмотрю самые популярные.
+Это флаг <code>-p</code> который показывает разницу внесенную каждым коммитом.</p>
+<p>Для получения краткой статистики по каждой из версии прменяется параметр <code>--stat</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git log --stat 
+</span></span></code></pre></div><p>Параметр &ndash;stat позволяет вывести под записью о каждой версии
+список измененных файлов, их количество, а также количество добавленных в них
+и удаленных из них строк.</p>
+<p>Еще одним крайне полезным параметром является <code>--pretty</code>. Он меняет формат
+вывода информации. Есть несколько предустановленных вариантов. Параметр
+oneline выводит каждый коммит в одну строку, что весьма удобно при просмотре
+большого числа коммитов. Параметры <code>short</code>, <code>full</code> и <code>fuller</code>, практически не меняя
+формат вывода, определяют его детализацию:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">$ git log --pretty=oneline
+</span></span><span class="line"><span class="cl">ca82...63949 changed the verison number
+</span></span><span class="line"><span class="cl">085b...6e7e7 removed unnecessary test
+</span></span><span class="line"><span class="cl">a11b...209e6 first commit
+</span></span></code></pre></div><p>Наиболее интересен параметр <code>format</code>, позволяющий выводить записи журнала
+в выбранном вами формате.</p>
+<p>Самые распространенные параметры форматирования:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Параметр</th>
+          <th>Описание выводимых данных</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>%H</td>
+          <td>Хеш-код коммита</td>
+      </tr>
+      <tr>
+          <td>%h</td>
+          <td>Сокращенный хеш-код коммита</td>
+      </tr>
+      <tr>
+          <td>%T</td>
+          <td>Хеш-код дерева</td>
+      </tr>
+      <tr>
+          <td>%t</td>
+          <td>Сокращенный хеш-код дерева</td>
+      </tr>
+      <tr>
+          <td>%P</td>
+          <td>Хеш-код родительских коммитов</td>
+      </tr>
+      <tr>
+          <td>%p</td>
+          <td>Сокращенный хеш-код родительских коммитов</td>
+      </tr>
+      <tr>
+          <td>%an</td>
+          <td>Имя автора</td>
+      </tr>
+      <tr>
+          <td>%ae</td>
+          <td>Электронная почта автора</td>
+      </tr>
+      <tr>
+          <td>%ad</td>
+          <td>Дата создания оригинала</td>
+      </tr>
+      <tr>
+          <td>%ar</td>
+          <td>Дата создания оригинала, в относительной форме</td>
+      </tr>
+      <tr>
+          <td>%cn</td>
+          <td>Имя создателя версии</td>
+      </tr>
+      <tr>
+          <td>%ce</td>
+          <td>Электронная почта создателя версии</td>
+      </tr>
+      <tr>
+          <td>%cd</td>
+          <td>Дата создания версии</td>
+      </tr>
+      <tr>
+          <td>%cr</td>
+          <td>Дата создания версии в относительном формате</td>
+      </tr>
+      <tr>
+          <td>%s</td>
+          <td>Комментарий</td>
+      </tr>
+  </tbody>
+</table>
+<br />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git log --pretty=format:&#34;%h - %an, %ar : %s&#34;
+</span></span><span class="line"><span class="cl">ca82a6d - Dxrkd3v, 6 years ago : changed the version number
+</span></span><span class="line"><span class="cl">085bb3b - Dxrkd3v, 6 years ago : removed unnecessary test
+</span></span><span class="line"><span class="cl">a11bef0 - Dxrkd3v, 6 years ago : first commit
+</span></span><span class="line"><span class="cl">%h <span class="p">&lt;</span><span class="nt">--</span> <span class="na">Сокращенный</span> <span class="na">хеш-код</span> <span class="na">коммита</span>
+</span></span><span class="line"><span class="cl"><span class="err">%</span><span class="na">n</span> <span class="err">&lt;</span><span class="na">--</span> <span class="na">Имя</span> <span class="na">автора</span>
+</span></span><span class="line"><span class="cl"><span class="err">%</span><span class="na">ar</span> <span class="err">&lt;</span><span class="na">--</span> <span class="na">Какое</span> <span class="na">время</span> <span class="na">назад</span>
+</span></span><span class="line"><span class="cl"><span class="err">%</span><span class="na">s</span> <span class="err">&lt;</span><span class="na">--</span> <span class="na">Текст</span> <span class="na">коммита</span>
+</span></span></code></pre></div><p>Параметры oneline и format особенно полезны в сочетании с другим параметром
+команды log, который называется &ndash;graph. Он добавляет небольшой ASCII-граф
+с историей ветвлений и слияний</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git log --pretty=format:&#34;%h %s&#34; --graph
+</span></span><span class="line"><span class="cl"><span class="k">*</span> 2d3acf9 ignore errors from SIGCHLD on trap
+</span></span><span class="line"><span class="cl"><span class="k">*</span> 5e3ee11 Merge branch &#39;master&#39; of git://github.com/dustin/grit
+</span></span><span class="line"><span class="cl">|\
+</span></span><span class="line"><span class="cl">| * 420eac9 Added a method for getting the current branch.
+</span></span><span class="line"><span class="cl"><span class="k">*</span> | 30e367c timeout code and tests
+</span></span><span class="line"><span class="cl"><span class="k">*</span> | 5a09431 add timeout protection to grit
+</span></span><span class="line"><span class="cl"><span class="k">*</span> | e1193f8 support for heads with slashes in them
+</span></span><span class="line"><span class="cl">|/
+</span></span><span class="line"><span class="cl"><span class="k">*</span> d6016bc require time for xmlschema
+</span></span><span class="line"><span class="cl"><span class="k">*</span> 11d191e Merge branch &#39;defunkt&#39; into local
+</span></span></code></pre></div><p>Распространенные параметры команды git log</p>
+<p>Вот таблица с распространёнными параметрами команды <code>git log</code>:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Параметр</th>
+          <th>Описание</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>git log</code></td>
+          <td>Показывает историю коммитов в текущей ветке.</td>
+      </tr>
+      <tr>
+          <td><code>git log -n &lt;число&gt;</code></td>
+          <td>Ограничивает вывод последними <code>&lt;число&gt;</code> коммитами.</td>
+      </tr>
+      <tr>
+          <td><code>git log --oneline</code></td>
+          <td>Показывает сокращённый вывод (хеш и сообщение коммита в одну строку).</td>
+      </tr>
+      <tr>
+          <td><code>git log --graph</code></td>
+          <td>Отображает историю в виде графа с ветвлениями и слияниями.</td>
+      </tr>
+      <tr>
+          <td><code>git log --all</code></td>
+          <td>Показывает историю всех веток, а не только текущей.</td>
+      </tr>
+      <tr>
+          <td><code>git log --author=&lt;имя&gt;</code></td>
+          <td>Фильтрует коммиты по автору.</td>
+      </tr>
+      <tr>
+          <td><code>git log --since=&lt;дата&gt;</code></td>
+          <td>Показывает коммиты, сделанные после указанной даты.</td>
+      </tr>
+      <tr>
+          <td><code>git log --until=&lt;дата&gt;</code></td>
+          <td>Показывает коммиты, сделанные до указанной даты.</td>
+      </tr>
+      <tr>
+          <td><code>git log --grep=&lt;текст&gt;</code></td>
+          <td>Ищет коммиты, в сообщениях которых есть указанный текст.</td>
+      </tr>
+      <tr>
+          <td><code>git log --stat</code></td>
+          <td>Показывает статистику изменений в файлах для каждого коммита.</td>
+      </tr>
+      <tr>
+          <td><code>git log --patch</code></td>
+          <td>Показывает изменения в файлах (дельта) для каждого коммита.</td>
+      </tr>
+      <tr>
+          <td><code>git log --pretty=&lt;формат&gt;</code></td>
+          <td>Настраивает формат вывода (например, <code>--pretty=format:&quot;%h - %an, %ar : %s&quot;</code>).</td>
+      </tr>
+      <tr>
+          <td><code>git log --abbrev-commit</code></td>
+          <td>Показывает сокращённые хеши коммитов.</td>
+      </tr>
+      <tr>
+          <td><code>git log --decorate</code></td>
+          <td>Показывает ссылки на ветки и теги, связанные с коммитами.</td>
+      </tr>
+      <tr>
+          <td><code>git log --merges</code></td>
+          <td>Показывает только коммиты слияния (merge).</td>
+      </tr>
+      <tr>
+          <td><code>git log --no-merges</code></td>
+          <td>Показывает только обычные коммиты, исключая слияния.</td>
+      </tr>
+      <tr>
+          <td><code>git log &lt;файл&gt;</code></td>
+          <td>Показывает историю изменений конкретного файла.</td>
+      </tr>
+      <tr>
+          <td><code>git log branch1..branch2</code></td>
+          <td>Показывает коммиты, которые есть в <code>branch2</code>, но отсутствуют в <code>branch1</code>.</td>
+      </tr>
+      <tr>
+          <td><code>git log --follow &lt;файл&gt;</code></td>
+          <td>Показывает историю файла, включая переименования.</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="отмена-изминений">Отмена изминений</h4>
+<p>Необходимость отмены чаще всего возникает при слишком ранней фиксации из-
+менений, когда вы забыли добавить в коммит какие-то файлы или ошиблись с со-
+общением фиксации. Для повторного сохранения версии в такой ситуации можно
+воспользоваться параметром &ndash;amend</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git commit –amend
+</span></span></code></pre></div><p>В итоге останется единственный коммит — второй коммит заменит результат
+первого.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git commit -m &#39;изначальный коммит&#39;
+</span></span><span class="line"><span class="cl">git add index.html
+</span></span><span class="line"><span class="cl">git commit --amend
+</span></span></code></pre></div><h4 id="отмена-индексирования">Отмена индексирования</h4>
+<p>Для отмены индексирования существует команда <code>reset</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">git reset HEAD index.html
+</span></span><span class="line"><span class="cl">    modified: index.html
+</span></span><span class="line"><span class="cl">// теперь файл показывается как просто измененный 
+</span></span></code></pre></div><h4 id="отмена-внесенных-в-файл-изменений">Отмена внесенных в файл изменений</h4>
+<p>Быстро отменить изминения и вернуть файл в состояние,
+в котором он находился до последней фиксации
+поможет <code>git checkout</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git checkout -- index.html
+</span></span></code></pre></div><p>Команда отменяет все изминения.</p>
+<h4 id="отображение-удаленных-репозиториев">Отображение удаленных репозиториев</h4>
+<p>Просмотр уже настроенных удаленных серверов осуществляется
+командой <code>git remote</code></p>
+<p>Параметр <code>-v</code> позволяет увидеть URL-адреса, которые хранить Git.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git remote -v
+</span></span><span class="line"><span class="cl">Origin https://github.com/dxrkd3v/blog (fetch)
+</span></span><span class="line"><span class="cl">Origin https://github.com/dxrkd3v/blog (push)
+</span></span></code></pre></div><h4 id="добавление-удаленных-репозиториев">Добавление удаленных репозиториев</h4>
+<p>Чтобы добавить репозиторий под коротким именем, которое упростит дальнейшие обращения к
+нему, используют команду <br /> <code>git remote add [сокращенное имя] [url]</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git remote add dxrk https://github.com/dkd3v/blog
+</span></span><span class="line"><span class="cl">git remote -v
+</span></span><span class="line"><span class="cl">origin https://github.com/dxrkd3v/blog (fetch)
+</span></span><span class="line"><span class="cl">origin https://github.com/dxrkd3v/blog (push)
+</span></span><span class="line"><span class="cl">dxrk https://github.com/dkd3v/blog (fetch)
+</span></span><span class="line"><span class="cl">dxrk https://github.com/dkd3v/blog (push)
+</span></span></code></pre></div><p>Теперь вместо полного URL-адреса в командную строку можно вводить имя dxrk.
+К примеру, для скачивания всей инфы нужно набрать <code>git fetch dxrk</code></p>
+<h4 id="удаление-и-переименование-удаленных-репозиториев">Удаление и переименование удаленных репозиториев</h4>
+<p>Переименование ссылок осуществляется командой <code>git remote rename</code>,
+меняющей сокращенные имена удаленных репозиториев.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git remote rename dxrk dark
+</span></span><span class="line"><span class="cl">git remote 
+</span></span><span class="line"><span class="cl">origin
+</span></span><span class="line"><span class="cl">dark
+</span></span></code></pre></div><p>Удалить ссылку на удаленный репозиторий</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git remote rm dark
+</span></span><span class="line"><span class="cl">git remote
+</span></span><span class="line"><span class="cl">origin
+</span></span></code></pre></div><h3 id="теги">Теги</h3>
+<p>Создать в Git тег, снабженный комментарием
+поможет параметр <code>-a</code> к команде <code>tag</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git tag -a v1.2 -m &#34;моя версия 1.2&#34;
+</span></span><span class="line"><span class="cl">git tag
+</span></span><span class="line"><span class="cl">v1.2
+</span></span></code></pre></div><p>В примере параметр <code>-m</code> позволяет добавить комментарий.</p>
+<p>Для просмотра данных тега вместе с помеченным им
+коммитом служит команда <code>git show</code></p>
+<p>Перед информацией о коммите выводятся данные человека,
+поставившего тег, дата пометки коммита и текст комментария.</p>
+<p>Тегами можно помечать и сделанные ранее коммиты. Предположим, что история
+зафиксированных состояний выглядит так:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git log --pretty=oneline
+</span></span><span class="line"><span class="cl">9fceb02...61af8 bug fixed
+</span></span><span class="line"><span class="cl">964f16d...4abbc second commit
+</span></span><span class="line"><span class="cl">8a5cbc4...2908a first commit
+</span></span></code></pre></div><p>Чтобы поставить тег на коммит сделанный ранее
+нужно в конце команды указать хеш коммита или первую часть хеша</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git tag -a v1.2 9fceb02
+</span></span></code></pre></div><p>Проверим наличие тега</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git tag
+</span></span><span class="line"><span class="cl">v1.2
+</span></span><span class="line"><span class="cl">git show v1.2
+</span></span><span class="line"><span class="cl">// выведет имя автора тега с почтой
+</span></span><span class="line"><span class="cl">// и датой + сам коммит
+</span></span></code></pre></div><h4 id="push-тегов">push тегов</h4>
+<p>Созданные теги отправляются на сервер отдельной командой <br /> <code>git push origin [имя  тега]</code></p>
+<p>Если нужно запушить все теги, ставят флаг <code>--tags</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git push origin --tags
+</span></span></code></pre></div><h4 id="псевдонимы-или-aliases">Псевдонимы или aliases</h4>
+<p>Команда <code>git config</code> позволяет легко создать псевдоним для любой команды.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">git config --global alias.a &#39;add .&#39;
+</span></span><span class="line"><span class="cl">git config --global alias.c commit
+</span></span><span class="line"><span class="cl">git config --global alias.s status
+</span></span></code></pre></div><p>Теперь можно набирать <code>git s</code> вместо <code>git status</code> и так далее.</p>
+<h3 id="ветки-в-git">Ветки в Git</h3>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

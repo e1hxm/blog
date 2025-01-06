@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vim - Keybindings</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+
+        
+
+        <div><h3 id="vim">Vim</h3>
+<p>Vim — это текстовый редактор известный своей эффективностью и гибкостью. Он поддерживает множество плагинов и настроек что
+позволяет превратить его в полноценную IDE. Vim + слепая печать, ускоряют навигацию и редактирование, освоив которые разработка становится быстрее и удобнее в разы.</p>
+<h4 id="редактирование-текста">Редактирование текста</h4>
+<p>Для основных команд используются один или два символа:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">i - ввод 
+</span></span><span class="line"><span class="cl">cw - изменить слово
+</span></span></code></pre></div><p>Используя буквы в качестве команд, можно очень быстро редактировать файл.
+Не нужно запоминать сотни горячих клавиш или тянуться пальцами до клавиш.</p>
+<p>Не придется убирать руки с клавиатуры или
+возиться с многоуровневыми меню! Большинство команд можно запомнить по
+первым буквам, отражающим их названия на английском языке. Почти все команды
+следуют этому принципу и связаны друг с другом.</p>
+<h4 id="открытие-файла-из-командной-строки">Открытие файла из командной строки</h4>
+<p>vim — это команда Unix, которая вызывает редактор Vim для обработки имеющегося
+или совершенно нового файла. Синтаксис команды vim выглядит так:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">vim index.html
+</span></span></code></pre></div><p>Также нужно иметь в виду, что следует нажать
+клавишу <code>Enter</code>, чтобы сообщить командной оболочке о завершении выполнения
+команды.</p>
+<p>Если нужно создать и тут же открыть новый файл, следует придумать ему имя и ввести его с помощью команды vi.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">vim style.css
+</span></span></code></pre></div><p>Можно отредактировать любой существующий текстовый файл в
+каталоге, указав его имя. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">ls
+</span></span><span class="line"><span class="cl">index.html style.css main.js
+</span></span><span class="line"><span class="cl">vim index.html
+</span></span></code></pre></div><h4 id="сохранение-и-закрытие-файла">Сохранение и закрытие файла</h4>
+<p>Чтобы в любой момент прекратить работу с файлом, сохранить внесенные
+изменения и вернуться в командную строку нужно набрать <code>ZZ</code> прописными
+буквами.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">:w <span class="p">&lt;</span><span class="nt">--</span>  <span class="na">сохранить</span> <span class="na">файл</span> <span class="na">не</span> <span class="na">закрывая</span> <span class="na">его</span>
+</span></span><span class="line"><span class="cl"><span class="na">:q</span> <span class="err">&lt;</span><span class="na">--</span>  <span class="na">выйти</span><span class="err">,</span> <span class="na">если</span> <span class="na">не</span> <span class="na">было</span> <span class="na">изминений</span> <span class="na">в</span> <span class="na">файле</span>
+</span></span><span class="line"><span class="cl"><span class="na">:wq</span> <span class="err">&lt;</span><span class="na">--</span>  <span class="na">сохранить</span> <span class="na">изминения</span> <span class="na">и</span> <span class="na">выйти</span> 
+</span></span><span class="line"><span class="cl"><span class="na">ZZ</span> <span class="err">&lt;==</span><span class="p">&gt;</span> :wq  <span class="p">&lt;</span><span class="nt">--</span> <span class="na">эквивалентные</span> <span class="na">команды</span> 
+</span></span></code></pre></div><h4 id="закрытие-файла-без-сохранения-изменений">Закрытие файла без сохранения изменений</h4>
+<p>Если нужно стереть все изменения, внесенные во время сеанса работы,
+а затем снова открыть исходный файл, то поможет команда:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">:e! + Enter  
+</span></span></code></pre></div><p>Откроется последняя сохраненная версия файла, тем самым позволив начать
+все заново.</p>
+<p>Если не нужно сохранить изминения и сразу выйти:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">:q! + Enter
+</span></span></code></pre></div><p>Данные команды откатывают назад все изменения, внесенные в буфер с момента
+последнего сохранения файла. Редактор обычно не позволяет удалять изменения.
+Восклицательный знак, добавленный к команде :e или :q, снимает этот запрет,
+и программа выполняет операцию, даже если содержимое буфера было изменено.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

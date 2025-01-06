@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        {{ if not .Params.hideTitle }}
+            <h2 class="title__center">{{ .Title }}</h2>
+        {{ end }}
+
+        {{ if not .Params.hideDate }}
+            <time class="h5 gray title__date">{{ dateFormat "02 January 2006" .Date }}</time>
+        {{ end }}
+
+        <div>{{ .Content }}</div>
+    </div>
+   </div>
+</div>
+{{ end }}

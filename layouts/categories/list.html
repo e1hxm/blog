@@ -1,0 +1,20 @@
+{{ define "main" }}
+<h2>{{ .Title }}</h2>
+<!-- Вывод описания из config.toml -->
+{{ $categoryName := .Title | urlize }}
+{{ with index $.Site.Params.categories $categoryName }}
+  <p>{{ . }}</p>
+{{ end }}
+<div class="list">
+  {{ range .Pages.GroupByDate "2006-01" }}
+  <h3>{{ dateFormat "January 2006" (time (printf "%s-01" .Key)) }}</h3> <!-- Заголовок с месяцем и годом -->
+  <ul>
+      {{ range .Pages }}
+          <li>
+              <time class="gray">{{ dateFormat "02" .Date }}</time> <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </li>
+      {{ end }}
+  </ul>
+  {{ end }}
+</div>
+{{ end }}

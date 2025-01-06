@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свойство Display в CSS</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Свойство Display в CSS</h2>
+        
+
+        
+            <time class="h5 gray title__date">14 December 2024</time>
+        
+
+        <div><p>К каждому HTML элементу на странице соответствует прямоугольная область.
+Такие области называют боксами.</p>
+<p>По умолчанию все HTML элементы обладают определенными боксами.
+Но стандартное отображение элементов бокса всегда можно
+поменять с помощью CSS-свойства Display.</p>
+<p>Тип отображения сразу влияет на две вещи в потоке документа:</p>
+<ul>
+<li>1 На расположение самого бокса.</li>
+<li>2 На расположение дочерних элементов внутри бокса.</li>
+</ul>
+<p>К примеру у элемента <code>li</code> тип отображения по умолчанию
+<code>display: block</code> Это означает что элементы списка отображаются один под другим на странице.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">li</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Если поменять значение на <code>display: inline</code> элементы списка станут отображаться
+друг за другом, как будто слова расположенные в предожении.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">li</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Возможность изменять внешний вид любого элемента
+позволяет вам ориентироваться на их семантическое значение при выборе,
+не беспокоясь о визуальном представлении.
+Внешний вид элементов можно легко настроить.</p>
+<p>В CSS существует четыре основных типа боксов
+<code>box types</code>, которые определяют,
+как элементы отображаются и взаимодействуют с другими элементами:</p>
+<ul>
+<li>1 › Блочный бокс <code>block</code></li>
+<li>2 › Строчный бокс <code>inline</code></li>
+<li>3 › Строчно-блочный <code>inline-block</code></li>
+<li>4 › Флексы и Гриды <code>flexbox</code> и <code>grid</code></li>
+</ul>
+<h3 id="блочный-бокс">Блочный бокс</h3>
+<p>Блочный бокс — это прямоугольная область на странице, представляющая
+собой просто прямоугольник. По умолчанию блочными боксами обладают крупные
+поточные элементы, которые не относятся к фразовым.
+Например, блочными боксами по умолчанию обладают такие элементы, как: <br />
+<code>div</code>, <code>h1</code>, <code>header</code>, <code>footer</code>, <code>section</code>, <code>p</code>, <code>ul</code>, <code>li</code></p>
+<p>Блочные боксы обладают рядом ключевых характеристик поведения:</p>
+<ul>
+<li>
+<p>1 › Блочный бокс обладает «эгоистичным» поведением,
+проявляющимся в принудительном переносе строки до и после него.
+Это означает, что никакой другой элемент не может находиться на той же строке,
+даже если блочный бокс содержит мало контента или занимает лишь небольшую часть строки.
+Он всегда остается единственным на своей строке.</p>
+</li>
+<li>
+<p>2 › На блочные боксы нормально действуют все свойства блочной модели:<br />
+<code>width</code>, <code>height</code>, <code>margin</code>, <code>padding</code></p>
+</li>
+<li>
+<p>3 › По высоте блочные боксы подстраиваются под содержимое,
+сжимаясь в соответствии с его размерами.</p>
+</li>
+</ul>
+<p>Пример поведения блочных боксов на картинке ниже:</p>
+<p><img src="../images/display_1.1.png" alt="Пример поведения блочных боксов"></p>
+<p>Внутри тега <code>body</code> находятся четыре элемента, и все четыре - блочные.</p>
+<p>Видно, что строки текста внутри <code>h2</code> очень короткие,
+и элементы могли бы сжаться под размер текста.
+Однако заголовки растягиваются на всю доступную ширину родительского контейнера,
+за вычетом внутренних отступов.</p>
+<p>Кроме того, если бы заголовки сжались под контент, они поместились бы на одну строку.
+Но каждый из них занимает отдельную строку.</p>
+<h3 id="строчный-бокс">Строчный бокс</h3>
+<p>Строчные боксы — это полная противоположность блочным.
+Если блочный бокс представляет собой крупную неразрывную прямоугольную область,
+то строчный бокс — это фрагмент текста,
+который может быть разорван и располагаться на нескольких строках.</p>
+<p>Элементы, боксы которых по умолчанию являются строчными, — это теги, предназначенные
+для разметки небольших фрагментов текста или словосочетаний: <br />
+<code>a</code>, <code>span</code>, <code>button</code>, <code>strong</code>, <code>em</code>, <code>i</code>, <code>b</code>, <code>time</code></p>
+<p>У строчных боксов несколько отличий от блочных:</p>
+<ul>
+<li>
+<p>1 Строчные боксы ведут себя аналогично тексту, то есть могут
+располагаться как на одной строке, так и на нескольких.
+Если такой бокс не помещается в пределах одной строки,
+он автоматически переносится на следующую.</p>
+</li>
+<li>
+<p>2 Строчные боксы плохо совместимы со свойствами блочной модели.
+Некоторые свойства на них вообще не действуют, а другие — лишь частично.
+Например, отступы в строчных боксах работают только по горизонтали.</p>
+</li>
+<li>
+<p>3 Размеры строчных боксов всегда определяются их содержимым.</p>
+</li>
+</ul>
+<p>В приведённом ниже примере, благодаря подсветке, можно увидеть,
+как ведёт себя строчный бокс, когда он не помещается в строке.</p>
+<p><img src="../images/display_1.2.png" alt="Поведение строчного бокса"></p>
+<p>Строчные боксы — это не только теги <code>em</code> и <code>span</code>, но и обычный текст,
+который не обёрнут во фразовый тег. Такие фрагменты текста автоматически
+оборачиваются в анонимный строчный бокс. В рассмотренном примере три таких анонимных бокса
+(это участки текста между явными строчными боксами, принадлежащими тегам).</p>
+<h3 id="блочно-строчный-бокс">Блочно-строчный бокс</h3>
+<p>Блочно-строчный бокс  — это тип бокса в CSS,
+который сочетает в себе свойства как блочных, так и строчных боксов.</p>
+<p>Элементы с <code>display: inline-block</code> ведут
+себя как строчные элементы,
+то есть они располагаются в строке и могут находиться рядом с
+другими элементами, но при этом могут иметь заданные ширину,
+высоту, отступы и поля, как у блочных элементов. Это позволяет управлять размерами и
+расположением элементов, сохраняя их способность располагаться в строке.</p>
+<h3 id="флексбоксы-и-гриды">Флексбоксы и Гриды</h3>
+<p>Флексы с Гридами — основной инструмент построения крупных сеток и микросеток.</p>
+<p>При использовании флексов важно учитывать несколько особенностей, которые следует иметь в виду:</p>
+<ul>
+<li>
+<p>Все блоки легко становятся &ldquo;гибкими&rdquo; благодаря названию <code>flex</code>. Элементы могут сжиматься и
+растягиваться в соответствии с заданными правилами, занимая необходимое пространство.</p>
+</li>
+<li>
+<p>Выравнивание по вертикали, горизонтали и базовой линии текста работает отлично.</p>
+</li>
+<li>
+<p>Расположение элементов в HTML не является определяющим. Его можно изменить с помощью CSS.</p>
+</li>
+<li>
+<p>Элементы могут автоматически формировать
+несколько строк или столбцов, заполняя всё доступное пространство.</p>
+</li>
+<li>
+<p>Синтаксис CSS-правил очень прост и осваивается довольно быстро.</p>
+</li>
+</ul>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

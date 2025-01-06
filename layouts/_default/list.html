@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="list">
+    {{ range .Pages.GroupByDate "2006-01" }}
+    <h3>{{ dateFormat "January 2006" (time (printf "%s-01" .Key)) }}</h3> <!-- Заголовок с месяцем и годом -->
+    <ul>
+        {{ range .Pages }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
+{{ end }}

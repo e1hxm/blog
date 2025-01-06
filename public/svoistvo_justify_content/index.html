@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свойство justify-content</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Свойство justify-content</h2>
+        
+
+        
+            <time class="h5 gray title__date">21 November 2024</time>
+        
+
+        <div><p>
+                            Лекция от HTMLAcademy про justify-content
+                        </p>
+                        <p>
+                            В Flexbox есть свойства justify-content,
+                            которые позволяют равномерно
+                            распределять элементы вдоль главной оси:
+                        </p>
+                        <ul>
+                            <li>
+                                'space-between' — это значение,
+                                при котором расстояния между
+                                соседними элементами равны,
+                                а отступы между элементами и
+                                краями контейнера отсутствуют.
+                            </li>
+                            <li>
+                                'space-around' — это значение,
+                                при котором расстояния между
+                                соседними элементами равны,
+                                а отступы между элементами и
+                                краями контейнера составляют половину
+                                расстояния между соседними элементами.
+                            </li>
+                            <li>
+                                'space-evenly' — это значение,
+                                при котором расстояния
+                                между всеми элементами,
+                                включая края контейнера, равны.
+                            </li>
+                        </ul>
+                        <p>
+                            Свойство 'justify-content' контролирует
+                            распределение элементов вдоль главной оси и
+                            принимает пять различных значений:
+                        </p>
+                        <ul>
+                            <li>
+                                Значение по умолчанию "flex-start"
+                                Располгает элементы в начале оси.
+                            </li>
+                        </ul>
+                            <pre><code>justify-content: flex-start;  </code></pre>
+                            <ul>
+                                <li>
+                                    <p>
+                                        "flex-end" распологает
+                                        элементы в конце главной оси.
+                                    </p>
+                                    <p>
+                                        Нужно обратить внимание, что
+                                        "justify-content: flex-end" не изменяет
+                                        порядок элементов,
+                                        в отличие от "flex-direction: row-reverse".
+                                    </p>
+                                </li>
+                            </ul>
+                            <pre><code>justify-content: flex-end;  </code></pre>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>
+                                    "space-between" расстояния между
+                                    соседними элементами равны, отступы от
+                                    краёв контейнера отсутствуют.
+                                </p>
+                            </li>
+                        </ul>
+                        <pre><code>justify-content: space-between;  </code></pre>
+                        <ul>
+                            <li>
+                                <p>
+                                    "space-around" расстояния между соседними
+                                    элементами равны, отступы от краёв
+                                    контейнера равны половине
+                                    расстояния между элементами.
+                                </p>
+                            </li>
+                        </ul>
+                        <pre><code>justify-content: space-around;  </code></pre>
+                        <ul>
+                            <li>
+                                <p>
+                                    "space-evenly" Расстояния между соседними
+                                    элементами и краями контейнера равны.
+                                </p>
+                            </li>
+                        </ul>
+                        <pre><code>justify-content: space-evenly;  </code></pre></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

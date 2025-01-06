@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Типы данных в JavaScript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Типы данных в JavaScript</h2>
+        
+
+        
+            <time class="h5 gray title__date">12 November 2024</time>
+        
+
+        <div><p>Task в RS School по JavaScript</p>
+<p>В JavaScript каждое значение всегда относится к определенному типу данных, например
+как строка или число.</p>
+<p>Существует всего 8 типов данных.</p>
+<p>Переменная может хранить в себе любой тип данных.</p>
+<p>В одном участке кода в переменной может храниться строка, а другой уже число.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">some</span> <span class="o">=</span> <span class="s1">&#39;123&#39;</span><span class="p">;</span> <span class="c1">// Строка   
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">some</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span> <span class="c1">// Число
+</span></span></span></code></pre></div><p>Из за такой особенности язык программирования JavaScript называется &ldquo;динамически
+типизированным&rdquo;.</p>
+<p>Это означает, что хотя типы данных существуют, переменные не привязаны к какому-либо
+конкретному типу.</p>
+<h3 id="число-или-number">Число или number</h3>
+<p>Числовой тип данных представляет как целые числа так и числа с плавающей точкой</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span> <span class="c1">// Простое число  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">number</span> <span class="o">=</span> <span class="mf">123.456</span><span class="p">;</span> <span class="c1">// Число с плавающей точкой
+</span></span></span></code></pre></div><p>В JavaScript доступно множество операций для работы с числами, таких как умножение
+&ldquo;*&rdquo;, деление &ldquo;/&rdquo;, сложение &ldquo;+&rdquo;, вычитание &ldquo;-&rdquo; и другие.</p>
+<p>Помимо обычных чисел также существуют так называемые &ldquo;специальные числовые значения&rdquo;,
+такие как &ldquo;Infinity&rdquo;, &ldquo;-Infinity&rdquo; и &ldquo;NaN&rdquo;, которые относятся к типу данных чисел.</p>
+<p class="gray">NaN - расшифровывается как - Not a number</p>
+<p>Infinity представляет математическую бесконечность. Это специальное значение, которое
+превосходит любое число</p>
+<p>Значение &ldquo;Infinity&rdquo; можно получить есть попытаться что то поделить на ноль</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// Infinity
+</span></span></span></code></pre></div><p>Либо вызвать его явно</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">infinity</span><span class="p">)</span> <span class="c1">// Infinity
+</span></span></span></code></pre></div><p>NaN обозначает вычислительную ошибку. Это результат некорректной или неопределенной
+математической операции, например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;не число&#34;</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// NaN, такое деление является ошибкой
+</span></span></span></code></pre></div><p>Значение NaN обладает свойством «прилипания». Любая математическая операция с NaN
+также возвращает NaN:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="kc">NaN</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">);</span> <span class="c1">// NaN    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="mi">3</span> <span class="o">*</span> <span class="kc">NaN</span> <span class="p">);</span> <span class="c1">// NaN   
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="s2">&#34;не число&#34;</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span> <span class="p">);</span> <span class="c1">// NaN 
+</span></span></span></code></pre></div><p>Если NaN присутствует в математическом выражении, оно распространяется на весь
+результат.</p>
+<p class="gray">
+    Существует только одно исключение: <br />
+    NaN ** 0 равно 1
+</p>
+<h3 id="bigint">BigInt</h3>
+<p>В JavaScript тип number не может безопасно обрабатывать числа, превышающие (2^53 - 1)
+(т.е. 9007199254740991) или меньшие, чем -(2^53 - 1) для отрицательных чисел.</p>
+<p>Технически, тип number способен хранить очень большие целые числа (до
+1.7976931348623157 * 10^308), но за пределами безопасного диапазона целых чисел ±(2^53- 1) возникает ошибка точности, так как не все цифры могут уместиться в фиксированную
+64-битную память. В результате, можно хранить лишь &ldquo;приблизительное&rdquo; значение.</p>
+<p>Например эти два разных вычисления дадут одинаковый результат.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">9007199254740991</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// 9007199254740992    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">9007199254740991</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// 9007199254740992
+</span></span></span></code></pre></div><p class="gray">
+    В данный момент BigInt поддерживается только в браузерах Firefox, Chrome, Edge и
+    Safari, но не поддерживается в IE.
+</p>
+<h3 id="строка-или-string">Строка или string</h3>
+<p>В JavaScript строка (string) должна быть заключена в кавычки.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&#34;Привет, друг!&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">str2</span> <span class="o">=</span> <span class="s1">&#39;Одинарные кавычки тоже подойдут&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">phrase</span> <span class="o">=</span> <span class="sb">`Обратные кавычки позволяют встраивать переменные </span><span class="si">${</span><span class="nx">str</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>   
+</span></span></code></pre></div><p>В JavaScript есть 3 типа ковычек:</p>
+<ul>
+<li>1 Одинарные ковычки: ''</li>
+<li>2 Двойные ковычки: &quot;&quot;</li>
+<li>3 Обратные ковычки: ``</li>
+</ul>
+<p>Двойные и одинарные кавычки считаются &ldquo;простыми&rdquo; и не имеют различий.</p>
+<p>Обратные кавычки, однако, обладают расширенной функциональностью. Они позволяют
+встраивать выражения внутри строки, заключая их в ${…}.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Dxrkd3v&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Вставим переменную
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="sb">`Привет, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span> <span class="p">);</span> <span class="c1">// Привет, Dxrkd3v!    
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl"><span class="c1">// Вставим выражение
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="sb">`результат: </span><span class="si">${</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="si">}</span><span class="sb">`</span> <span class="p">);</span> <span class="c1">// результат: 3
+</span></span></span></code></pre></div><p class="gray">
+    Обратые ковычки еще называются backtick и исользуются для интерполяции
+</p>
+<h3 id="boolean-или-булевый-логический-тип">Boolean или Булевый (логический) тип</h3>
+<p>Булевый тип (boolean) может принимать только два значения: true (истина) и false (ложь).</p>
+<p>Этот тип обычно используется для хранения значений да/нет: true означает &ldquo;да, верно&rdquo;,
+а false означает &ldquo;нет, неверно&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">nameFieldChecked</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// да, поле отмечено
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">ageFieldChecked</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">// нет, поле не отмечено
+</span></span></span></code></pre></div><p>Булевый тип данных также может быть результатом операций сравнения:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">isGreater</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">alert</span><span class="p">(</span> <span class="nx">isGreater</span> <span class="p">);</span> <span class="c1">// true (результатом сравнения будет &#34;да&#34;)
+</span></span></span></code></pre></div><p class="gray">Тема про булевый тип данных будет пройдена позже более поробно</p>
+<h3 id="тип-данных-null">Тип данных null</h3>
+<p>Специальное значение null не относится ни к одному из вышеперечисленных типов.</p>
+<p>Оно образует отдельный тип, включающий только значение null.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span></code></pre></div><p>В JavaScript null не является &ldquo;ссылкой на несуществующий объект&rdquo; или &ldquo;нулевым
+указателем&rdquo;, как в некоторых других языках.</p>
+<p>Это просто специальное значение, которое означает &ldquo;ничего&rdquo;, &ldquo;пусто&rdquo; или
+&ldquo;значение неизвестно&rdquo;.</p>
+<h3 id="значение-undefined">Значение «undefined»</h3>
+<p>Специальное значение undefined создает тип из самого себя точно так же как и null.</p>
+<p>Оно указывает на то, что &lsquo;значение не было присвоено&rsquo;.</p>
+<p>Если переменная объявлена, но ей не присвоено никакого значения, то её
+значением будет undefined:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">age</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span> <span class="c1">// выведет &#34;undefined&#34;
+</span></span></span></code></pre></div><p>Так же можно принудительно присвоить значение undefined любой переменной</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">age</span> <span class="o">=</span> <span class="mi">35</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// меняем значение на undefined
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">age</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span> <span class="c1">// &#34;undefined&#34;
+</span></span></span></code></pre></div><p>Однако такой подход не рекомендуется.</p>
+<p>Обычно null используется для присвоения переменной &ldquo;пустого&rdquo; или &ldquo;неизвестного&rdquo; значения.</p>
+<p>В то время как undefined – для проверки, была ли переменная инициализирована.</p>
+<h3 id="тип-данных-объект-или-object">Тип данных Объект или object</h3>
+<p>В отличие от остальных типов данных object является не примитивным типом.</p>
+<p>Все остальные называются &ldquo;приминивными&rdquo; потому что их значениями могут быть только
+простыми данными, например строки или числа и т.д.</p>
+<p>В объектах хранятся более сложные структуры например как коллекции данных.</p>
+<p>Изучение объектов пребует особого изучения поэтому тема быдет пройдена позже в новой
+отдельной лекции.</p>
+<p>Синтаксис объектов для примера</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>     <span class="c1">// объект user
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span>  <span class="c1">// под ключом &#34;name&#34; хранится значение &#34;John&#34;  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">age</span><span class="o">:</span> <span class="mi">30</span>        <span class="c1">// под ключом &#34;age&#34; хранится значение 30
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">};</span>
+</span></span></code></pre></div><p>На этом лекция заканчивается.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

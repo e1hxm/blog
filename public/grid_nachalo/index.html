@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid начало</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">Dxrkd3v</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Grid начало</h2>
+        
+
+        
+            <time class="h5 gray title__date">12 October 2024</time>
+        
+
+        <div><p>
+                            Лекция в HTMLAcademy про Grid
+                        </p>
+                        <p>
+                            Бокс - контейнер, 
+                            который относится к типу grid, 
+                            содержит дочерние элементы, 
+                            называемые грид-элементами. 
+                            Несмотря на то что грид-контейнер 
+                            выглядит как обычный блочный элемент 
+                            для других элементов, таких как основное 
+                            содержимое, грид-элементы внутри 
+                            него ведут себя по-другому. 
+                        </p>
+                        <p>Например, даже строчные элементы 
+                            начинают занимать всю доступную им область, 
+                            а внешние отступы у элементов в грид-контейнере 
+                            также ведут себя иначе.
+                        </p>
+                        <p>
+                            По умолчанию грид-контейнер 
+                            является одноколоночным. 
+                            Чтобы изменить это, необходимо 
+                            описать шаблон грид-контейнера. 
+                            Для этого используется 
+                            свойство grid-template-columns.
+                        </p>
+                        <pre>
+<code>.grid-container {
+  display: grid;
+  grid-template-columns: 100px 150px 80px;
+}</code></pre>
+                        <p>
+                            Кроме 'grid-template-columns', 
+                            для описания шаблона грид-контейнера 
+                            можно использовать другие свойства, 
+                            такие как 'grid-template-rows' 
+                            и 'grid-template-areas'.
+                        </p>
+                        <p>
+                            Если количество элементов в 
+                            грид-контейнере превышает количество колонок, 
+                            дополнительные элементы автоматически 
+                            переносятся на новую строку (ряд) 
+                            и также распределяются по колонкам.
+                        </p>
+                        <h3>Доли в гридах 'fr'</h3>
+                        <p>
+                            Единица измерения fr 
+                            (сокращение от "fraction" — "доля") 
+                            представляет собой долю доступного 
+                            пространства в грид-контейнере.
+                        </p>
+                        <pre>
+<code>.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}</code></pre>
+                        <p>
+                            В данном примере грид-контейнер 
+                            будет разделен на три равные части. 
+                            Первая колонка займет одну часть 
+                            ширины грид-контейнера, а вторая колонка — две части. 
+                            Независимо от изменения ширины контейнера, 
+                            пропорции колонок всегда останутся неизменными.
+                        </p>
+                        <p>
+                            Единица fr может использоваться 
+                            в сочетании с пикселями. Например, 
+                            можно создать сетку, где правая 
+                            колонка имеет фиксированную ширину 200 пикселей, 
+                            а левая занимает все оставшееся пространство:
+                        </p>
+                        <pre>
+<code>.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+}</code></pre>
+                        <h3>Свойство gap</h3>
+                        <p>
+                            Свойство 'gap' определяет расстояние 
+                            между грид-элементами, но не влияет на расстояние между 
+                            элементами и границами контейнера. Вот сравнение:
+                        </p>
+                        <p>
+                            Свойство 'gap' применяется к 
+                            грид-контейнеру, в то время как 'margin' — 
+                            к элементам внутри него.
+                        </p>
+                        <p>
+                            С помощью gap можно задавать 
+                            отступы отдельно по вертикали 
+                            и горизонтали: 'column-gap' 
+                            определяет расстояние между колонками, 
+                            а 'row-gap' — между рядами.
+                        </p>
+                        <pre>
+<code>.grid-container {
+  column-gap: 15px;
+  row-gap: 5px;
+}</code></pre>
+                        <p>
+                            Если отступы одинаковы, 
+                            можно использовать составное свойство
+                            'gap' для удобства:
+                        </p>
+<pre><code>.grid-container {
+  gap: 20px;
+}</code></pre></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>
