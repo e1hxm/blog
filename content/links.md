@@ -37,10 +37,14 @@ hideDate = true
 Лекции из Университета
 </p>
 <p>
-🇬🇧 <a href="/english/">English</a> &rsaquo; Лекции по английскому языку
+<a href="/english/">English</a> &rsaquo; Лекции по английскому языку
 </p>
 <p>
-💸 <a href="/economy/">Economy</a> &rsaquo; Лекции по экономике
+<a href="/economy/">Economy</a> &rsaquo; Лекции по экономике
+</p>
+<p>
+<a href="/tis/">TIS</a> &rsaquo; Лекции по теории информационных
+систем
 </p>
 <h3 class="mt2" style="padding-top: 20px;">langs</h3>
 <p>
@@ -62,6 +66,9 @@ Phrases</a> in English &rsaquo; Слова и фразы на английско
 </p>
 <p>
 🇩🇪 <a href="/worten_deutsch/">Wörter</a> und <a href="/phrasen_deutsch/">Phrasen</a> auf Deutsch &rsaquo; Слова и фразы на немецком языке
+</p>
+<p>
+🇹🇷 <a href="/kelimeler_turkey/">Kelimeler</a> ve <a href="/cumleler_turkey/">Сümleler</a> Türkçe dilinde &rsaquo; Слова и фразы на турецком языке
 </p>
 <h3 class="mt2" style="padding-top: 20px;">links</h3>
 <p>
