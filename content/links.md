@@ -48,37 +48,21 @@ hideDate = true
 эффективного усвоения и закрепления в памяти
 </p>
 <p>
-🇬🇧 <a href="/english_words/">Words in English</a> &rsaquo; Слова на английском языке
+🇬🇧 <a href="/english_words/">Words</a> and <a href="/english_phrases/">
+Phrases</a> in English &rsaquo; Слова и фразы на английском языке
 </p>
 <p>
-🇬🇧 <a href="/english_phrases/">Phrases in English</a> &rsaquo; Фразы на английском языке
+🇪🇸 <a href="/espanol_palabras/">Palabras</a> y esas <a href="/espanol_frases/">Frases</a> en Español &rsaquo; Слова и фразы на испанском языке
 </p>
 <p>
-🇪🇸 <a href="/espanol_palabras/">Palabras en español</a> &rsaquo; Слова на испанском языке
+🇮🇹 <a href="/parole_italiano/">Parole</a> e <a href="/frasi_italiano/">Frasi</a> in Italiano &rsaquo; Слова и фразы на итальянском языке
 </p>
 <p>
-🇪🇸 <a href="/espanol_frases/">Frases en español</a> &rsaquo; Фразы на испанском языке
+🇫🇷 <a href="/france_mots/">Mots</a> et <a href="/france_phrases/">Phrases</a> sur Français &rsaquo; Слова и фразы на французском языке
 </p>
 <p>
-🇮🇹 <a href="/parole_italiano/">Parole in italiano</a> &rsaquo; Слова на итальянском языке
+🇩🇪 <a href="/worten_deutsch/">Wörter</a> und <a href="/phrasen_deutsch/">Phrasen</a> auf Deutsch &rsaquo; Слова и фразы на немецком языке
 </p>
-<p>
-🇮🇹 <a href="/frasi_italiano/">Frasi in italiano</a> &rsaquo; Фразы на итальянском языке
-</p>
-<p>
-🇫🇷 <a href="/france_mots/">Mots en français</a> &rsaquo; Слова на французском языке
-</p>
-<p>
-🇫🇷 <a href="/france_phrases/">Phrases en français</a> &rsaquo; Фразы на французском языке
-</p>
-<p>
-🇩🇪 <a href="/worten_deutsch/">Wörter auf Deutsch</a> &rsaquo; Слова на немецком языке
-</p>
-<p>
-🇩🇪 <a href="/phrasen_deutsch/">Phrasen auf Deutsch</a> &rsaquo; Фразы на немецком языке
-</p>
-
-
 <h3 class="mt2" style="padding-top: 20px;">links</h3>
 <p>
 Полезные ссылки
