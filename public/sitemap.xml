@@ -20,7 +20,28 @@
     <loc>http://localhost:1313/espanol_palabras/</loc>
     <lastmod>2025-01-05T18:53:24+03:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/parole_italiano/</loc>
+    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/worten_deutsch/</loc>
+    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/france_mots/</loc>
+    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/english_phrases/</loc>
+    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/espanol_frases/</loc>
+    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/frasi_italiano/</loc>
+    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/phrasen_deutsch/</loc>
+    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/france_phrases/</loc>
     <lastmod>2025-01-05T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/vim/</loc>

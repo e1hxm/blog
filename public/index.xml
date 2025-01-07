@@ -6,8 +6,22 @@
     <description>Recent content on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Sun, 05 Jan 2025 18:53:24 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jan 2025 19:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Функция main() на Си</title>
+      <link>http://localhost:1313/main_in_c/</link>
+      <pubDate>Mon, 06 Jan 2025 19:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/main_in_c/</guid>
+      <description>&lt;p&gt;Самая важная часть программы, написанной на языке Си —&#xA;это функция main()&lt;/p&gt;&#xA;&lt;p&gt;На Си существует два вида функций&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Включенные в сам язык&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Созданные самостоятельно&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;В каждой программе обязательно присутствие функции main()&lt;/p&gt;&#xA;&lt;p&gt;От обычной команды, функцию отличает наличие скобок, например&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;calcIt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Команды идут без скобок&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;return&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;while&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;int&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;iffloat&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Если имя функции состоит из нескольких слов&#xA;то следует их прописывать в формате camelCase&lt;/p&gt;&#xA;&lt;p&gt;Например&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;doReportPrint&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;calcIt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Имя функции main(), а также имена практически всех встроенных&#xA;функций С должны содержать только буквы нижнего регистра.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello, World! на Си</title>
+      <link>http://localhost:1313/hello_world_c/</link>
+      <pubDate>Mon, 06 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/hello_world_c/</guid>
+      <description>&lt;p&gt;Короткий кусок кода из учебника&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Программирование на С для начинающих&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Пример вывода простого текста в консоль&#xA;с помощью printf()&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Интересно что делают &lt;code&gt;&amp;lt;stdio.h&amp;gt;&lt;/code&gt; &lt;code&gt;include&lt;/code&gt; и &lt;code&gt;return 0&lt;/code&gt; тем более возвращает &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Запустил через &lt;code&gt;code runner&lt;/code&gt; вроде заработало,&#xA;хотя и с ошибками в функции &lt;code&gt;main()&lt;/code&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tempCodeRunnerFile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;warning&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;defaults&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;‘&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Wimplicit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;^~~~&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Hello&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;World&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Done&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;exited&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.097&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;seconds&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
     <item>
       <title>Английский алфавит</title>
       <link>http://localhost:1313/english_alphabet/</link>
@@ -30,11 +44,60 @@
       <description>&lt;h3 id=&#34;palabras-en-español&#34;&gt;Palabras en español&lt;/h3&gt;&#xA;&lt;p&gt;Lista de palabras nuevas para mí en español con traducción, que agrego a diario&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Список новых слов для меня на Итальянском языке</title>
+      <link>http://localhost:1313/parole_italiano/</link>
+      <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/parole_italiano/</guid>
+      <description>&lt;h3 id=&#34;parole-in-italiano&#34;&gt;Parole in italiano&lt;/h3&gt;&#xA;&lt;p&gt;Una lista di parole nuove per me in italiano con traduzione, che aggiungo ogni giorno&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Список новых слов для меня на Немецком языке</title>
+      <link>http://localhost:1313/worten_deutsch/</link>
+      <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/worten_deutsch/</guid>
+      <description>&lt;h3 id=&#34;wörter-auf-deutsch&#34;&gt;Wörter auf Deutsch&lt;/h3&gt;&#xA;&lt;p&gt;Eine Liste mit für mich neuen Wörtern auf Deutsch mit Übersetzung, die ich jeden Tag hinzufüge&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Список новых слов для меня на Французском языке</title>
+      <link>http://localhost:1313/france_mots/</link>
+      <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/france_mots/</guid>
+      <description>&lt;h3 id=&#34;mots-en-français&#34;&gt;Mots en Français&lt;/h3&gt;&#xA;&lt;p&gt;Liste de mots nouveaux pour moi en français avec traduction, que j&amp;rsquo;ajoute chaque jour&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Список новых фраз для меня на Английском языке</title>
       <link>http://localhost:1313/english_phrases/</link>
       <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
       <guid>http://localhost:1313/english_phrases/</guid>
       <description>&lt;h3 id=&#34;phrases-in-english&#34;&gt;Phrases in English&lt;/h3&gt;&#xA;&lt;p&gt;List of new phrases for me in English with translation, which I add to every day&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Список новых фраз для меня на Испанском языке</title>
+      <link>http://localhost:1313/espanol_frases/</link>
+      <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/espanol_frases/</guid>
+      <description>&lt;h3 id=&#34;frases-en-español&#34;&gt;Frases en español&lt;/h3&gt;&#xA;&lt;p&gt;Lista de frases nuevas para mí en español con traducción, que agrego a diario&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Список новых фраз для меня на Итальянском языке</title>
+      <link>http://localhost:1313/frasi_italiano/</link>
+      <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/frasi_italiano/</guid>
+      <description>&lt;h3 id=&#34;frasi-in-italiano&#34;&gt;Frasi in italiano&lt;/h3&gt;&#xA;&lt;p&gt;Una lista di frasi nuove per me in italiano con traduzione, che aggiungo ogni giorno&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Список новых фраз для меня на Немецком языке</title>
+      <link>http://localhost:1313/phrasen_deutsch/</link>
+      <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/phrasen_deutsch/</guid>
+      <description>&lt;h3 id=&#34;phrasen-auf-deutsch&#34;&gt;Phrasen auf Deutsch&lt;/h3&gt;&#xA;&lt;p&gt;Liste der für mich neuen Sätze auf Deutsch mit Übersetzung, die ich jeden Tag hinzufüge&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Список новых фраз для меня на Французском языке</title>
+      <link>http://localhost:1313/france_phrases/</link>
+      <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/france_phrases/</guid>
+      <description>&lt;h3 id=&#34;phrases-en-français&#34;&gt;Phrases en Français&lt;/h3&gt;&#xA;&lt;p&gt;Liste de phrases nouveaux pour moi en français avec traduction, que j&amp;rsquo;ajoute chaque jour&lt;/p&gt;</description>
     </item>
     <item>
       <title>Команды из VimTutor</title>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World! на Си</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Hello, World! на Си</h2>
+        
+
+        
+            <time class="h5 gray title__date">06 January 2025</time>
+        
+
+        <div><p>Короткий кусок кода из учебника</p>
+<blockquote>
+<p>&ldquo;Программирование на С для начинающих&rdquo;</p>
+</blockquote>
+<p>Пример вывода простого текста в консоль
+с помощью printf()</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello, World!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Интересно что делают <code>&lt;stdio.h&gt;</code> <code>include</code> и <code>return 0</code> тем более возвращает <code>0</code>.</p>
+<p>Запустил через <code>code runner</code> вроде заработало,
+хотя и с ошибками в функции <code>main()</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">tempCodeRunnerFile</span><span class="p">.</span><span class="nl">c</span><span class="p">:</span><span class="mi">2</span><span class="o">:</span><span class="mi">1</span><span class="o">:</span> <span class="nl">warning</span><span class="p">:</span> <span class="k">return</span> <span class="n">type</span> <span class="n">defaults</span> <span class="n">to</span> <span class="err">‘</span><span class="kt">int</span><span class="err">’</span> <span class="p">[</span><span class="o">-</span><span class="n">Wimplicit</span><span class="o">-</span><span class="kt">int</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span> <span class="o">|</span> <span class="nf">main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span> <span class="o">^~~~</span>
+</span></span><span class="line"><span class="cl"><span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">Done</span><span class="p">]</span> <span class="n">exited</span> <span class="n">with</span> <span class="n">code</span><span class="o">=</span><span class="mi">0</span> <span class="n">in</span> <span class="mf">0.097</span> <span class="n">seconds</span>
+</span></span></code></pre></div></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>
