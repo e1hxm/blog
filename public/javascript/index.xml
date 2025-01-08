@@ -85,5 +85,12 @@
       <guid>http://localhost:1313/logicheskie_operatory_v_javascript/</guid>
       <description>&lt;p&gt;Лекция про логические операторы c Udemy&lt;/p&gt;&#xA;            &lt;p&gt;&#xA;              Логические выражения на языке JavaScript могут быть объединены, для использования в&#xA;              качестве проверки, например паролей. Возьмём к примеру проверку пароля при&#xA;              регистрации. Если мы хотим чтобы пароль был не менее 8 символов и более 20 то функция&#xA;              выполняющая такую проверку будет такой&#xA;            &lt;/p&gt;&#xA;            &lt;pre&gt;&lt;code&gt;const isStrongPassword = (password) =&gt; {&#xA;const length = password.length;&#xA;  return length &gt; 8 &amp;&amp; length &lt; 20;&#xA;};&#xA;isStrongPassword(&#39;qwerty&#39;); // false&#xA;isStrongPassword(&#39;qwerty1234&#39;); // true&#xA;isStrongPassword(&#39;zxcvbnmasdfghjkqwertyui&#39;); // false&lt;/code&gt;&lt;/pre&gt;&#xA;            &lt;p&gt;&#xA;              &amp;&amp; - означает «И». Все выражение считается истинным только в том случае, когда истинен&#xA;              каждый операнд — и слева и справа. Иными словами, &amp;&amp; означает «и то, и другое».&#xA;            &lt;/p&gt;</description>
     </item>
+    <item>
+      <title>alert() promt() confirm() в JavaScript</title>
+      <link>http://localhost:1313/alert_promt_confirm_javascript/</link>
+      <pubDate>Mon, 08 Jan 2024 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/alert_promt_confirm_javascript/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

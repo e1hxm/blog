@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Promt и Confirm в JavaScript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Alert, Promt и Confirm в JavaScript</h2>
+        
+
+        
+            <time class="h5 gray title__date">08 January 2025</time>
+        
+
+        <div><p>Простое взаимодействие сайта с пользователями через
+команды <code>alert()</code>, <code>promt()</code> и <code>confirm()</code></p>
+<p>Хотя данные команды не используются
+в реальных проектах, все равно следует
+изучить их.</p>
+<p>Все три команды напоминают работу
+через <code>console log()</code></p>
+<h4 id="alert">Alert()</h4>
+<p>Синтаксис команды очень простой
+и само действие тоже.
+<code>alert()</code> создает модальное окно на странице с текстом
+который можно прописать заранее.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello, friends!&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>Вызванное модальное окно через <code>alert()</code>
+невозможно застилизовать.</p>
+<p>Команда <code>alert()</code> используется, чтобы
+предупредить пользователя о чем то очень важном.
+Например, если пользователь начинает покидать
+страницу, через модальное окно обычно
+сообщается, что введенная им информация будет
+потеряна если он закроет страницу.</p>
+<h4 id="confirm">Confirm()</h4>
+<p>Команда существует для того, если нужно о чем-то
+спросить пользователя. Например, &ldquo;Вам есть 18?&rdquo;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;Вам есть 18?&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span></span></code></pre></div><p>Вызывает так же модальное окно,
+но уже с выбором &ldquo;Ок&rdquo;, &ldquo;Отмена&rdquo;.</p>
+<p>Если нажать &ldquo;Ок&rdquo; - запишет в переменную <code>result</code> значение <code>true</code></p>
+<p>Если нажать &ldquo;Отмена&rdquo; - запишет в переменную <code>result</code> значение <code>false</code></p>
+<h4 id="promt">Promt()</h4>
+<p>Команду <code>Promt()</code> используют если нужно что-то спросить
+у пользователя. Она содержит вопрос, и так же можно
+прописать ответ по умолчанию, как <code>placeholder</code>
+в формах HTML.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">answer</span> <span class="o">=</span> <span class="nx">promt</span><span class="p">(</span><span class="s1">&#39;Сколько вам лет?&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">answer</span><span class="p">);</span>
+</span></span></code></pre></div><p>Нужно запомнить, что любой ответ возвращенный
+от пользователя, в переменной <code>answer</code>
+будет <code>string</code></p>
+<p>Создадим массив данных и запишем все ответы от пользователя.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">answers</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">answers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nx">promt</span><span class="p">(</span><span class="s1">&#39;Как ваше имя?&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">answers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">promt</span><span class="p">(</span><span class="s1">&#39;Как ваша фамилия?&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">answers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nx">promt</span><span class="p">(</span><span class="s1">&#39;Сколько вам лет?&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">answers</span><span class="p">)</span>
+</span></span></code></pre></div><p>Команды <code>alert</code>, <code>promt</code> и <code>confirm</code> блокируют
+отрисовку страницы до того момента, пока они не
+будут выполнены.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>
