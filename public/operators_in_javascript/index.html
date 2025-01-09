@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арифметические операторы в JavaScript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Арифметические операторы в JavaScript</h2>
+        
+
+        
+            <time class="h5 gray title__date">09 January 2025</time>
+        
+
+        <div><h4 id="арифметические-операторы">Арифметические операторы</h4>
+<p>Для выполнения математических операций:</p>
+<p><code>+</code> — сложение</p>
+<p><code>-</code> — вычитание</p>
+<p><code>*</code> — умножение</p>
+<p><code>/</code> — деление</p>
+<p><code>%</code> — остаток от деления</p>
+<p><code>**</code> — возведение в степень (ES6)</p>
+<p><code>++</code> — инкремент (увеличение на 1)</p>
+<p><code>--</code> — декремент (уменьшение на 1)</p>
+<p class='gray'>
+Унарный плюс - это оператор, который используется для преобразования значения в число. 
+</p>
+<p>Унарный плюс пытается преобразовать значение, стоящее после него, в числовой тип (number). Это полезно, когда нужно явно привести строку или другой тип данных к числу.</p>
+<p>Он называется &ldquo;унарным&rdquo;, потому что применяется к одному операнду (в отличие от бинарного плюса, который работает с двумя операндами, например, <code>a + b</code>)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="s2">&#34;42&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">num</span> <span class="o">=</span> <span class="o">+</span><span class="nx">str</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span> <span class="c1">// 42 (число)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">num</span><span class="p">);</span> <span class="c1">// &#34;number&#34;
+</span></span></span></code></pre></div><h4 id="инкремент-и-декремент">Инкремент и Декремент</h4>
+<p>Инкремент (++) и декремент (&ndash;)  это унарные операторы в JavaScript, которые используются для увеличения или уменьшения значения переменной на 1.</p>
+<h4 id="инкремент-">Инкремент ++</h4>
+<p>Префиксная форма (++x):</p>
+<blockquote>
+<p>Увеличивает значение переменной на 1.</p>
+</blockquote>
+<blockquote>
+<p>Возвращает новое значение (после увеличения).</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="o">++</span><span class="nx">x</span><span class="p">;</span> <span class="c1">// x увеличивается на 1, затем значение присваивается y
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 6
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span> <span class="c1">// 6
+</span></span></span></code></pre></div><p>Постфиксная форма (x++):</p>
+<blockquote>
+<p>Увеличивает значение переменной на 1.</p>
+</blockquote>
+<blockquote>
+<p>Возвращает старое значение (до увеличения).</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">x</span><span class="o">++</span><span class="p">;</span> <span class="c1">// y получает значение x (5), затем x увеличивается на 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 6
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span> <span class="c1">// 5
+</span></span></span></code></pre></div><h4 id="декремент---">Декремент &ndash;</h4>
+<p>Оператор декремента уменьшает значение переменной на 1.</p>
+<p>Префиксная форма (&ndash;x):</p>
+<blockquote>
+<p>Уменьшает значение переменной на 1.</p>
+</blockquote>
+<blockquote>
+<p>Возвращает новое значение (после уменьшения).</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="o">--</span><span class="nx">x</span><span class="p">;</span> <span class="c1">// x уменьшается на 1, затем значение присваивается y
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span> <span class="c1">// 4
+</span></span></span></code></pre></div><p>Постфиксная форма (x&ndash;):</p>
+<blockquote>
+<p>Уменьшает значение переменной на 1.</p>
+</blockquote>
+<blockquote>
+<p>Возвращает старое значение (до уменьшения).</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">x</span><span class="o">--</span><span class="p">;</span> <span class="c1">// y получает значение x (5), затем x уменьшается на 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// 4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">y</span><span class="p">);</span> <span class="c1">// 5
+</span></span></span></code></pre></div></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -6,8 +6,15 @@
     <description>Recent content in Categories on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Tue, 07 Jan 2025 18:53:24 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2025 18:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript</title>
+      <link>http://localhost:1313/javascript/</link>
+      <pubDate>Thu, 09 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/javascript/</guid>
+      <description></description>
+    </item>
     <item>
       <title>English</title>
       <link>http://localhost:1313/english/</link>
@@ -69,13 +76,6 @@
       <link>http://localhost:1313/html/</link>
       <pubDate>Wed, 27 Nov 2024 18:53:24 +0300</pubDate>
       <guid>http://localhost:1313/html/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Javascript</title>
-      <link>http://localhost:1313/javascript/</link>
-      <pubDate>Sat, 23 Nov 2024 18:53:24 +0300</pubDate>
-      <guid>http://localhost:1313/javascript/</guid>
       <description></description>
     </item>
     <item>
