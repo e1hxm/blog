@@ -21,3 +21,13 @@ Una lista di frasi nuove per me in italiano con traduzione, che aggiungo ogni gi
 
 5 - Che umore hai? (Кэ уморе ай?) — Какое у тебя настроение?
 
+6 - Sono triste (Соно тристэ) — Мне грустно 
+
+7 - Che cosa fai? (Кэ коза фай?) — Что ты делаешь?
+
+8 - Dove vai? (Довэ вай?) — Куда ты идёшь? 
+
+9 - Ho fame (О фаме) — Я голоден/голодна 
+
+10 - Ho sete (О сэтэ) — Я хочу пить 
+
