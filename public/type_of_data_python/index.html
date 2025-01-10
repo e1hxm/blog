@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основные типы данных в Python</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Основные типы данных в Python</h2>
+        
+
+        
+            <time class="h5 gray title__date">09 January 2025</time>
+        
+
+        <div><h4 id="целые-числа">Целые числа</h4>
+<p>Тип данных для целых чисел называется int (от английского &ldquo;integer&rdquo;). Целые числа могут быть положительными, отрицательными или нулём.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>          <span class="c1"># Положительное целое число</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>         <span class="c1"># Отрицательное целое число</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>           <span class="c1"># Ноль</span>
+</span></span><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="mi">1234567890</span>  <span class="c1"># Большое целое число</span>
+</span></span></code></pre></div><h4 id="числа-с-плавающей-запятой">Числа с плавающей запятой</h4>
+<p>Тип данных для чисел с плавающей запятой (дробных чисел) называется float. Эти числа используются для представления вещественных чисел, то есть чисел с дробной частью. Примеры: <code>3.14</code>, <code>-0.001</code>, <code>2.0</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mf">3.14</span>       <span class="c1"># Положительное число с плавающей запятой</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.001</span>     <span class="c1"># Отрицательное число с плавающей запятой</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="mf">2.0</span>        <span class="c1"># Число с плавающей запятой, хотя значение целое</span>
+</span></span><span class="line"><span class="cl"><span class="n">d</span> <span class="o">=</span> <span class="mf">1.23e-4</span>    <span class="c1"># Научная нотация: 1.23 * 10^(-4) = 0.000123</span>
+</span></span></code></pre></div><h4 id="строки">Строки</h4>
+<p>Строки (тип str) — это последовательности символов, используемые для хранения и обработки текстовых данных.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">s1</span> <span class="o">=</span> <span class="s2">&#34;Привет, мир!&#34;</span>  <span class="c1"># Строка в двойных кавычках</span>
+</span></span><span class="line"><span class="cl"><span class="n">s2</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>        <span class="c1"># Строка в одинарных кавычках</span>
+</span></span><span class="line"><span class="cl"><span class="n">s3</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;Это
+</span></span></span><span class="line"><span class="cl"><span class="s2">многострочная
+</span></span></span><span class="line"><span class="cl"><span class="s2">строка&#34;&#34;&#34;</span>            <span class="c1"># Многострочная строка в тройных кавычках</span>
+</span></span><span class="line"><span class="cl"><span class="n">s4</span> <span class="o">=</span> <span class="s1">&#39;123&#39;</span>           <span class="c1"># Строка, содержащая цифры</span>
+</span></span></code></pre></div><h4 id="списки">Списки</h4>
+<p>Списки (тип list) — это упорядоченные изменяемые коллекции элементов. Списки могут содержать элементы разных типов данных (числа, строки, другие списки и т.д.), и они являются одной из самых часто используемых структур данных.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>  <span class="c1"># Список целых чисел</span>
+</span></span><span class="line"><span class="cl"><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;банан&#34;</span><span class="p">,</span> <span class="s2">&#34;вишня&#34;</span><span class="p">]</span>  <span class="c1"># Список строк</span>
+</span></span><span class="line"><span class="cl"><span class="n">mixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;яблоко&#34;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>  <span class="c1"># Список с элементами разных типов</span>
+</span></span><span class="line"><span class="cl"><span class="n">nested</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>  <span class="c1"># Вложенный список (список списков)</span>
+</span></span></code></pre></div><h4 id="словари">Словари</h4>
+<p>Словари (тип dict) — это неупорядоченные коллекции пар &ldquo;ключ-значение&rdquo;. Ключи в словаре уникальны и используются для доступа к соответствующим значениям. Словари очень полезны для хранения и быстрого поиска данных по ключу.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="c1"># Словарь с ключами-строками</span>
+</span></span><span class="line"><span class="cl"><span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Алексей&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;age&#34;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;city&#34;</span><span class="p">:</span> <span class="s2">&#34;Москва&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Словарь с разными типами ключей</span>
+</span></span><span class="line"><span class="cl"><span class="n">mixed_dict</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="p">:</span> <span class="s2">&#34;один&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;two&#34;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span> <span class="s2">&#34;кортеж&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Пустой словарь</span>
+</span></span><span class="line"><span class="cl"><span class="n">empty_dict</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span></code></pre></div><h4 id="кортежи">Кортежи</h4>
+<p>Кортежи (тип tuple) — это упорядоченные неизменяемые коллекции элементов. Кортежи похожи на списки, но, в отличие от списков, их нельзя изменить после создания. Это делает их полезными для хранения данных, которые не должны изменяться.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="c1"># Кортеж из чисел</span>
+</span></span><span class="line"><span class="cl"><span class="n">numbers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Кортеж из строк</span>
+</span></span><span class="line"><span class="cl"><span class="n">fruits</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&#34;яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;банан&#34;</span><span class="p">,</span> <span class="s2">&#34;вишня&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Кортеж с элементами разных типов</span>
+</span></span><span class="line"><span class="cl"><span class="n">mixed</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;яблоко&#34;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Пустой кортеж</span>
+</span></span><span class="line"><span class="cl"><span class="n">empty_tuple</span> <span class="o">=</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Кортеж из одного элемента (не забудьте запятую!)</span>
+</span></span><span class="line"><span class="cl"><span class="n">single_element</span> <span class="o">=</span> <span class="p">(</span><span class="mi">42</span><span class="p">,)</span>
+</span></span></code></pre></div><h4 id="множества">Множества</h4>
+<p>Множества (тип set) — это неупорядоченные коллекции уникальных элементов. Множества полезны для выполнения операций, таких как удаление дубликатов, проверка принадлежности элемента и математические операции над множествами (объединение, пересечение, разность и т.д.).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="c1"># Множество целых чисел</span>
+</span></span><span class="line"><span class="cl"><span class="n">numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Множество строк</span>
+</span></span><span class="line"><span class="cl"><span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;яблоко&#34;</span><span class="p">,</span> <span class="s2">&#34;банан&#34;</span><span class="p">,</span> <span class="s2">&#34;вишня&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Множество с элементами разных типов</span>
+</span></span><span class="line"><span class="cl"><span class="n">mixed</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;яблоко&#34;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="kc">True</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Пустое множество (используйте set(), так как {} создаёт пустой словарь)</span>
+</span></span><span class="line"><span class="cl"><span class="n">empty_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+</span></span></code></pre></div><h4 id="булевы-значения">Булевы значения</h4>
+<p>Булевы значения (тип bool) представляют логические значения: True (истина) и False (ложь). Они используются для выполнения логических операций, управления потоком выполнения программы (например, в условиях if, циклах while) и работы с логическими выражениями.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">is_raining</span> <span class="o">=</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl"><span class="n">is_sunny</span> <span class="o">=</span> <span class="kc">False</span>
+</span></span></code></pre></div></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>
