@@ -6,8 +6,15 @@
     <description>Recent content in Javascript on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Thu, 09 Jan 2025 19:53:24 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2025 18:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Циклы в JavaScript</title>
+      <link>http://localhost:1313/loop_javascript/</link>
+      <pubDate>Fri, 10 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/loop_javascript/</guid>
+      <description>&lt;p&gt;При написании скриптов часто возникает необходимость выполнять однотипные действия многократно. Например, может потребоваться вывести все товары из списка по очереди или перебрать числа от 1 до 10, выполняя для каждого из них одинаковый код.&lt;/p&gt;&#xA;&lt;p&gt;Для таких случаев в программировании предусмотрены циклы. Циклы позволяют повторять определённый блок кода несколько раз, что делает код более компактным и удобным для работы с большими наборами данных или повторяющимися задачами.&lt;/p&gt;&#xA;&lt;h4 id=&#34;цикл-while&#34;&gt;Цикл While&lt;/h4&gt;&#xA;&lt;p&gt;Цикл &lt;code&gt;while&lt;/code&gt; — это способ организации повторяющихся действий в JavaScript. В отличие от цикла &lt;code&gt;for&lt;/code&gt;, где количество итераций обычно известно заранее, цикл while используется, когда нужно выполнять блок кода до тех пор, пока выполняется определённое условие.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Операторы сравнения в JavaScript</title>
       <link>http://localhost:1313/operatory_sravneniya/</link>

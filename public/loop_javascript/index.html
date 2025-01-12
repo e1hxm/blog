@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Циклы в JavaScript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Циклы в JavaScript</h2>
+        
+
+        
+            <time class="h5 gray title__date">10 January 2025</time>
+        
+
+        <div><p>При написании скриптов часто возникает необходимость выполнять однотипные действия многократно. Например, может потребоваться вывести все товары из списка по очереди или перебрать числа от 1 до 10, выполняя для каждого из них одинаковый код.</p>
+<p>Для таких случаев в программировании предусмотрены циклы. Циклы позволяют повторять определённый блок кода несколько раз, что делает код более компактным и удобным для работы с большими наборами данных или повторяющимися задачами.</p>
+<h4 id="цикл-while">Цикл While</h4>
+<p>Цикл <code>while</code> — это способ организации повторяющихся действий в JavaScript. В отличие от цикла <code>for</code>, где количество итераций обычно известно заранее, цикл while используется, когда нужно выполнять блок кода до тех пор, пока выполняется определённое условие.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Итерация номер: &#34;</span> <span class="o">+</span> <span class="nx">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p class="gray">
+i++ — это оператор инкремента в JavaScript. Он увеличивает значение переменной i на 1. Это сокращённая запись для выражения i = i + 1
+</p>
+<p>Цикл while полезен, когда количество итераций неизвестно заранее, и выполнение цикла зависит от какого-то условия.</p>
+<p>Например:</p>
+<ol>
+<li>
+<p>Чтение данных из файла или потока до конца.</p>
+</li>
+<li>
+<p>Ожидание изменения состояния (например, завершение анимации).</p>
+</li>
+<li>
+<p>Работа с пользовательским вводом до тех пор, пока не будет введено корректное значение.</p>
+</li>
+</ol>
+<h4 id="цикл-dowhile">Цикл do&hellip;while</h4>
+<p>Цикл <code>do...while</code> — это разновидность цикла while в JavaScript, которая гарантирует, что тело цикла выполнится хотя бы один раз, даже если условие изначально равно <code>false</code>. Это отличает его от обычного <code>while</code>, где тело цикла может не выполниться ни разу, если условие <code>false</code> с самого начала.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// тело цикла
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">condition</span><span class="p">);</span>
+</span></span></code></pre></div><p>Цикл сначала выполнит тело, а затем проверит условие. Если условие равно <code>true</code>, цикл повторится. Этот процесс будет продолжаться снова и снова, пока условие остаётся равным <code>true</code>.</p>
+<p>Такой синтаксис полезен, когда нужно, чтобы тело цикла выполнилось хотя бы один раз, даже если условие изначально <code>false</code>. Однако на практике чаще используется цикл с предусловием: <code>while(…) {…}</code>, где условие проверяется до выполнения тела цикла.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">alert</span><span class="p">(</span> <span class="nx">i</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">);</span>
+</span></span></code></pre></div><h4 id="цикл-for">Цикл For</h4>
+<p>Oдин из самых популярных и часто используемых циклов в JavaScript. Он идеально подходит для ситуаций, когда известно точное количество итераций, которые нужно выполнить.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nx">начало</span><span class="p">;</span> <span class="nx">условие</span><span class="p">;</span> <span class="nx">шаг</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ... тело цикла ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>Простой пример работы цикла <code>for</code> -  В этом примере цикл выводит значения <code>i</code> с помощью <code>alert(i)</code> для <code>i</code> от <code>0</code> до <code>2</code> (не включая <code>3</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span> <span class="c1">// Выведет 0, затем 1, затем 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>Детальный разбор каждой части цикла</p>
+<ol>
+<li>
+<p>Начало:
+<code>let i = 0</code> — выполняется один раз при входе в цикл. Здесь создаётся переменная <code>i</code> и присваивается значение <code>0</code></p>
+</li>
+<li>
+<p>Условие:
+<code>i &lt; 3</code> — проверяется перед каждой итерацией. Если условие истинно (<code>true</code>), цикл продолжает работать. Если ложно (<code>false</code>) — цикл останавливается</p>
+</li>
+<li>
+<p>Тело:
+<code>alert(i)</code> — выполняется на каждой итерации, пока условие истинно. В данном случае выводит текущее значение <code>i</code>.</p>
+</li>
+<li>
+<p>Шаг:
+<code>i++</code> — выполняется после тела цикла на каждой итерации. Увеличивает значение <code>i</code> на <code>1</code></p>
+</li>
+</ol>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

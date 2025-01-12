@@ -6,8 +6,15 @@
     <description>Recent content on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Thu, 09 Jan 2025 20:53:24 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2025 18:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Циклы в JavaScript</title>
+      <link>http://localhost:1313/loop_javascript/</link>
+      <pubDate>Fri, 10 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/loop_javascript/</guid>
+      <description>&lt;p&gt;При написании скриптов часто возникает необходимость выполнять однотипные действия многократно. Например, может потребоваться вывести все товары из списка по очереди или перебрать числа от 1 до 10, выполняя для каждого из них одинаковый код.&lt;/p&gt;&#xA;&lt;p&gt;Для таких случаев в программировании предусмотрены циклы. Циклы позволяют повторять определённый блок кода несколько раз, что делает код более компактным и удобным для работы с большими наборами данных или повторяющимися задачами.&lt;/p&gt;&#xA;&lt;h4 id=&#34;цикл-while&#34;&gt;Цикл While&lt;/h4&gt;&#xA;&lt;p&gt;Цикл &lt;code&gt;while&lt;/code&gt; — это способ организации повторяющихся действий в JavaScript. В отличие от цикла &lt;code&gt;for&lt;/code&gt;, где количество итераций обычно известно заранее, цикл while используется, когда нужно выполнять блок кода до тех пор, пока выполняется определённое условие.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Основные типы данных в Python</title>
       <link>http://localhost:1313/type_of_data_python/</link>
@@ -111,7 +118,7 @@
       <link>http://localhost:1313/parole_italiano/</link>
       <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
       <guid>http://localhost:1313/parole_italiano/</guid>
-      <description>&lt;h3 id=&#34;parole-in-italiano&#34;&gt;Parole in italiano&lt;/h3&gt;&#xA;&lt;p&gt;Una lista di parole nuove per me in italiano con traduzione, che aggiungo ogni giorno&lt;/p&gt;&#xA;&lt;p&gt;1 - Buongiorno (Буонджорно) - Добрый день&lt;/p&gt;&#xA;&lt;p&gt;2 - Grazie (Грациэ) - Спасибо&lt;/p&gt;&#xA;&lt;p&gt;3 - Prego (Прэго) - Пожалуйста&lt;/p&gt;&#xA;&lt;p&gt;4 - Scusi (Скузи) - Извините&lt;/p&gt;&#xA;&lt;p&gt;5 - Bene (Бэнэ) - Хорошо&lt;/p&gt;&#xA;&lt;h3 id=&#34;frutta&#34;&gt;Frutta&lt;/h3&gt;&#xA;&lt;p&gt;1 - Mela (Мэла) — Яблоко 🍎&lt;/p&gt;&#xA;&lt;p&gt;2 - Banana (Бананa) — Банан 🍌&lt;/p&gt;&#xA;&lt;p&gt;3 - Arancia (Аранча) — Апельсин 🍊&lt;/p&gt;&#xA;&lt;p&gt;4 - Fragola (Фрагола) — Клубника 🍓&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;parole-in-italiano&#34;&gt;Parole in italiano&lt;/h3&gt;&#xA;&lt;p&gt;Una lista di parole nuove per me in italiano con traduzione, che aggiungo ogni giorno&lt;/p&gt;&#xA;&lt;p&gt;1 - Buongiorno (Буонджорно) - Добрый день&lt;/p&gt;&#xA;&lt;p&gt;2 - Grazie (Грациэ) - Спасибо&lt;/p&gt;&#xA;&lt;p&gt;3 - Prego (Прэго) - Пожалуйста&lt;/p&gt;&#xA;&lt;p&gt;4 - Scusi (Скузи) - Извините&lt;/p&gt;&#xA;&lt;p&gt;5 - Bene (Бэнэ) - Хорошо&lt;/p&gt;&#xA;&lt;p&gt;6 - Ciao (Чао) — Привет/Пока&lt;/p&gt;&#xA;&lt;p&gt;7 - Arrivederci (Арриведэрчи) — До свидания&lt;/p&gt;&#xA;&lt;p&gt;8 - Per favore (Пер фаворэ) — Пожалуйста (в значении просьбы)&lt;/p&gt;</description>
     </item>
     <item>
       <title>Список новых слов для меня на Немецком языке</title>
@@ -125,7 +132,7 @@
       <link>http://localhost:1313/kelimeler_turkey/</link>
       <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
       <guid>http://localhost:1313/kelimeler_turkey/</guid>
-      <description>&lt;h3 id=&#34;türkçe-kelimeler&#34;&gt;Türkçe kelimeler&lt;/h3&gt;&#xA;&lt;p&gt;Her gün eklediğim çeviri ile Türkiye&amp;rsquo;de benim için yeni kelimelerin listesi&lt;/p&gt;&#xA;&lt;p&gt;1 - Merhaba (Мерхаба) - Привет&lt;/p&gt;&#xA;&lt;p&gt;2 - Selam (Сэлям) - Привет&lt;/p&gt;&#xA;&lt;p&gt;3 - Teşekkür ederim (Тешеккюр эдерим) - Спасибо&lt;/p&gt;&#xA;&lt;p&gt;4 - Sağ ol (Са ол) - Спасибо&lt;/p&gt;&#xA;&lt;p&gt;5 - Özür dilerim (Озюр дилерим) - Извините&lt;/p&gt;&#xA;&lt;p&gt;6 - Affedersiniz&amp;quot; (Аффедерсиниз) - Извините&lt;/p&gt;&#xA;&lt;h3 id=&#34;meyve&#34;&gt;Meyve&lt;/h3&gt;&#xA;&lt;p&gt;1 - Elma (Эльма) — яблоко 🍎&lt;/p&gt;&#xA;&lt;p&gt;2 - Muz (Муз) — банан 🍌&lt;/p&gt;&#xA;&lt;p&gt;3 - Çilek (Чилек) — клубника 🍓&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;türkçe-kelimeler&#34;&gt;Türkçe kelimeler&lt;/h3&gt;&#xA;&lt;p&gt;Her gün eklediğim çeviri ile Türkiye&amp;rsquo;de benim için yeni kelimelerin listesi&lt;/p&gt;&#xA;&lt;p&gt;1 - Merhaba (Мерхаба) - Привет&lt;/p&gt;&#xA;&lt;p&gt;2 - Selam (Сэлям) - Привет&lt;/p&gt;&#xA;&lt;p&gt;3 - Teşekkür ederim (Тешеккюр эдерим) - Спасибо&lt;/p&gt;&#xA;&lt;p&gt;4 - Sağ ol (Са ол) - Спасибо&lt;/p&gt;&#xA;&lt;p&gt;5 - Özür dilerim (Озюр дилерим) - Извините&lt;/p&gt;&#xA;&lt;p&gt;6 - Affedersiniz&amp;quot; (Аффедерсиниз) - Извините&lt;/p&gt;&#xA;&lt;p&gt;7 - Evet (Эвет) — Да&lt;/p&gt;&#xA;&lt;p&gt;8 - Hayır (Хайыр) — Нет&lt;/p&gt;&#xA;&lt;p&gt;9 - Lütfen (Лютфен) — Пожалуйста&lt;/p&gt;</description>
     </item>
     <item>
       <title>Список новых слов для меня на Французском языке</title>
@@ -153,7 +160,7 @@
       <link>http://localhost:1313/frasi_italiano/</link>
       <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
       <guid>http://localhost:1313/frasi_italiano/</guid>
-      <description>&lt;h3 id=&#34;frasi-in-italiano&#34;&gt;Frasi in italiano&lt;/h3&gt;&#xA;&lt;p&gt;Una lista di frasi nuove per me in italiano con traduzione, che aggiungo ogni giorno&lt;/p&gt;&#xA;&lt;p&gt;1 - Come sta? (Комэ ста?) - как дела?&lt;/p&gt;&#xA;&lt;p&gt;2 - Come si sente?&amp;quot; Комэ си сэнтэ? - Как настроение?&lt;/p&gt;&#xA;&lt;p&gt;3 - Così così (Кози кози) — Так себе&lt;/p&gt;&#xA;&lt;p&gt;4 - Sono felice&amp;quot; (Соно фэличэ) - Я счастлив&lt;/p&gt;&#xA;&lt;p&gt;5 - Che umore hai? (Кэ уморе ай?) — Какое у тебя настроение?&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;frasi-in-italiano&#34;&gt;Frasi in italiano&lt;/h3&gt;&#xA;&lt;p&gt;Una lista di frasi nuove per me in italiano con traduzione, che aggiungo ogni giorno&lt;/p&gt;&#xA;&lt;p&gt;1 - Come sta? (Комэ ста?) - как дела?&lt;/p&gt;&#xA;&lt;p&gt;2 - Come si sente?&amp;quot; Комэ си сэнтэ? - Как настроение?&lt;/p&gt;&#xA;&lt;p&gt;3 - Così così (Кози кози) — Так себе&lt;/p&gt;&#xA;&lt;p&gt;4 - Sono felice&amp;quot; (Соно фэличэ) - Я счастлив&lt;/p&gt;&#xA;&lt;p&gt;5 - Che umore hai? (Кэ уморе ай?) — Какое у тебя настроение?&lt;/p&gt;&#xA;&lt;p&gt;6 - Sono triste (Соно тристэ) — Мне грустно&lt;/p&gt;</description>
     </item>
     <item>
       <title>Список новых фраз для меня на Немецком языке</title>
@@ -167,7 +174,7 @@
       <link>http://localhost:1313/cumleler_turkey/</link>
       <pubDate>Sun, 05 Jan 2025 18:53:24 +0300</pubDate>
       <guid>http://localhost:1313/cumleler_turkey/</guid>
-      <description>&lt;h3 id=&#34;türkçe-cümleler&#34;&gt;Türkçe cümleler&lt;/h3&gt;&#xA;&lt;p&gt;Her gün eklediğim çeviri ile Türkiye&amp;rsquo;de benim için yeni cümlelerin listesi&lt;/p&gt;&#xA;&lt;p&gt;1 - Nasılsın? (Насылсын?) - Как дела?&lt;/p&gt;&#xA;&lt;p&gt;2 - Adınız ne?&amp;quot; (Адыныз не?) - Как тебя зовут?&lt;/p&gt;&#xA;&lt;p&gt;3 - Benim adım El&amp;rsquo;ham. (Беним адым Ильхам) — Меня зовут Ильхам&lt;/p&gt;&#xA;&lt;p&gt;4 - Nasıl hissediyorsunuz? (Насыл хисседиёрсунуз?) - Как настроение?&lt;/p&gt;&#xA;&lt;p&gt;5 - Harika! (Харика!) — &amp;ldquo;Отлично!&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;türkçe-cümleler&#34;&gt;Türkçe cümleler&lt;/h3&gt;&#xA;&lt;p&gt;Her gün eklediğim çeviri ile Türkiye&amp;rsquo;de benim için yeni cümlelerin listesi&lt;/p&gt;&#xA;&lt;p&gt;1 - Nasılsın? (Насылсын?) - Как дела?&lt;/p&gt;&#xA;&lt;p&gt;2 - Adınız ne?&amp;quot; (Адыныз не?) - Как тебя зовут?&lt;/p&gt;&#xA;&lt;p&gt;3 - Benim adım El&amp;rsquo;ham. (Беним адым Ильхам) — Меня зовут Ильхам&lt;/p&gt;&#xA;&lt;p&gt;4 - Nasıl hissediyorsunuz? (Насыл хисседиёрсунуз?) - Как настроение?&lt;/p&gt;&#xA;&lt;p&gt;5 - Harika! (Харика!) — &amp;ldquo;Отлично!&lt;/p&gt;&#xA;&lt;p&gt;6 - Ne yapıyorsun? (Не япыйорсун?) — Что ты делаешь?&lt;/p&gt;&#xA;&lt;p&gt;7 - Nerede yaşıyorsun? (Нереде яшыйорсун?) — Где ты живешь?&lt;/p&gt;</description>
     </item>
     <item>
       <title>Список новых фраз для меня на Французском языке</title>
