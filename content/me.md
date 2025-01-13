@@ -66,14 +66,6 @@ Vim</a>
 </p>
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">study</h3>
 <p>Прогресс обучения</p>
-<h4 class="mt2">January 2025</h4>
-<ul>
-<li class="mb0.5">
-<a href="https://21-school.ru" target="_blank">
-21 School</a>
-&rsaquo; Отборочный интенсив в IT корпусе от Сбербанк
-</li>
-</ul>
 <h4 class="mt2">October 2024</h4>
 <ul>
 <li class="mb0.5">
@@ -108,10 +100,31 @@ Udemy</a>
 </li>
 </ul>
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">
-works
+projects
 </h3>
 <p>
-Список моих работ
+Список проектов
+</p>
+<h3 class="mt2" style="padding-top: 20px">
+January 2025
+</h3>
+<p>
+Landing Page сайта с суши от Bedimcode 😊 на HTML, CSS + 
+JavaScript с адаптивной версткой и темной темой.
+</p>
+<p class="post">
+<a href="https://e1hxm.github.io/resposive-sushi-website/" target="_blank">
+<img src="/images/preview_sushi.png" style="border-radius: 20px"/>
+</a>
+</p>
+<p style="padding-top: 10px">
+👉 <a href="https://www.youtube.com/watch?v=HW1zt2EPMqY" target="_blank">
+Источник
+</a>
+</p>
+<p>👉 <a href="https://e1hxm.github.io/resposive-sushi-website/" target="_blank">
+Моя верстка
+</a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
 October 2024
