@@ -12,56 +12,38 @@ hideDate = true
 <p>Скиллы в языках и софте</p>
 <p>
 <img class="logos" src="/images/Github-Dark.svg" width="22px" height="22px" />
-<a href="https://github.com" target="_blank"> 
-GitHub</a>
 &rsaquo; Хостинг кода
 </p>
 <p>
 <img class="logos" src="/images/Git.svg" width="22px" height="22px" />
-<a href="https://git-scm.com" target="_blank"> 
-Git</a>
 &rsaquo; Контроль версий
 </p>
 <p>
 <img class="logos" src="/images/CSS.svg" width="22px" height="22px" />
-<a href="https://www.w3.org/Style/CSS/" target="_blank"> 
-CSS</a>
 &rsaquo; Каскадные таблицы стилей
 </p>
 <p>
 <img class="logos" src="/images/HTML.svg" width="22px" height="22px" />
-<a href="https://www.w3.org/" target="_blank"> 
-HTML</a>
 &rsaquo; Гипертекстовая разметка
 </p>
 <p>
 <img class="logos" src="/images/JavaScript.svg" width="22px" height="22px" />
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> 
-JS</a>
 &rsaquo; Язык программирования JavaScript
 </p>
 <p>
 <img class="logos" src="/images/Sass.svg" width="22px" height="22px" />
-<a href="https://sass-lang.com/" target="_blank"> 
-SCSS/SASS</a>
 &rsaquo; Препроцессоры CSS
 </p>
 <p>
 <img class="logos" src="/images/Markdown-Dark.svg" width="22px" height="22px" />
-<a href="https://commonmark.org/" target="_blank"> 
-MarkDown</a>
 &rsaquo; Текстовая разметка
 </p>
 <p>
 <img class="logos" src="/images/VSCode-Dark.svg" width="22px" height="22px" />
-<a href="https://code.visualstudio.com/" target="_blank"> 
-VSCode</a>
 &rsaquo; IDE от Microsoft
 </p>
 <p>
 <img class="logos" src="/images/Vimlogo.png" width="22px" height="22px" />
-<a href="https://www.vim.org/" target="_blank"> 
-Vim</a>
 &rsaquo; Текстовый редактор
 </p>
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">study</h3>
