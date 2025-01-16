@@ -6,8 +6,15 @@
     <description>Recent content on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Wed, 15 Jan 2025 18:53:24 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2025 19:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Оператор return в Javascript</title>
+      <link>http://localhost:1313/return_javascript/</link>
+      <pubDate>Wed, 15 Jan 2025 19:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/return_javascript/</guid>
+      <description>&lt;p&gt;Оператор &lt;code&gt;return&lt;/code&gt; в JavaScript используется для возврата значения из функции. Когда интерпретатор встречает &lt;code&gt;return&lt;/code&gt;, выполнение функции прекращается, и управление возвращается туда, где функция была вызвана. Если после &lt;code&gt;return&lt;/code&gt; указано значение, оно возвращается как результат функции.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;return&lt;/code&gt; может вернуть любое значение: число, строку, объект, массив, другую функцию и даже &lt;code&gt;null&lt;/code&gt; или &lt;code&gt;undefined&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Как только выполняется &lt;code&gt;return&lt;/code&gt;, функция сразу завершает свою работу. Код, который находится после &lt;code&gt;return&lt;/code&gt;, не выполняется.&lt;/p&gt;&#xA;&lt;p&gt;Если &lt;code&gt;return&lt;/code&gt; используется без значения, функция возвращает &lt;code&gt;undefined&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Аргументы в функциях JavaScript</title>
       <link>http://localhost:1313/argument_javascript/</link>
