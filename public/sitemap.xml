@@ -3,10 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-01-10T18:53:24+03:00</lastmod>
+    <lastmod>2025-01-15T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/javascript/</loc>
-    <lastmod>2025-01-10T18:53:24+03:00</lastmod>
+    <lastmod>2025-01-15T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/argument_javascript/</loc>
+    <lastmod>2025-01-15T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/fuction_expression_javascript/</loc>
+    <lastmod>2025-01-14T19:55:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/function_declaration_javascript/</loc>
+    <lastmod>2025-01-14T18:55:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/arrow_function_javascript/</loc>
+    <lastmod>2025-01-14T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-01-13T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/english/</loc>
+    <lastmod>2025-01-13T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/linkin_park_numb/</loc>
+    <lastmod>2025-01-13T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/loop_javascript/</loc>
     <lastmod>2025-01-10T18:53:24+03:00</lastmod>
@@ -34,12 +55,6 @@
   </url><url>
     <loc>http://localhost:1313/alert_promt_confirm_javascript/</loc>
     <lastmod>2025-01-08T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-01-07T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/english/</loc>
-    <lastmod>2025-01-07T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tipy_udarnogo_sloga/</loc>
     <lastmod>2025-01-07T18:53:24+03:00</lastmod>

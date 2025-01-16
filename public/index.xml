@@ -6,8 +6,15 @@
     <description>Recent content on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Tue, 14 Jan 2025 19:55:24 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2025 18:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Аргументы в функциях JavaScript</title>
+      <link>http://localhost:1313/argument_javascript/</link>
+      <pubDate>Wed, 15 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/argument_javascript/</guid>
+      <description>&lt;p&gt;В JavaScript аргументы — это значения, которые передаются в функцию при её вызове. Они позволяют функциям принимать данные и работать с ними. Аргументы могут быть любого типа: числа, строки, объекты, массивы, другие функции и т.д.&lt;/p&gt;&#xA;&lt;p&gt;В функциях в Javascript есть параметры и аргументы.&lt;/p&gt;&#xA;&lt;p&gt;Параметры функции - это переменные, указанные в определении функции. Они используются для работы с аргументами, переданными при вызове функции.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;greet&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// name — параметр&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`Hello, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;!`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Аргументы функции - это значения, которые передаются в функцию при её вызове.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Function Expression в JavaScript</title>
       <link>http://localhost:1313/fuction_expression_javascript/</link>
