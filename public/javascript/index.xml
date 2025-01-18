@@ -6,8 +6,29 @@
     <description>Recent content in Javascript on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Wed, 15 Jan 2025 18:53:24 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2025 19:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Методы строк и чисел в JavaScript</title>
+      <link>http://localhost:1313/methods_of_str_and_numbers_javascript/</link>
+      <pubDate>Thu, 16 Jan 2025 19:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/methods_of_str_and_numbers_javascript/</guid>
+      <description>&lt;p&gt;Самые простые и часто используемые методы для строк и чисел в JavaScript. Эти методы помогут выполнять базовые операции без сложностей.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Свойства строк и чисел в JavaScript</title>
+      <link>http://localhost:1313/svoistva_v_javascript/</link>
+      <pubDate>Thu, 16 Jan 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/svoistva_v_javascript/</guid>
+      <description>&lt;p&gt;В JavaScript у строк и чисел есть свойства, которые предоставляют полезную информацию о них.&lt;/p&gt;&#xA;&lt;h4 id=&#34;свойства-строк&#34;&gt;Свойства строк&lt;/h4&gt;&#xA;&lt;p&gt;Строки в JavaScript имеют одно основное свойство &lt;code&gt;length&lt;/code&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Возвращает количество символов в строке&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Это свойство только для чтения (его нельзя изменить)&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, Elle!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p class=&#34;gray&#34;&gt;&#xA;Синтаксис свойств строк и чисел в отличие от методов пишется &#xA;без скобок в конце.&#xA;&lt;/p&gt;&#xA;&lt;h4 id=&#34;свойства-чисел&#34;&gt;Свойства чисел&lt;/h4&gt;&#xA;&lt;p&gt;У чисел есть статические свойства, такие как &lt;code&gt;MAX_VALUE&lt;/code&gt;, &lt;code&gt;MIN_VALUE&lt;/code&gt;, &lt;code&gt;NaN&lt;/code&gt;, &lt;code&gt;POSITIVE_INFINITY&lt;/code&gt;, &lt;code&gt;NEGATIVE_INFINITY&lt;/code&gt;, &lt;code&gt;EPSILON&lt;/code&gt;, &lt;code&gt;MAX_SAFE_INTEGER&lt;/code&gt; и &lt;code&gt;MIN_SAFE_INTEGER&lt;/code&gt;, которые предоставляют информацию о числовых константах и ограничениях.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Оператор return в Javascript</title>
+      <link>http://localhost:1313/return_javascript/</link>
+      <pubDate>Wed, 15 Jan 2025 19:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/return_javascript/</guid>
+      <description>&lt;p&gt;Оператор &lt;code&gt;return&lt;/code&gt; в JavaScript используется для возврата значения из функции. Когда интерпретатор встречает &lt;code&gt;return&lt;/code&gt;, выполнение функции прекращается, и управление возвращается туда, где функция была вызвана. Если после &lt;code&gt;return&lt;/code&gt; указано значение, оно возвращается как результат функции.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;return&lt;/code&gt; может вернуть любое значение: число, строку, объект, массив, другую функцию и даже &lt;code&gt;null&lt;/code&gt; или &lt;code&gt;undefined&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Как только выполняется &lt;code&gt;return&lt;/code&gt;, функция сразу завершает свою работу. Код, который находится после &lt;code&gt;return&lt;/code&gt;, не выполняется.&lt;/p&gt;&#xA;&lt;p&gt;Если &lt;code&gt;return&lt;/code&gt; используется без значения, функция возвращает &lt;code&gt;undefined&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Аргументы в функциях JavaScript</title>
       <link>http://localhost:1313/argument_javascript/</link>
