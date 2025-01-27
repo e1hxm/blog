@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массивы и псевдомассивы в Javascript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Массивы и псевдомассивы в Javascript</h2>
+        
+
+        
+            <time class="h5 gray title__date">25 January 2025</time>
+        
+
+        <div><p>Сегодня пройдет лекция про массивы и псевдомассивы.</p>
+<p>А так про основные методы работы с ними.</p>
+<p>Массивы и псевдомассивы — это две разные, но похожие структуры данных в JavaScript.</p>
+<p>Массивы — это встроенный тип данных в JavaScript, предназначенный для хранения упорядоченных коллекций элементов. Они имеют множество полезных методов для работы с данными.</p>
+<p>Пример простого массива</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> <span class="c1">// Выведет: 5
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">// Выведет: 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span> <span class="c1">// Добавляем элемент в конец
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// Выведет: [1, 2, 3, 4, 5, 6]
+</span></span></span></code></pre></div><p>Особенности массивов:</p>
+<blockquote>
+<p>Элементы массива индексируются (начинаются с 0)</p>
+</blockquote>
+<blockquote>
+<p>Массивы динамические: их длина может изменяться</p>
+</blockquote>
+<blockquote>
+<p>Поддерживают методы для работы с коллекциями: <code>push</code>, <code>pop</code>, <code>map</code>, <code>filter</code>, <code>reduce</code> и т.д.</p>
+</blockquote>
+<h4 id="псевдомассивы">Псевдомассивы</h4>
+<p>Псевдомассивы — это объекты, которые выглядят как массивы, но не являются массивами. Они имеют числовые индексы и свойство length, но не поддерживают методы массивов.</p>
+<p>Особенности псевдомассивов:</p>
+<blockquote>
+<p>Имеют числовые индексы (например, 0, 1, 2)</p>
+</blockquote>
+<blockquote>
+<p>Имеют свойство <code>length</code>, которое указывает количество элементов.</p>
+</blockquote>
+<blockquote>
+<p>Не поддерживают методы массивов (<code>push</code>, <code>pop</code>, <code>map</code> и т.д.).</p>
+</blockquote>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>
