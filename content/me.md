@@ -33,7 +33,7 @@ Freelance Биржа
 <img class="logos" src="/images/htmlacademy.png" width="22px" height="22px" /> <a href="https://htmlacademy.ru/profile/elham" target="_blank">HTMLAcademy</a> &rsaquo; 400+ Задач
 </p>
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">skills</h3>
-<p>Скиллы в языках и софте</p>
+<p>Скиллы в коде и софте</p>
 <p>
 <img class="logos" src="/images/Github-Dark.svg" width="22px" height="22px" />
 &rsaquo; Хостинг кода Github
@@ -148,6 +148,23 @@ JavaScript с адаптивной версткой и темной темой.
 </p>
 <p>👉 <a href="https://e1hxm.github.io/resposive-sushi-website/" target="_blank">
 Моя верстка
+</a>
+</p>
+<h3 class="mt2" style="padding-top: 20px">
+November 2024
+</h3>
+<p>
+Коммерческая разработка корпоративного многостраничного сайта для бизнеса
+на движке Tilda. SEO, мобильная версия, формы обратной 
+связи и т.д.
+</p>
+<p class="post">
+<a href="http://galaxyoverseas.ru" target="_blank">
+<img src="/images/gos.png" style="border-radius: 20px"/>
+</a>
+</p>
+<p>👉 <a href="http://galaxyoverseas.ru" target="_blank">
+Мой дизайн и верстка
 </a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
