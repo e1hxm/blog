@@ -7,21 +7,15 @@ hideTitle = true
 hideDate = true
 +++
 <h2>about</h2>
-<p>Привет, это El'ham 👋</p>
-<p>Я Frontend разработчик. Специализируюсь на создании современных веб-интерфейсов. Могу помочь с разработкой Landing Page,
-Сайта визитки, Корпоративного сайта для бизнеса или Интернет Магазина.
+<p>
+Привет, это El'ham 👋
 </p>
 <p>
-Разрабатываю кроссбраузерную и адаптивную верстку на чистом HTML, CSS и JavaScript или с использованием фреймворков, либо с внедрением WordPress и Tilda.
+И я Frontend разработчик.
 </p>
-📲 &rsaquo;<a href="mailto:mail@elham@ro.ru" class="inline-block mx2 mt1 md:mt0">Text Me</a>
 <h3 class="mt2" style="padding-top: 20px;">profiles</h3>
 <p>
 Ссылки на профили
-</p>
-<p>
-<img class="logos" src="/images/kwork.png" width="22px" height="22px" /> <a href="/" target="_blank">Kwork</a> &rsaquo; 
-Freelance Биржа
 </p>
 <p>
 <img class="logos" src="/images/Github-Dark.svg" width="22px" height="22px" /> <a href="https://github.com/e1hxm" target="_blank">Github</a> &rsaquo; Исходники 😊

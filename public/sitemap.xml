@@ -3,10 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-01-25T12:55:24+03:00</lastmod>
+    <lastmod>2025-01-30T18:55:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/javascript/</loc>
-    <lastmod>2025-01-25T12:55:24+03:00</lastmod>
+    <lastmod>2025-01-30T18:55:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/method_of_arrays_javascript/</loc>
+    <lastmod>2025-01-30T18:55:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/destructurisazia_objectov_javascript/</loc>
     <lastmod>2025-01-25T12:55:24+03:00</lastmod>

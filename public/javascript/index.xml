@@ -6,8 +6,15 @@
     <description>Recent content in Javascript on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Sat, 25 Jan 2025 12:55:24 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2025 18:55:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Методы массивов в JavaScript</title>
+      <link>http://localhost:1313/method_of_arrays_javascript/</link>
+      <pubDate>Thu, 30 Jan 2025 18:55:24 +0300</pubDate>
+      <guid>http://localhost:1313/method_of_arrays_javascript/</guid>
+      <description>&lt;p&gt;Все методы и свойства которые содержат массивы&#xA;можно найти в документации.&lt;/p&gt;&#xA;&lt;p&gt;Либо можно вывести в консоль все методы при помощи&#xA;команды &lt;code&gt;console.dir&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Сегодня мы познакомимся с самыми часто используемыми&#xA;методами массивов.&lt;/p&gt;&#xA;&lt;p&gt;Для этого создадим простой массив для эксперементов.&#xA;Сначала это будет набор простых чисел.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;array&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Часто при работе с массивами приходится его редактировать.&#xA;Мы либо хотим что то добавить или удалить.&lt;/p&gt;&#xA;&lt;p&gt;Для этого существует методы как для редактирования&#xA;начала массива или его последнего значения.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Деструктуризация объектов в Javascript</title>
       <link>http://localhost:1313/destructurisazia_objectov_javascript/</link>
