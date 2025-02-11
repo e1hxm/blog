@@ -60,14 +60,14 @@ hideDate = true
 <img class="logos" src="/images/tw.webp" width="22px" height="22px" />
 &rsaquo; Препроцессор Tailwind CSS
 </p>
-<h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">study</h3>
+<h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">education</h3>
 <p>Прогресс обучения</p>
 <h4 class="mt2">February 2022</h4>
 <ul>
 <li class="mb0.5">
 <a href="https://htmlacademy.ru/profession/frontender" target="_blank">
 HTMLAcademy</a>
-&rsaquo; Начало курса по Frontend разработке
+&rsaquo; Курс по Frontend разработке от HTMLAcademy
 </li>
 </ul>
 <h4 class="mt2">January 2022</h4>
@@ -75,9 +75,24 @@ HTMLAcademy</a>
 <li class="mb0.5">
 <a href="https://synergy.ru" target="_blank">
 Synergy University</a>
-&rsaquo; Start my bachelor's degree in "Information system and 
-technology, Development, Maintenance and support, 
-The information system security"
+&rsaquo; Университет Синергия. 
+Факультет информационных технологий.
+</li>
+</ul>
+<h4 class="mt2">December 2021</h4>
+<ul>
+<li>
+<a href="https://www.udemy.com/course/php-v7-mysql/" target="_blank">
+Udemy</a>
+&rsaquo; Курс по Backend разработке "PHP + MySQL"
+</li>
+</ul>
+<h4 class="mt2">November 2021</h4>
+<ul>
+<li>
+<a href="https://www.udemy.com/course/bestpython/" target="_blank">
+Udemy</a>
+&rsaquo; Курс по Backend разработке "Python, SQL и PostgreSQL"
 </li>
 </ul>
 <h4 class="mt2">October 2021</h4>
@@ -85,8 +100,8 @@ The information system security"
 <li>
 <a href="https://www.udemy.com/course/javascript_full/" target="_blank">
 Udemy</a>
-&rsaquo; Начало курса по Frontend разработке от 
-Ивана Петриченко "JavaScript + React"
+&rsaquo; Курс по Frontend разработке
+"JavaScript + React"
 </li>
 </ul>
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">
@@ -94,6 +109,27 @@ projects
 </h3>
 <p>
 Список проектов
+</p>
+<h3 class="mt2" style="padding-top: 20px">
+February 2025
+</h3>
+<p>
+NFT вебсайт от Bedimcode 😊 на HTML, CSS и 
+JavaScript. Адаптивная верстка под разные устройства и анимация.
+</p>
+<p class="post">
+<a href="https://e1hxm.github.io/nft-website/" target="_blank">
+<img src="/images/preview_nft.png" style="border-radius: 20px"/>
+</a>
+</p>
+<p style="padding-top: 10px">
+👉 <a href="https://youtu.be/eDm7l5ODWuU" target="_blank">
+Источник
+</a>
+</p>
+<p>👉 <a href="https://e1hxm.github.io/nft-website/" target="_blank">
+Моя верстка
+</a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
 January 2025
