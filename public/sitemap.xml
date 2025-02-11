@@ -2,10 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-02-01T12:00:24+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-02-07T12:00:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/javascript/</loc>
+    <lastmod>2025-02-07T12:00:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/spread_v_javascript/</loc>
+    <lastmod>2025-02-07T12:00:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-02-01T12:00:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/english/</loc>
@@ -13,9 +19,6 @@
   </url><url>
     <loc>http://localhost:1313/lesson_1_part_1_greeting/</loc>
     <lastmod>2025-02-01T12:00:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/javascript/</loc>
-    <lastmod>2025-01-30T18:55:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/method_of_arrays_javascript/</loc>
     <lastmod>2025-01-30T18:55:24+03:00</lastmod>
