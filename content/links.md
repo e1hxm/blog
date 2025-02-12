@@ -15,22 +15,6 @@ hideDate = true
 Ссылки на дополнительные разделы блога и 
 полезные ресурсы.
 </p>
-<h3 class="mt2" style="padding-top: 20px;">articles</h3>
-<p>
-Лекции из Университетов
-</p>
-<p>
-<a href="/english/">English</a> &rsaquo; Лекции по английскому языку
-</p>
-<p>
-<a href="/economy/">Economy</a> &rsaquo; Лекции по экономике
-</p>
-<p>
-<a href="/tis/">TIS</a> &rsaquo; Лекции по теории информационных
-систем
-</p>
-<h3 class="mt2" style="padding-top: 20px;">links</h3>
-<p>
 Полезные ссылки
 </p>
 <p>
