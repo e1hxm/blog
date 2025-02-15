@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Введение в препроцессоры SCSS/SASS</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Введение в препроцессоры SCSS/SASS</h2>
+        
+
+        
+            <time class="h5 gray title__date">09 February 2025</time>
+        
+
+        <div><p>SCSS/SASS — это препроцессоры CSS, которые расширяют возможности стандартных стилей. Они позволяют использовать переменные, вложенные селекторы, миксины, функции и другие удобные инструменты, делая код более структурированным и легким в поддержке. SCSS — это синтаксис, похожий на CSS, а SASS — более лаконичный вариант с отступами. Оба варианта компилируются в обычный CSS, который понимают браузеры. Эти технологии значительно ускоряют разработку и упрощают работу с большими проектами.</p>
+<p>Для себя я выберу SASS, мне больше понравился его синтаксис.</p>
+<h3 id="установка-препроцессора-scsssass">Установка препроцессора SCSS/SASS</h3>
+<p>Мне не очень понрвился вариант ставить сторонее приложение
+для работы с препроцессорами, я пойду по старинке и буду делать все
+через консоль, тем более что я на Линуксе ;)</p>
+<p>На windows все ставится через choco на OS X через brew,
+а на Linux через npm пакеты.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">install</span> <span class="o">-</span><span class="nx">g</span> <span class="nx">sass</span>
+</span></span></code></pre></div><p>Нужно не забыть прописать <code>sudo</code>, если у вас Линукс вы и без
+меня это прекрасно знаете.</p>
+<p>После установки проверим как все прошло командой <code>sass --version</code>
+если все в порядке, выдаст версию например <code>1.85.0</code></p>
+<p>После установки Sass вы можете легко преобразовывать ваш код в CSS с помощью команды <code>sass</code>. Для этого достаточно указать Sass, где находится исходный файл с расширением <code>.scss</code> или <code>.sass</code>, и куда сохранить скомпилированный CSS.</p>
+<p>Например, выполнив команду <code>sass input.scss output.css</code> в терминале, вы даете Sass указание взять файл <code>input.scss</code>, обработать его и создать готовый CSS-файл с именем <code>output.css</code>. Это позволяет быстро генерировать стили, которые браузеры смогут корректно интерпретировать.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">sass</span> <span class="err">input.scss</span> <span class="err">output.css</span>
+</span></span></code></pre></div><p>Мы можем отслеживать изменения в конкретных файлах или папках, используя флаг <code>--watch</code>. Этот флаг указывает Sass автоматически перекомпилировать CSS каждый раз, когда в отслеживаемых файлах происходят изменения. Например, чтобы следить за изменениями в файле <code>input.scss</code> и автоматически обновлять <code>output.css</code>, достаточно запустить команду:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sass --watch input.scss output.css
+</span></span></code></pre></div><p>Это избавляет от необходимости вручную перекомпилировать код после каждого изменения, что значительно ускоряет процесс разработки.</p>
+<p>Также мы можем отслеживать изменения в целых папках, указав пути к исходной директории и папке для сохранения скомпилированных CSS-файлов. Для этого нужно разделить пути двоеточием. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sass --watch app/sass:public/stylesheets
+</span></span></code></pre></div><p>Эта команда заставит Sass следить за всеми файлами в папке <code>app/sass</code> и автоматически компилировать их в CSS, сохраняя результат в директорию <code>public/stylesheets</code>. Это особенно удобно при работе с большими проектами, где файлы стилей разбиты на множество компонентов.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<div class="text-center">
+    <a href="mailto:mail@elham@ro.ru" class="gray no-underline inline-block mx2 mt1"
+             style = "font-size: 18px;";>
+        Text me
+    </a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

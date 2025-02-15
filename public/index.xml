@@ -6,8 +6,15 @@
     <description>Recent content on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Sat, 08 Feb 2025 12:00:24 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2025 12:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Введение в препроцессоры SCSS/SASS</title>
+      <link>http://localhost:1313/vedenie_v_sass/</link>
+      <pubDate>Sun, 09 Feb 2025 12:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/vedenie_v_sass/</guid>
+      <description>&lt;p&gt;SCSS/SASS — это препроцессоры CSS, которые расширяют возможности стандартных стилей. Они позволяют использовать переменные, вложенные селекторы, миксины, функции и другие удобные инструменты, делая код более структурированным и легким в поддержке. SCSS — это синтаксис, похожий на CSS, а SASS — более лаконичный вариант с отступами. Оба варианта компилируются в обычный CSS, который понимают браузеры. Эти технологии значительно ускоряют разработку и упрощают работу с большими проектами.&lt;/p&gt;&#xA;&lt;p&gt;Для себя я выберу SASS, мне больше понравился его синтаксис.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Гайд по NPM</title>
       <link>http://localhost:1313/npm/</link>
