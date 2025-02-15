@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переменные в препроцессорах SCSS/SASS</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Переменные в препроцессорах SCSS/SASS</h2>
+        
+
+        
+            <time class="h5 gray title__date">10 February 2025</time>
+        
+
+        <div><p>Мы можем использовать переменные как удобный способ хранения данных, которые будут использоваться в стилях на протяжении всего проекта. В переменных можно сохранять цвета, шрифты, отступы и другие CSS-значения, чтобы легко управлять ими и избежать дублирования кода. В Sass для создания переменной используется символ <code>$</code>. Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$main-color</span><span class="o">:</span><span class="nf">rgb</span><span class="p">(</span><span class="mi">108</span><span class="o">,</span> <span class="mi">52</span><span class="o">,</span> <span class="mi">219</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$font-family</span><span class="o">:</span> <span class="s1">&#39;Arial&#39;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.header</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background-color</span><span class="o">:</span> <span class="nv">$main-color</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">font-family</span><span class="o">:</span> <span class="nv">$font-family</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Переменные — это основа для создания масштабируемых и легко поддерживаемых стилей в Sass. Они особенно полезны в больших проектах, где важно сохранять единообразие и быстро вносить изменения.</p>
+<p>Такой подход позволяет быстро вносить изменения в стили, просто обновляя значения переменных.</p>
+<p>Данные которые можно хранить в переменных:</p>
+<blockquote>
+<p><code>Цвета</code> - например основной цвет сайта, цвет фона, или цвет текста</p></blockquote>
+<blockquote>
+<p><code>Шрифты</code> - семейства шрифтов или размеры шрифтов</p></blockquote>
+<blockquote>
+<p><code>Размеры</code> - отступы, ширину, высоту, радиусы углов и так далее..</p></blockquote>
+<p>Рассмотрим еще несколько прмеров с переменными.</p>
+<p>Как уже известно переменные в препроцессоре SASS
+объявляются с помощью знака доллара как в PHP.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$primary-color</span><span class="o">:</span> <span class="mh">#fff</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">$font-stack</span><span class="o">:</span> <span class="s1">&#39;Helvetica&#39;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$spacing</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span></code></pre></div><p>А теперь после объявления переменных и когда присвоили значения
+разберемся как их использовать</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$primary-color</span><span class="o">:</span> <span class="mh">#3498db</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$font-stack</span><span class="o">:</span> <span class="s1">&#39;Helvetica&#39;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$spacing</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span></code></pre></div><p>Несколько преимуществ переменных:</p>
+<p>Удобство поддержки: Если нужно изменить значение (например, цвет), достаточно обновить его в одном месте.</p>
+<p>Сокращение дублирования: Переменные помогают избежать повторения одних и тех же значений.</p>
+<p>Читаемость кода: Именованные переменные делают стили более понятными и структурированными.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<div class="text-center">
+    <a href="mailto:mail@elham@ro.ru" class="gray no-underline inline-block mx2 mt1"
+             style = "font-size: 18px;";>
+        Text me
+    </a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>
