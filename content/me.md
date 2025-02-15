@@ -25,41 +25,22 @@ hideDate = true
 </p>
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">skills</h3>
 <p>
-<img class="logos" src="/images/HTML.svg" width="22px" height="22px" />
-&rsaquo; Гипертекстовая разметка HTML
+Технологии которые я изучил или в процессе изучения
 </p>
-<p>
-<img class="logos" src="/images/CSS.svg" width="22px" height="22px" />
-&rsaquo; Каскадные таблицы стилей CSS
-</p>
-<p>
-<img class="logos" src="/images/JavaScript.svg" width="22px" height="22px" />
-&rsaquo; Язык программирования JavaScript
-</p>
-<p>
-<img class="logos" src="/images/py.png" width="22px" height="22px" />
-&rsaquo; Язык программирования Python
-</p>
-<p>
-<img class="logos" src="/images/php.webp" width="25px" height="25px" />
-&rsaquo; Язык программирования PHP
-</p>
-<p>
-<img class="logos" src="/images/sql.png" width="22px" height="22px" />
-&rsaquo; Базы Данных MySQL
-</p>
-<p>
-<img class="logos" src="/images/react.png" width="22px" height="22px" />
-&rsaquo; Фрейворк React JS
-</p>
-<p>
-<img class="logos" src="/images/Sass.svg" width="22px" height="22px" />
-&rsaquo; Препроцессоры SCSS/SASS
-</p>
-<p>
-<img class="logos" src="/images/tw.webp" width="22px" height="22px" />
-&rsaquo; Препроцессор Tailwind CSS
-</p>
+<div class="tech_logos">
+    <img src="/images/Git.svg">
+    <img src="/images/Github-Dark.svg">
+    <img src="/images/Markdown-Dark.svg">
+    <img src="/images/CSS.svg">
+    <img src="/images/HTML.svg">
+    <img src="/images/JavaScript.svg">
+    <img src="/images/py.png">
+    <img src="/images/php.webp">
+    <img src="/images/sql.png">
+    <img src="/images/Sass.svg">
+    <img src="/images/tw.webp">
+    <img src="/images/VSCode-Dark.svg">
+</div>
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">education</h3>
 <p>Прогресс обучения</p>
 <h4 class="mt2">February 2022</h4>

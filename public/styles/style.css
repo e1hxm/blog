@@ -19,7 +19,19 @@
 .logos {
     vertical-align: middle;
 }
-
+/*==Для логотипов==*/
+.tech_logos{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tech_logos img {
+    width: 34px;
+    max-width: 20px;
+    height: auto;
+    margin: 20px;
+}
 a,
 abbr,
 acronym,
