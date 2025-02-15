@@ -6,8 +6,15 @@
     <description>Recent content in Javascript on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 07 Feb 2025 12:00:24 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2025 12:00:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Гайд по NPM</title>
+      <link>http://localhost:1313/npm/</link>
+      <pubDate>Sat, 08 Feb 2025 12:00:24 +0300</pubDate>
+      <guid>http://localhost:1313/npm/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Spread оператор в JavaScript</title>
       <link>http://localhost:1313/spread_v_javascript/</link>

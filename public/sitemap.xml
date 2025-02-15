@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-02-08T12:00:24+03:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-07T12:00:24+03:00</lastmod>
+    <lastmod>2025-02-08T12:00:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/javascript/</loc>
-    <lastmod>2025-02-07T12:00:24+03:00</lastmod>
+    <lastmod>2025-02-08T12:00:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/npm/</loc>
+    <lastmod>2025-02-08T12:00:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/npm/</loc>
+    <lastmod>2025-02-08T12:00:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/spread_v_javascript/</loc>
     <lastmod>2025-02-07T12:00:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-02-01T12:00:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/english/</loc>
-    <lastmod>2025-02-01T12:00:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/lesson_1_part_1_greeting/</loc>
-    <lastmod>2025-02-01T12:00:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/method_of_arrays_javascript/</loc>
     <lastmod>2025-01-30T18:55:24+03:00</lastmod>
@@ -62,9 +62,6 @@
     <loc>http://localhost:1313/arrow_function_javascript/</loc>
     <lastmod>2025-01-14T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/linkin_park_numb/</loc>
-    <lastmod>2025-01-13T18:53:24+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/loop_javascript/</loc>
     <lastmod>2025-01-10T18:53:24+03:00</lastmod>
   </url><url>
@@ -89,9 +86,6 @@
     <loc>http://localhost:1313/alert_promt_confirm_javascript/</loc>
     <lastmod>2025-01-08T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tipy_udarnogo_sloga/</loc>
-    <lastmod>2025-01-07T18:53:24+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/c/</loc>
     <lastmod>2025-01-06T19:53:24+03:00</lastmod>
   </url><url>
@@ -101,46 +95,7 @@
     <loc>http://localhost:1313/hello_world_c/</loc>
     <lastmod>2025-01-06T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/glasnye_soglasnye/</loc>
-    <lastmod>2025-01-06T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/english_alphabet/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/english_words/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/espanol_palabras/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/parole_italiano/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/worten_deutsch/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/kelimeler_turkey/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/france_mots/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/english_phrases/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/espanol_frases/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/frasi_italiano/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/phrasen_deutsch/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/cumleler_turkey/</loc>
-    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/france_phrases/</loc>
     <lastmod>2025-01-05T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/vim/</loc>
@@ -152,29 +107,11 @@
     <loc>http://localhost:1313/gitbook/</loc>
     <lastmod>2024-12-30T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/linkin_park_in_the_end/</loc>
-    <lastmod>2024-12-30T18:53:24+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/linux/</loc>
     <lastmod>2024-12-30T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/vimbook/</loc>
     <lastmod>2024-12-30T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tis/</loc>
-    <lastmod>2024-12-28T21:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/etapy_razvitiya_informatsionnyh_system/</loc>
-    <lastmod>2024-12-28T21:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/sposoby_isucheniya_informatsionnoy_systemy/</loc>
-    <lastmod>2024-12-28T20:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/ponatiya_svyazannye_s_sistemoy/</loc>
-    <lastmod>2024-12-28T19:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/ponatiya_informatsionnyh_system/</loc>
-    <lastmod>2024-12-28T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/css/</loc>
     <lastmod>2024-12-26T18:53:24+03:00</lastmod>
@@ -206,44 +143,11 @@
     <loc>http://localhost:1313/links/</loc>
     <lastmod>2024-12-12T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/economy/</loc>
-    <lastmod>2024-12-11T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/obchestvennoe_vosproizvodstvo/</loc>
-    <lastmod>2024-12-11T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/subject_of_economy/</loc>
-    <lastmod>2024-12-09T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/gpv/</loc>
-    <lastmod>2024-12-07T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/ogranichenie_resursov/</loc>
-    <lastmod>2024-12-04T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/factornye_dohody/</loc>
-    <lastmod>2024-12-04T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/economic_benifits/</loc>
-    <lastmod>2024-12-02T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/economic_resourses/</loc>
-    <lastmod>2024-12-02T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/economy_science/</loc>
-    <lastmod>2024-12-01T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/economic_needs/</loc>
-    <lastmod>2024-12-01T18:53:24+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/html/</loc>
     <lastmod>2024-11-27T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/setki_stranits/</loc>
     <lastmod>2024-11-27T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/economy_entry/</loc>
-    <lastmod>2024-11-24T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/map_v_javascript/</loc>
     <lastmod>2024-11-23T18:53:24+03:00</lastmod>
@@ -275,20 +179,11 @@
     <loc>http://localhost:1313/function_javascript/</loc>
     <lastmod>2024-11-11T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/linkin_park_a_place_for_my_head/</loc>
-    <lastmod>2024-11-09T18:53:24+03:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/axis_flexbox/</loc>
     <lastmod>2024-11-03T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/svoistvo_flex_direction_flexbox/</loc>
     <lastmod>2024-11-03T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/linkin_park_what_ive_done/</loc>
-    <lastmod>2024-11-01T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/linkin_park_with_you/</loc>
-    <lastmod>2024-10-29T18:53:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/peremennye_v_javascript/</loc>
     <lastmod>2024-10-29T18:53:24+03:00</lastmod>

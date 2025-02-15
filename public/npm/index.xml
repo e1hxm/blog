@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Npm on El&#39;ham</title>
+    <link>http://localhost:1313/npm/</link>
+    <description>Recent content in Npm on El&#39;ham</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Sat, 08 Feb 2025 12:00:24 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/npm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Гайд по NPM</title>
+      <link>http://localhost:1313/npm/</link>
+      <pubDate>Sat, 08 Feb 2025 12:00:24 +0300</pubDate>
+      <guid>http://localhost:1313/npm/</guid>
+      <description>&lt;p&gt;NPM (Node Package Manager) — это инструмент для управления пакетами в среде Node.js. Он позволяет устанавливать необходимые библиотеки, контролировать зависимости проекта, а также настраивать и редактировать его метаданные.&lt;/p&gt;&#xA;&lt;h3 id=&#34;загрузка-пакетов&#34;&gt;Загрузка пакетов&lt;/h3&gt;&#xA;&lt;p&gt;Пакеты в NPM — это упакованный программный код, который может представлять собой библиотеку, утилиту или полноценное приложение.&lt;/p&gt;&#xA;&lt;p&gt;Разработчики используют готовые пакеты, чтобы избежать лишних телодвижений — вместо того чтобы писать с нуля модули, которые уже существуют, они применяют уже созданные решения.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

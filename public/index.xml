@@ -6,8 +6,15 @@
     <description>Recent content on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Fri, 07 Feb 2025 12:00:24 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2025 12:00:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Гайд по NPM</title>
+      <link>http://localhost:1313/npm/</link>
+      <pubDate>Sat, 08 Feb 2025 12:00:24 +0300</pubDate>
+      <guid>http://localhost:1313/npm/</guid>
+      <description>&lt;p&gt;NPM (Node Package Manager) — это инструмент для управления пакетами в среде Node.js. Он позволяет устанавливать необходимые библиотеки, контролировать зависимости проекта, а также настраивать и редактировать его метаданные.&lt;/p&gt;&#xA;&lt;h3 id=&#34;загрузка-пакетов&#34;&gt;Загрузка пакетов&lt;/h3&gt;&#xA;&lt;p&gt;Пакеты в NPM — это упакованный программный код, который может представлять собой библиотеку, утилиту или полноценное приложение.&lt;/p&gt;&#xA;&lt;p&gt;Разработчики используют готовые пакеты, чтобы избежать лишних телодвижений — вместо того чтобы писать с нуля модули, которые уже существуют, они применяют уже созданные решения.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Spread оператор в JavaScript</title>
       <link>http://localhost:1313/spread_v_javascript/</link>

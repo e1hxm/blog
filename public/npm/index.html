@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гайд по NPM</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Гайд по NPM</h2>
+        
+
+        
+            <time class="h5 gray title__date">08 February 2025</time>
+        
+
+        <div><p>NPM (Node Package Manager) — это инструмент для управления пакетами в среде Node.js. Он позволяет устанавливать необходимые библиотеки, контролировать зависимости проекта, а также настраивать и редактировать его метаданные.</p>
+<h3 id="загрузка-пакетов">Загрузка пакетов</h3>
+<p>Пакеты в NPM — это упакованный программный код, который может представлять собой библиотеку, утилиту или полноценное приложение.</p>
+<p>Разработчики используют готовые пакеты, чтобы избежать лишних телодвижений — вместо того чтобы писать с нуля модули, которые уже существуют, они применяют уже созданные решения.</p>
+<p>В Node JS пакеты ставятся с помощью менеджера NPM, а хостится код в
+открытом доступе.</p>
+<p>Для установки NPM воспользуемся командой <code>install</code> либо <code>i</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">create</span><span class="o">-</span><span class="nx">react</span><span class="o">-</span><span class="nx">app</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// скачает React JS
+</span></span></span></code></pre></div><p>Если нужно несколько модулей то можно перечислить их сразу, а не вводить
+команды по подной и ждать установки каждого, это экономит время.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">install</span> <span class="nx">react</span> <span class="nx">react</span><span class="o">-</span><span class="nx">dom</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">// скачает сразу 2 пакета 
+</span></span></span></code></pre></div><h3 id="ставим-зависимости">Ставим зависимости</h3>
+<p>Зависимости в проекте - это набор пакетов, которые необходимы
+для запуска и работы приложения. Их список указывается в файле
+<code>packade.json</code> в разделе <code>dependencies</code> а конфиг запускается командой <code>npm init</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">init</span>
+</span></span></code></pre></div><p>После запуска команды, в консольке появятся несколько
+вопросов об авторе, названии проекта, версии и т.д.</p>
+<p>Можно пропустить и не отечать на эти вопросы,
+ничего страшного не произойдет.</p>
+<p>У <code>init</code> есть флаг, прописав который вопросы будут
+автоматически скипнуты.</p>
+<p>В любом случае получаем готовый файлик <code>package.json</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;test&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;El&#39;ham&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;License&#34;</span><span class="p">:</span> <span class="s2">&#34;MIT&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>А теперь добавим список зависимостей в разделе <code>dependencies</code>
+в формате <code>&quot;название_пакета&quot;:&quot;версия&quot;</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;test&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;El&#39;ham&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;License&#34;</span><span class="p">:</span> <span class="s2">&#34;MIT&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;express&#34;</span><span class="p">:</span> <span class="s2">&#34;4.17.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lodash&#34;</span><span class="p">:</span> <span class="s2">&#34;4.17.21&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>А теперь сохранимся и запустим команду <code>npm install</code></p>
+<p>NPM чекнет список зависимостей, создаст файлик <code>package_lock.json</code>
+а все скачанные модули теперь будут лежать в папке проекта
+<code>node_modules</code></p>
+<h3 id="автоматически-добавим-зависимости">Автоматически добавим зависимости</h3>
+<p>В NPM есть функция автоматического добавления зависимостей в файл <code>package.json</code>, что избавляет от необходимости вручную редактировать раздел <code>dependencies</code>. Для этого воспользуемся флагами команд:</p>
+<p>Флаг <code>--save</code> или <code>-S</code> позволяет добавить название пакета и его версию в раздел <code>dependencies</code> во время установки. Однако стоит отметить, что этот флаг актуален только для старых версий NPM. Начиная с версии NPM 5, все устанавливаемые пакеты по умолчанию автоматически добавляются в раздел <code>dependencies</code>, что упрощает процесс управления зависимостями.</p>
+<p>Флаг <code>--save-dev</code> или <code>-D</code> используется для добавления зависимостей в раздел <code>devDependencies</code> при установке пакетов. Он предназначен для пакетов, которые необходимы только в процессе разработки и не используются в финальной версии проекта. Например, сюда могут входить инструменты для тестирования, линтеры, сборщики и другие вспомогательные библиотеки, которые помогают в разработке, но не требуются для работы готового приложения.</p>
+<h3 id="обновим-пакеты">Обновим пакеты</h3>
+<p>Для обновления модулей в проекте используем команду <code>npm update</code>. Она позволяет NPM проверить список зависимостей в файле <code>package.json</code> и установить все доступные обновления, если они не ограничены специальными правилами.</p>
+<p>Ограничения на обновления задаются в разделе <code>dependencies</code> с помощью символа каретки (<code>^</code>). Например, список зависимостей с указанными ограничениями может выглядеть следующим образом:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;test&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;El&#39;ham&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;License&#34;</span><span class="p">:</span> <span class="s2">&#34;MIT&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;express&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.17.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lodash&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.17.21&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Теперь NPM обновит все модули до минорных версий и патчей, игнорирую мажорные версии.</p>
+<p class="gray">
+Пакеты в NPM следуют принципу семантического версионирования, где версии указываются в формате MAJOR.MINOR.PATCH. Каждая часть версии имеет своё значение:
+</p>
+<p class="gray">
+- MAJOR (мажорная версия) — указывает на крупные изменения, которые могут повлиять на совместимость пакета с другими модулями или инструментами.
+</p>
+<p class="gray">
+- MINOR (минорная версия) — добавляет новые функции, которые не нарушают обратную совместимость и не мешают использованию пакета.
+</p>
+<p class="gray">
+- PATCH (патч) — включает исправления ошибок, не затрагивающие функциональность пакета. 
+</p>
+<p class="gray">
+Такой подход помогает разработчикам понимать, какие изменения влечёт за собой обновление пакета.
+</p>
+<p>Если необходимо обновить один определенный пакет
+то можно прописать команду с его названием</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">npm</span> <span class="err">update</span> <span class="err">react</span>
+</span></span></code></pre></div><h3 id="загрузим-пакеты-определенных-версий">Загрузим пакеты определенных версий</h3>
+<p>Если после автоматического обновления всех пакетов в проекте, становится
+понятно что в одном из них появились ошибки или исчезли необходимые функции, в <code>NPM</code> есть возможность откатиться к предыдущей версии и заблокировать дальнейшие обновления.</p>
+<p>Для начала определим, какая версия пакета использовалась до проблемного обновления. Например, предположим, что сейчас установлен пакет <code>react</code> версии <code>10.2.0</code>. Чтобы найти предыдущие версии, воспользуемся калькулятором NPM <code>SemVer</code>: набираем название модуля и диапазон версий. В данном случае это <code>10.x.x</code> — все релизы мажорной версии 10. Также список всех доступных версий можно посмотреть на странице пакета в NPM.</p>
+<p>После того выяснили что с версией 10.1.0 не было проблем,
+пропишем его в <code>package.json</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;test&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;El&#39;ham&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;License&#34;</span><span class="p">:</span> <span class="s2">&#34;MIT&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;express&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.17.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lodash&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.17.21&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="s2">&#34;10.1.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>И ставим с помощью команды <code>npm install</code></p>
+<h3 id="запуск-скриптов-в-npm">Запуск скриптов в NPM</h3>
+<p>В файле <code>package.json</code> можно прописать скрипты и сложные команды, которые будут выполняться для сборки проекта, тестирования или обработки ошибок. Например, многие разработчики используют <code>Webpack</code> для объединения нескольких файлов с JavaScript-кодом в одно приложение. Чтобы запустить процесс сборки, достаточно выполнить соответствующую команду, указанную в <code>package.json</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">NODE_ENV=production webpack -p --config webpack.conf.js
+</span></span></code></pre></div><p>Упростим задачу, добавив команду в раздел <code>scripts</code> файла <code>package.json</code>. Перед командой укажем название скрипта, которое будет использоваться для его запуска. Например, в нашем случае это будет <code>prod</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;test&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;prod&#34;</span><span class="p">:</span> <span class="s2">&#34;NODE_ENV=production webpack -p --config webpack.conf.js&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;El&#39;ham&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;License&#34;</span><span class="p">:</span> <span class="s2">&#34;MIT&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;express&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.17.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;lodash&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.17.21&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="s2">&#34;10.1.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Теперь этот скрипт запускается с помощью <code>npm run prod</code></p>
+<h3 id="разберем-файл-packagejson">Разберем файл package.json</h3>
+<p>Файл <code>package.json</code> — это ключевой компонент проектов в экосистеме Node.js.</p>
+<p>Рассмотрим всю его структуру и возможности.</p>
+<p><code>Version</code> - говорит о текучей версии проекта. Версия задается
+по правилам семантического версионирования.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;version&#34;</span><span class="err">:</span> <span class="s2">&#34;1.0.0&#34;</span>
+</span></span></code></pre></div><p><code>Desription</code> - короткое описание проекта.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;description&#34;</span><span class="err">:</span> <span class="s2">&#34;Это супер мощный скрипт&#34;</span>
+</span></span></code></pre></div><p><code>Main</code> - точка входа в приложение.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;main&#34;</span><span class="err">:</span> <span class="s2">&#34;app/main.js&#34;</span>
+</span></span></code></pre></div><p><code>Scripts</code> - список скриптов которые мы собираемся
+запускать в дальнейшем.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;say-hi&#34;</span><span class="p">:</span> <span class="s2">&#34;echo &#39;Hello Frends!&#39;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>Dependencies</code> - список зависимостей для запуска приложения или программы.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;depenencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;express&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.17.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;lodash&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.17.21&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>Engines</code> - список версий Node.js на которых запустится
+приложение</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;engines&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;node&#34;</span><span class="p">:</span> <span class="s2">&#34;&gt;= 5.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;npm&#34;</span><span class="p">:</span> <span class="s2">&#34;&gt;= 2.5.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;yarn&#34;</span><span class="p">:</span> <span class="s2">&#34;^0.14.0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>Autor</code> - инфа об авторе проекта.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;El&#39;ham&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;hello@elham.ru&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;https://elham.ru&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>Bugs</code> - адрес на баг-трекер проекта.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;bugs&#34;</span><span class="p">:</span> <span class="s2">&#34;https://github.com/e1hxm/package/issues&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>Homepage</code> - адрес официального сайта проекта</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;homepage&#34;</span><span class="p">:</span> <span class="s2">&#34;https://elham.ru&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>devDependencies</code> - список зависимостей необходимых
+для ведения разработки.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;devDependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;autoprefixer&#34;</span><span class="p">:</span> <span class="s2">&#34;^7.1.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;babel-core&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.22.1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="правильное-версионирование">Правильное версионирование</h3>
+<p>В процессе разработки проекта чаще всего изменения происходят в разделах <code>dependencies</code> и <code>devDependencies</code>. Разработчики добавляют новые пакеты, обновляют версии существующих и удаляют ненужные зависимости. Для управления версиями пакетов используется принцип семантического версионирования, а NPM предоставляет удобные инструменты для работы с ними. Разберём специальные символы, которые помогают контролировать версии пакетов.</p>
+<h3 id="символы-для-управления-версиями-пакетов-в-npm">Символы для управления версиями пакетов в NPM:</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Символ</th>
+          <th>Описание</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>^</code></td>
+          <td>Разрешает обновления до последней <strong>минорной</strong> версии (например, <code>^1.2.3</code> обновит до <code>1.x.x</code>, но не до <code>2.0.0</code>).</td>
+      </tr>
+      <tr>
+          <td><code>~</code></td>
+          <td>Разрешает обновления только в пределах <strong>патчей</strong> (например, <code>~1.2.3</code> обновит до <code>1.2.x</code>, но не до <code>1.3.0</code>).</td>
+      </tr>
+      <tr>
+          <td><code>&gt;</code></td>
+          <td>Устанавливает версию <strong>выше</strong> указанной.</td>
+      </tr>
+      <tr>
+          <td><code>&lt;</code></td>
+          <td>Устанавливает версию <strong>ниже</strong> указанной.</td>
+      </tr>
+      <tr>
+          <td><code>&gt;=</code></td>
+          <td>Устанавливает версию <strong>не ниже</strong> указанной.</td>
+      </tr>
+      <tr>
+          <td><code>&lt;=</code></td>
+          <td>Устанавливает версию <strong>не выше</strong> указанной.</td>
+      </tr>
+      <tr>
+          <td><code>=</code></td>
+          <td>Устанавливает <strong>точную</strong> версию (можно не указывать, это поведение по умолчанию).</td>
+      </tr>
+      <tr>
+          <td><code>-</code></td>
+          <td>Задаёт диапазон версий (например, <code>1.2.3 - 2.0.0</code>).</td>
+      </tr>
+      <tr>
+          <td><code>*</code></td>
+          <td>Разрешает установку <strong>любой</strong> версии.</td>
+      </tr>
+      <tr>
+          <td><code>x</code></td>
+          <td>Обозначает &ldquo;любое значение&rdquo; в версии (например, <code>1.x.x</code> или <code>1.2.x</code>).</td>
+      </tr>
+  </tbody>
+</table>
+<p>Эти символы позволяют гибко управлять версиями пакетов, обеспечивая стабильность и совместимость проекта.</p>
+<h3 id="рассмотрим-файл-package-lockjson">Рассмотрим файл package-lock.json</h3>
+<p>Файл <code>package-lock.json</code> автоматически создаётся при установке пакетов через NPM. Скорее всего, этот файл уже есть в папке вашего проекта. Его основная задача — зафиксировать все зависимости, необходимые для работы сторонних пакетов.</p>
+<p>Рассмотрим пример. Предположим, я решил разработать библиотеку для обработки онлайн-платежей. Для этого я использовал несколько готовых модулей из NPM и на их основе создал собственное решение.</p>
+<p>Спустя некоторое время вы нашли мою библиотеку и решили добавить её в свой проект. Информация о ней будет зафиксирована в файле <code>package.json</code>, а все зависимости, без которых моя библиотека не сможет работать, запишутся в <code>package-lock.json</code>. Если говорить проще, то <code>package-lock.json</code> содержит информацию о зависимостях зависимостей.</p>
+<p>Если заглянуть в папку <code>node_modules</code>, то там можно найти не только пакеты, которые мы поставили сами, но и множество других модулей. Они появились там автоматически, потому что необходимы для работы библиотек, которые используются. Это стало возможным благодаря записям в <code>package-lock.json</code>.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+</div>
+<div class="text-center">
+    <a href="mailto:mail@elham@ro.ru" class="gray no-underline inline-block mx2 mt1"
+             style = "font-size: 18px;";>
+        Text me
+    </a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>
