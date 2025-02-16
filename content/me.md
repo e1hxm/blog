@@ -92,7 +92,28 @@ projects
 Список проектов
 </p>
 <h3 class="mt2" style="padding-top: 20px">
-February 2025
+February 2025 (#8)
+</h3>
+<p>
+Сайт на Helloween от Bedimcode 😊 на HTML, CSS и 
+JavaScript. Мобильная версия, flexbox, grid и анимация.
+</p>
+<p class="post">
+<a href="https://e1hxm.github.io/nft-website/" target="_blank">
+<img src="/images/helloween.png" style="border-radius: 20px"/>
+</a>
+</p>
+<p style="padding-top: 10px">
+👉 <a href="https://youtu.be/eDm7l5ODWuU" target="_blank">
+Источник
+</a>
+</p>
+<p>👉 <a href="https://e1hxm.github.io/nft-website/" target="_blank">
+Моя верстка
+</a>
+</p>
+<h3 class="mt2" style="padding-top: 20px">
+February 2025 (#7)
 </h3>
 <p>
 NFT вебсайт от Bedimcode 😊 на HTML, CSS и 
@@ -113,7 +134,7 @@ JavaScript. Адаптивная верстка под разные устрой
 </a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
-January 2025
+January 2025 (#6)
 </h3>
 <p>
 Landing Page сайта с суши от Bedimcode 😊 на HTML, CSS + 
@@ -134,7 +155,7 @@ JavaScript с адаптивной версткой и темной темой.
 </a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
-November 2024
+November 2024 (#5)
 </h3>
 <p>
 Коммерческая разработка корпоративного многостраничного сайта для бизнеса
@@ -151,7 +172,7 @@ November 2024
 </a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
-October 2024
+October 2024 (#4)
 </h3>
 <p>
 Landing Page с наушниками от Bedimcode 😊 на HTML, CSS + 
@@ -172,7 +193,7 @@ JavaScript с адаптивной версткой и анимацией на �
 </a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
-September 2024
+September 2024 (#3)
 </h3>
 <p>
 Landing Page с кроссовками от Bedimcode 😊 на HTML, CSS + 
@@ -194,7 +215,7 @@ JavaScript с адаптивной версткой и анимацией на �
 </a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
-August 2024
+August 2024 (#2)
 </h3>
 <p>
 Landing Page для пекарни от Bedimcode 😊 на HTML, CSS + 
@@ -216,7 +237,7 @@ JavaScript с адаптивной версткой и анимацией.
 </a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
-June 2024
+June 2024 (#1)
 </h3>
 <p>
 Landing Page с одеждой от Bedimcode 😊 на HTML, CSS + 
