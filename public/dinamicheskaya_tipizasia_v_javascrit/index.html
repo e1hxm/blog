@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Динамическая типизация в Javascript</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Динамическая типизация в Javascript</h2>
+        
+
+        
+            <time class="h5 gray title__date">16 February 2025</time>
+        
+
+        <div><p>Сегодня поговорим про динамическую типизацию в JavaScript.</p>
+<p>Динамическая типизация - это возможность одного типа данных
+превращаться в другой. То есть, строка может стать числом,
+число может стать строкой, объект тоже может стать строкой
+и так далее.</p>
+<p>Так же стоит знать, что в других языках программирования
+встречается статическая типизация данных, это
+когда число всегда остается числом.</p>
+<h3 id="tostring">toString</h3>
+<p>Рассмотрим пример с превращением в строку <code>toString</code></p>
+<p>Используем старый оператор, которым редко пользуются
+в разработке <code>String</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="kc">null</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Вернет string
+</span></span></span></code></pre></div><p>Этот оператор просто оборачивает все в ковычки, что
+в свою очередь меняет на строчный тип данных.</p>
+<p>Эту же команду можем запустить с числом.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="mi">4</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Вернет string
+</span></span></span></code></pre></div><p>Четверка, как числовой тип данных превратилась в строку.</p>
+<h3 id="конкатинация">Конкатинация</h3>
+<p>Конкатинация это сложение строки с чем то. Можно складывать
+строки между собой, строки с числами, числа с числами&hellip;</p>
+<p>Пример:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="s2">&#34;hello&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Вернет string
+</span></span></span></code></pre></div><p>Следует помнить, что всегда при сложении со строкой, результатом
+всегда будет строка.</p>
+</div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+    <br />
+    <br />
+    <a href="mailto:mail@elham@ro.ru" class="gray no-underline inline-block mx2">
+        Text me
+    </a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

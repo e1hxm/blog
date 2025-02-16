@@ -3,13 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-02-15T12:53:24+03:00</lastmod>
+    <lastmod>2025-02-16T12:55:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-02-15T12:53:24+03:00</lastmod>
+    <lastmod>2025-02-16T12:55:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/javascript/</loc>
-    <lastmod>2025-02-15T12:53:24+03:00</lastmod>
+    <lastmod>2025-02-16T12:55:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/dinamicheskaya_tipizasia_v_javascrit/</loc>
+    <lastmod>2025-02-16T12:55:24+03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/object_create_v_javascript/</loc>
     <lastmod>2025-02-15T12:53:24+03:00</lastmod>
