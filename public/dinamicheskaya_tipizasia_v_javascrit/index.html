@@ -58,7 +58,7 @@
 встречается статическая типизация данных, это
 когда число всегда остается числом.</p>
 <h3 id="tostring">toString</h3>
-<p>Рассмотрим пример с превращением в строку <code>toString</code></p>
+<p>Рассмотрим пример с превращением в строку <code>String</code></p>
 <p>Используем старый оператор, которым редко пользуются
 в разработке <code>String</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nb">String</span><span class="p">(</span><span class="kc">null</span><span class="p">)));</span>
@@ -75,8 +75,92 @@
 <p>Пример:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="s2">&#34;hello&#34;</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// Вернет string
-</span></span></span></code></pre></div><p>Следует помнить, что всегда при сложении со строкой, результатом
-всегда будет строка.</p>
+</span></span></span></code></pre></div><p>Следует помнить, что всегда при сложении со строкой, результатом всегда будет строка.</p>
+<p>При помощи кода на JavaScript можно так же
+формировать CSS стили.</p>
+<p>Давайте посмотрим как можно это реализовать.</p>
+<p>Нам нужно учитывать что нужно будет передавать
+стили в виде строки.</p>
+<p>Назовем переменную например fontSize и допустим
+эта переменная будет формироваться динамически.
+К примеру нам будет приходить значение <code>26</code></p>
+<p>Тут нужно помнить что в CSS у всех свойств
+есть единица измирения, поэтому наш код будет
+примерно таким:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">fontSize</span> <span class="o">=</span> <span class="mi">26</span> <span class="o">+</span> <span class="s2">&#34;px&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p>Так как все данные в CSS хранятся в виде строк,
+поэтому используем конкатинацию и получим в
+результате строчный тип данных.</p>
+<h3 id="tonumber">toNumber</h3>
+<p>Теперь рассмотрим как превратить в числовой тип
+данных.</p>
+<p>Точно так же как и в примере со строками,
+у чисел существует конструкция, которая называется
+<code>Number</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nb">Number</span><span class="p">(</span><span class="s2">&#34;4&#34;</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Вернется числовой тип данных
+</span></span></span></code></pre></div><p>Далее разберем более простой и лаконичный
+способ, который называется &ldquo;унарный плюс&rdquo;</p>
+<p>Если говорить простыми словами, то это
+когда мы ставим знак плюса <code>+</code> переди
+каким либо типом данных, это автоматчески
+поменяет значение данных.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="o">+</span><span class="s1">&#39;5&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Вернет числовой тип данных
+</span></span></span></code></pre></div><p>Еще один метод который называется <code>parseInt</code></p>
+<p>Он принимает два аргумента, в первой части
+то что требуется поменять, а во второй части
+ставим <code>10</code> - десятичная система.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&#34;15px&#34;</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</span></span></code></pre></div><p>Этот метод в реальной практике
+используется не так часто.</p>
+<p class="gray">
+Нужно запомнить, данные которые мы получаем 
+от пользователей через сайт, 
+всегда имеют тип `string` 
+</p>
+<h3 id="to-boolean">to Boolean</h3>
+<p>Сначала пройдем по всем значениям,
+которые будут возвращать <code>false</code></p>
+<p>Первое это будет <code>0</code></p>
+<p>Далее следует пустая строка, она тоже
+возвращает <code>false</code></p>
+<p class="gray">
+Строка с пробелом, это уже не пустая строка. 
+</p>
+<p>Далее следуют <code>null</code>, <code>undefined</code> и <code>NaN</code></p>
+<p>Все остальное, что существует в JavaScript
+возвращает <code>true</code></p>
+<p>Небольшой пример с булиновым значением:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">switcher</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">switcher</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Working...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Не сработает, 
+</span></span></span><span class="line"><span class="cl"><span class="c1">// switcher = &#39;false&#39;
+</span></span></span></code></pre></div><p>Если в switcher запихнуть <code>1</code> то тогда
+в консольке увидим <code>Working...</code></p>
+<p>Потому что значение станет правдивым -
+<code>true</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">switcher</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">switcher</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Working...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="boolean">Boolean</h3>
+<p>Точно так же как и в других типах данных
+у булиновых типов существует свой метод
+это <code>Boolean</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">(</span><span class="s2">&#34;4&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Вернется true
+</span></span></span></code></pre></div><p>Еще один редкий прием, это конда перед
+строкой поставить два восклицательных знака <code>!!</code></p>
+<p>Например:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">!!</span><span class="s2">&#34;4&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Вернет Boolean
+</span></span></span></code></pre></div><p>Это были основы динамической типизации
+в JavaScript</p>
 </div>
     </div>
    </div>
