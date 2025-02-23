@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фрагментация кода в препроцессоре SASS</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="author">
+        <a href="/">
+        <img class="author-avatar" src="/images/ava.jpeg">
+        </a>
+    </div>
+    <div class="clearfix">
+    <div class="col12 md:col8 lg:col6 mxauto pl2 pr2">
+    <div class="post">    
+        <nav class="col11 mxauto">
+    <div class="flex align-center justify-center">
+        <a href="/" class="Logo no-underline h2 serif bold mb0">El'ham</a>
+    </div>
+    <div class="mt4 h5 text-center">
+        <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+        <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+        <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+      </div>
+</nav>
+        
+<div class="list">
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Фрагментация кода в препроцессоре SASS</h2>
+        
+
+        
+            <time class="h5 gray title__date">20 February 2025</time>
+        
+
+        <div><p>Фрагментация в SASS - это разделение кода на
+несколько файлов, которые можно будет
+переиспользовать в других участках кода.</p>
+<p>Их еще называют <code>partials</code>.</p>
+<p>Данные из этих файлов в дальнейшем легко
+переиспользуются через импорт.</p>
+<p>На практике это позволяет упростить
+поддержку кода, уменьшает дублирование и
+делает стили модульными.</p>
+<p>Для создания файла с фрагментом кода или по другому <code>partials</code>, название файла именуют
+с нижнего подчеркивания <code>_</code>, например:
+<code>_menu</code>, <code>_header</code> или <code>_buttons</code>.</p>
+<p>Такие названия файлов указывают компилятору
+<code>SASS</code> что код из них должен быть импортирован.</p>
+<p>Для импорта кода в основной файл, например
+в <code>app.sass</code> используем директиву <code>@import</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* app.sass */</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">import</span> <span class="s1">&#39;_menu&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">import</span> <span class="s1">&#39;_header&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">import</span> <span class="s1">&#39;_buttons&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p class="gray">
+Нужно обрать внимание, что при импорте 
+файлов не нужно указывать расширение.
+</p>
+<p>Во время рендеринга, компилятор соберет
+все файлы в один, пример структуры проекта:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">styles/
+</span></span><span class="line"><span class="cl">├── _menu.scss
+</span></span><span class="line"><span class="cl">├── _buttons.scss
+</span></span><span class="line"><span class="cl">├── _header.scss
+</span></span><span class="line"><span class="cl">└── main.scss
+</span></span></code></pre></div><p>В современно подходе нужно использовать <code>@use</code>
+вместо <code>@import</code>. Такая деректива добавилась
+в <code>SASS</code> с обновлением <code>Dart Sass</code> чтобы убрать
+конфликты которые вызывал <code>@import</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* main.scss */</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">use</span> <span class="s1">&#39;menu&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">use</span> <span class="s1">&#39;buttons&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">use</span> <span class="s1">&#39;header&#39;</span><span class="p">;</span>
+</span></span></code></pre></div></div>
+    </div>
+   </div>
+</div>
+ 
+        
+<div class="mt4 h5 text-center">
+    <a href="/" class="gray no-underline inline-block mx2 mt1 md:mt0">Home</a>
+    <a href="/me/" class="gray no-underline inline-block mx2 mt1 md:mt0">About</a>
+    <a href="/links/" class="gray no-underline inline-block mx2 mt1 md:mt0">Links</a>
+    <br />
+    <br />
+    <a href="mailto:mail@elham@ro.ru" class="gray no-underline inline-block mx2">
+        Text me
+    </a>
+</div>
+<br />
+<br />
+ 
+    </div>
+    </div>
+    </div>
+</body>
+</html>

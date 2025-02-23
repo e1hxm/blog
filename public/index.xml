@@ -6,8 +6,15 @@
     <description>Recent content on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <lastBuildDate>Tue, 18 Feb 2025 18:53:24 +0300</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2025 18:53:24 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Фрагментация кода в препроцессоре SASS</title>
+      <link>http://localhost:1313/partials_sass/</link>
+      <pubDate>Thu, 20 Feb 2025 18:53:24 +0300</pubDate>
+      <guid>http://localhost:1313/partials_sass/</guid>
+      <description>&lt;p&gt;Фрагментация в SASS - это разделение кода на&#xA;несколько файлов, которые можно будет&#xA;переиспользовать в других участках кода.&lt;/p&gt;&#xA;&lt;p&gt;Их еще называют &lt;code&gt;partials&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Данные из этих файлов в дальнейшем легко&#xA;переиспользуются через импорт.&lt;/p&gt;&#xA;&lt;p&gt;На практике это позволяет упростить&#xA;поддержку кода, уменьшает дублирование и&#xA;делает стили модульными.&lt;/p&gt;&#xA;&lt;p&gt;Для создания файла с фрагментом кода или по другому &lt;code&gt;partials&lt;/code&gt;, название файла именуют&#xA;с нижнего подчеркивания &lt;code&gt;_&lt;/code&gt;, например:&#xA;&lt;code&gt;_menu&lt;/code&gt;, &lt;code&gt;_header&lt;/code&gt; или &lt;code&gt;_buttons&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Такие названия файлов указывают компилятору&#xA;&lt;code&gt;SASS&lt;/code&gt; что код из них должен быть импортирован.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Вложенность в препроцессоре SASS</title>
       <link>http://localhost:1313/vlojennost_v_sass/</link>
