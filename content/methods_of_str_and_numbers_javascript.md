@@ -24,7 +24,7 @@ console.log(str.toUpperCase()); // "HELLO"
 
 ```js
 const str = "HELLO";
-console.log(str.toLowerCase()); // "hello"
+console.log(str.toLowerCase()); // "hello" 
 ```
 
 #### trim()
