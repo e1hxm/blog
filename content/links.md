@@ -15,6 +15,28 @@ hideDate = true
 Ссылки на дополнительные разделы блога и 
 полезные ресурсы.
 </p>
+<hr style="width: 100px;">
+<p>
+Лекции из университетов, института и курсов
+не касающиеся кода.
+</p>
+<p>
+<a href="/history/">History</a> &rsaquo; История
+</p>
+<p>
+<a href="/philosophy/">Philosophy</a> &rsaquo; Философия
+</p>
+<p>
+<a href="/english/">English</a> &rsaquo; Английский
+</p>
+<p>
+<a href="/economy/">Economy</a> &rsaquo; Экономика
+</p>
+<p>
+<a href="/the_hollow_crown/">The Hollow Crown</a> &rsaquo; Пустая Корона 
+</p>
+<hr style="width: 100px;">
+<p>
 Полезные ссылки
 </p>
 <p>
@@ -26,6 +48,7 @@ hideDate = true
 <p>
 📌 <a href="/linux/">Linux</a> &rsaquo; Linux Commands
 </p>
+<hr style="width: 100px;">
 <p>
 <a href="https://mastery.games/flexboxzombies/" target="_blank">FlexboxZombies</a> &rsaquo; Тренажер по Флексам
 </p>
