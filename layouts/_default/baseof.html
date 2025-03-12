@@ -67,6 +67,33 @@
     </div>
     <script>
         /*=============== Показать кнопку наверх ===============*/ 
+
+const handleBackButton = () => {
+    const backButton = document.getElementById('back-button'); 
+
+    
+    if (backButton) {
+        if (window.scrollY >= 350) {
+            backButton.classList.add('show-scroll');
+        } else {
+            backButton.classList.remove('show-scroll'); 
+        }
+    }
+};
+
+
+window.addEventListener('scroll', handleBackButton);
+
+const backButton = document.getElementById('back-button');
+
+if (backButton) {
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        backButton.classList.add('hidden'); 
+    } else {
+        backButton.classList.remove('hidden'); 
+    }
+}
+        
 let scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
 	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
@@ -92,38 +119,35 @@ if (navClose) {
     });
 }
 
+/* Закрытие меню при клике вне его области */
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = navMenu.contains(event.target); // Проверяем, был ли клик внутри меню
+    const isClickOnToggle = navToggle.contains(event.target); // Проверяем, был ли клик на кнопке меню
 
-const backButton = document.getElementById('back-button');
+    // Если клик был вне меню и не на кнопке меню, закрываем меню
+    if (!isClickInsideMenu && !isClickOnToggle && document.body.classList.contains('show-menu')) {
+        document.body.classList.remove('show-menu');
+    }
+});
 
-
-if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    backButton.style.display = 'none'; 
-}
-
-
-// Получаем все ссылки в меню
 const navLinks = document.querySelectorAll('.nav__link');
 
-// Функция для добавления класса active-link
 const setActiveLink = () => {
-    const currentPath = window.location.pathname; // Получаем текущий путь страницы
+    const currentPath = window.location.pathname;
 
     navLinks.forEach(link => {
-        const linkPath = new URL(link.href).pathname; // Получаем путь из href ссылки
+        const linkPath = new URL(link.href).pathname;
 
-        // Если путь ссылки совпадает с текущим путём страницы
         if (linkPath === currentPath) {
-            link.classList.add('active-link'); // Добавляем класс active-link
+            link.classList.add('active-link');
         } else {
-            link.classList.remove('active-link'); // Убираем класс active-link
+            link.classList.remove('active-link');
         }
     });
 };
 
-// Вызываем функцию при загрузке страницы
 window.addEventListener('load', setActiveLink);
 
-// Вызываем функцию при изменении истории (например, при переходе по страницам через SPA)
 window.addEventListener('popstate', setActiveLink);
     </script>
 </body>

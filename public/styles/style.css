@@ -448,26 +448,36 @@ body.show-menu .nav__toggle {
 .back-button {
     position: fixed;
     left: 1rem; 
-    bottom: 1rem;
+    bottom: -50%; 
     background-color: black;
     color: gray;
     box-shadow: 0px 0px 10px 3px rgba(254, 254, 254, 0.2);
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; 
+    justify-content: center; 
     padding: 6px;
     font-size: 1.25rem;
-    transition: transform .4s;
+    transition: bottom .4s, transform .4s;
     border-radius: 12px;
     text-decoration: none; 
     width: 42px; 
-    height: 42px;
+    height: 42px; 
     z-index: 1000; 
     cursor: pointer; 
 }
 
 .back-button:hover {
-    background-color: rgba(0, 0, 0, 0.8); 
+    transform: translateY(-.5rem); 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.show-scroll {
+    bottom: 1rem; 
+}
+
+.hidden {
+    display: none;
 }
 
 .m1 {

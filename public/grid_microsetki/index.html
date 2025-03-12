@@ -152,6 +152,33 @@
     </div>
     <script>
           
+
+const handleBackButton = () => {
+    const backButton = document.getElementById('back-button'); 
+
+    
+    if (backButton) {
+        if (window.scrollY >= 350) {
+            backButton.classList.add('show-scroll');
+        } else {
+            backButton.classList.remove('show-scroll'); 
+        }
+    }
+};
+
+
+window.addEventListener('scroll', handleBackButton);
+
+const backButton = document.getElementById('back-button');
+
+if (backButton) {
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        backButton.classList.add('hidden'); 
+    } else {
+        backButton.classList.remove('hidden'); 
+    }
+}
+        
 let scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
 	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
@@ -177,37 +204,34 @@ if (navClose) {
     });
 }
 
+ 
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = navMenu.contains(event.target); 
+    const isClickOnToggle = navToggle.contains(event.target); 
 
-const backButton = document.getElementById('back-button');
-
-
-if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-    backButton.style.display = 'none'; 
-}
-
-
+    
+    if (!isClickInsideMenu && !isClickOnToggle && document.body.classList.contains('show-menu')) {
+        document.body.classList.remove('show-menu');
+    }
+});
 
 const navLinks = document.querySelectorAll('.nav__link');
 
-
 const setActiveLink = () => {
-    const currentPath = window.location.pathname; 
+    const currentPath = window.location.pathname;
 
     navLinks.forEach(link => {
-        const linkPath = new URL(link.href).pathname; 
+        const linkPath = new URL(link.href).pathname;
 
-        
         if (linkPath === currentPath) {
-            link.classList.add('active-link'); 
+            link.classList.add('active-link');
         } else {
-            link.classList.remove('active-link'); 
+            link.classList.remove('active-link');
         }
     });
 };
 
-
 window.addEventListener('load', setActiveLink);
-
 
 window.addEventListener('popstate', setActiveLink);
     </script>
