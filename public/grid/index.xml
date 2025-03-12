@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grid on El&#39;ham</title>
-    <link>https://elham.ru/grid/</link>
+    <link>http://localhost:1313/grid/</link>
     <description>Recent content in Grid on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
     <lastBuildDate>Thu, 26 Dec 2024 18:53:24 +0300</lastBuildDate>
-    <atom:link href="https://elham.ru/grid/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/grid/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Микросетки в Grid</title>
-      <link>https://elham.ru/grid_microsetki/</link>
+      <link>http://localhost:1313/grid_microsetki/</link>
       <pubDate>Thu, 26 Dec 2024 18:53:24 +0300</pubDate>
-      <guid>https://elham.ru/grid_microsetki/</guid>
+      <guid>http://localhost:1313/grid_microsetki/</guid>
       <description>&lt;h3 id=&#34;repeat&#34;&gt;repeat&lt;/h3&gt;&#xA;&lt;p&gt;Если все колонки в грид-контейнере должны быть одинаковой ширины, удобно использовать функцию &lt;code&gt;repeat&lt;/code&gt;. В скобках после &lt;code&gt;repeat&lt;/code&gt; указывают количество колонок и их ширину, разделяя значения запятой. Например:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;repeat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;количество&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;колонок&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;ширина&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;колонки&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Это создаст три колонки одинаковой ширины, где &lt;code&gt;1fr&lt;/code&gt; означает, что каждая колонка займет равную долю доступного пространства.&lt;/p&gt;&#xA;&lt;h3 id=&#34;auto-fit&#34;&gt;auto-fit&lt;/h3&gt;&#xA;&lt;p&gt;Если количество колонок должно автоматически подстраиваться под ширину контейнера, используют значение &lt;code&gt;auto-fit&lt;/code&gt;. Его указывают в функции &lt;code&gt;repeat&lt;/code&gt; вместо фиксированного числа колонок. Например:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;repeat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;auto-fit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;minmax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;200px&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;1fr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;В этом случае браузер автоматически создаст столько колонок, сколько поместится в контейнер, при этом каждая колонка будет иметь минимальную ширину &lt;code&gt;200px&lt;/code&gt; и равномерно распределит оставшееся пространство (&lt;code&gt;1fr&lt;/code&gt;). Это особенно полезно для создания адаптивных макетов.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Grid начало</title>
-      <link>https://elham.ru/grid_nachalo/</link>
+      <link>http://localhost:1313/grid_nachalo/</link>
       <pubDate>Sat, 12 Oct 2024 18:53:24 +0300</pubDate>
-      <guid>https://elham.ru/grid_nachalo/</guid>
+      <guid>http://localhost:1313/grid_nachalo/</guid>
       <description>&lt;p&gt;&#xD;&#xA;                            Лекция в HTMLAcademy про Grid&#xD;&#xA;                        &lt;/p&gt;&#xD;&#xA;                        &lt;p&gt;&#xD;&#xA;                            Бокс - контейнер, &#xD;&#xA;                            который относится к типу grid, &#xD;&#xA;                            содержит дочерние элементы, &#xD;&#xA;                            называемые грид-элементами. &#xD;&#xA;                            Несмотря на то что грид-контейнер &#xD;&#xA;                            выглядит как обычный блочный элемент &#xD;&#xA;                            для других элементов, таких как основное &#xD;&#xA;                            содержимое, грид-элементы внутри &#xD;&#xA;                            него ведут себя по-другому. &#xD;&#xA;                        &lt;/p&gt;&#xD;&#xA;                        &lt;p&gt;Например, даже строчные элементы &#xD;&#xA;                            начинают занимать всю доступную им область, &#xD;&#xA;                            а внешние отступы у элементов в грид-контейнере &#xD;&#xA;                            также ведут себя иначе.&#xD;&#xA;                        &lt;/p&gt;&#xD;&#xA;                        &lt;p&gt;&#xD;&#xA;                            По умолчанию грид-контейнер &#xD;&#xA;                            является одноколоночным. &#xD;&#xA;                            Чтобы изменить это, необходимо &#xD;&#xA;                            описать шаблон грид-контейнера. &#xD;&#xA;                            Для этого используется &#xD;&#xA;                            свойство grid-template-columns.&#xD;&#xA;                        &lt;/p&gt;</description>
     </item>
   </channel>

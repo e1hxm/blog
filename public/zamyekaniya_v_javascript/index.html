@@ -4,7 +4,7 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vim</title>
+    <title>Замыкания в JavaScript</title>
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
@@ -38,21 +38,40 @@
       </div>
 </nav>
         
-<h2>Vim</h2>
-
-
-
 <div class="list">
-  
-  <h3>January 2025</h3> 
-  <ul>
-      
-          <li>
-              <time class="gray">04</time> <a href="/vimtutor/">Команды из VimTutor</a>
-          </li>
-      
-  </ul>
-  
+   <div class="singleHead">
+    <div class="sinleHeadTexts">
+        
+            <h2 class="title__center">Замыкания в JavaScript</h2>
+        
+
+        
+            <time class="h5 gray title__date">11 March 2025</time>
+        
+
+        <div><p>Сегодня разберем, использование замыканий
+в JavaScript.</p>
+<p>Возьмем небольщой кусок кода, который
+уже попадался в этом курсе</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">logNumber</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">number</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">logNumber</span><span class="p">();</span>
+</span></span></code></pre></div><p>Нужно помнить что JavaScript выполнит этот код
+с помощью интерпритатора последовательно, строка
+за строкой.</p>
+<p>На строчке <code>let number = 5</code> тип данных изначально
+будет <code>undefined</code> мы туда помещаем значение <code>5</code></p>
+<p>Дальше интерпритатор натыкается на создание функции.</p>
+<p>Переменная logNumber</p>
+</div>
+    </div>
+   </div>
 </div>
  
         

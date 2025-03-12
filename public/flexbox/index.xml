@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flexbox on El&#39;ham</title>
-    <link>https://elham.ru/flexbox/</link>
+    <link>http://localhost:1313/flexbox/</link>
     <description>Recent content in Flexbox on El&#39;ham</description>
     <generator>Hugo</generator>
     <language>ru</language>
     <lastBuildDate>Wed, 25 Dec 2024 01:40:24 +0300</lastBuildDate>
-    <atom:link href="https://elham.ru/flexbox/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/flexbox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Применение автоматических отступов flexbox</title>
-      <link>https://elham.ru/base_weight_flexbox3/</link>
+      <link>http://localhost:1313/base_weight_flexbox3/</link>
       <pubDate>Wed, 25 Dec 2024 01:40:24 +0300</pubDate>
-      <guid>https://elham.ru/base_weight_flexbox3/</guid>
+      <guid>http://localhost:1313/base_weight_flexbox3/</guid>
       <description>&lt;p&gt;Алгоритм расчёта размеров флекс-элементов и их распределения внутри флекс-контейнера включает три последовательных этапа. Этот процесс значительно сложнее, чем в традиционной блочной модели.&lt;/p&gt;&#xA;&lt;h3 id=&#34;шаг-третий---применение-автоматических-отступов&#34;&gt;Шаг третий - Применение автоматических отступов&lt;/h3&gt;&#xA;&lt;p&gt;Если во флекс-контейнере остаётся свободное место, то автоматически применяются отступы с помощью свойства &lt;code&gt;margin&lt;/code&gt;, установленного в значение &lt;code&gt;auto&lt;/code&gt; для флекс-элементов.&lt;/p&gt;&#xA;&lt;p&gt;Во флексбоксе автоматические отступы &lt;code&gt;margin: auto&lt;/code&gt; функционируют значительно эффективнее, чем в стандартной блочной модели. Во-первых, они применяются во всех направлениях, в отличие от блочной модели, где они работают только по горизонтали. Во-вторых, автоматические отступы могут взаимодействовать между собой: если на одной оси присутствует несколько таких отступов (у разных элементов или с разных сторон одного элемента), то свободное пространство распределяется между ними равномерно.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Приминение гибких размеров flexbox</title>
-      <link>https://elham.ru/base_weight_flexbox2/</link>
+      <link>http://localhost:1313/base_weight_flexbox2/</link>
       <pubDate>Wed, 25 Dec 2024 01:29:24 +0300</pubDate>
-      <guid>https://elham.ru/base_weight_flexbox2/</guid>
-      <description>&lt;p&gt;Алгоритм расчёта размеров флекс-элементов и их распределения внутри флекс-контейнера включает три последовательных этапа. Этот процесс значительно сложнее, чем в традиционной блочной модели.&lt;/p&gt;&#xA;&lt;h3 id=&#34;шаг-второй---применение-гибких-размеров&#34;&gt;Шаг второй - Применение гибких размеров&lt;/h3&gt;&#xA;&lt;p&gt;Начнём с примера. Ширина флекс-контейнера составляет 500px. Внутри него находятся три флекс-элемента, каждый из которых имеет исходный базовый размер 100px. Отступы &lt;code&gt;padding&lt;/code&gt; отсутствуют. Таким образом, во флекс-контейнере остаётся 500px - 300px = 200px свободного места.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://elham.ru/images/base_weight_flex2.png&#34; alt=&#34;Применение гибких размеров&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;В стандартной блочной модели эти 200px остались бы неиспользованными, так как размеры элементов определяются за один проход. Во флексбоксе же размеры элементов пересчитываются несколько раз. На втором этапе происходит перераспределение свободного пространства, но только для «гибких» элементов. При этом «гибкость» может быть двух типов: на растяжение и на сжатие.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/base_weight_flexbox2/</guid>
+      <description>&lt;p&gt;Алгоритм расчёта размеров флекс-элементов и их распределения внутри флекс-контейнера включает три последовательных этапа. Этот процесс значительно сложнее, чем в традиционной блочной модели.&lt;/p&gt;&#xA;&lt;h3 id=&#34;шаг-второй---применение-гибких-размеров&#34;&gt;Шаг второй - Применение гибких размеров&lt;/h3&gt;&#xA;&lt;p&gt;Начнём с примера. Ширина флекс-контейнера составляет 500px. Внутри него находятся три флекс-элемента, каждый из которых имеет исходный базовый размер 100px. Отступы &lt;code&gt;padding&lt;/code&gt; отсутствуют. Таким образом, во флекс-контейнере остаётся 500px - 300px = 200px свободного места.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/base_weight_flex2.png&#34; alt=&#34;Применение гибких размеров&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;В стандартной блочной модели эти 200px остались бы неиспользованными, так как размеры элементов определяются за один проход. Во флексбоксе же размеры элементов пересчитываются несколько раз. На втором этапе происходит перераспределение свободного пространства, но только для «гибких» элементов. При этом «гибкость» может быть двух типов: на растяжение и на сжатие.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Исходные базовые размеры flex-элементов</title>
-      <link>https://elham.ru/base_weight_flexbox/</link>
+      <link>http://localhost:1313/base_weight_flexbox/</link>
       <pubDate>Tue, 24 Dec 2024 06:29:24 +0300</pubDate>
-      <guid>https://elham.ru/base_weight_flexbox/</guid>
+      <guid>http://localhost:1313/base_weight_flexbox/</guid>
       <description>&lt;p&gt;Алгоритм расчёта размеров флекс-элементов и их распределения внутри флекс-контейнера включает три последовательных этапа. Этот процесс значительно сложнее, чем в традиционной блочной модели.&lt;/p&gt;&#xA;&lt;h3 id=&#34;первый-шаг---определение-исходных-базовых-размеров-флекс-элементов&#34;&gt;Первый шаг - Определение исходных базовых размеров флекс-элементов&lt;/h3&gt;&#xA;&lt;p&gt;Базовый размер — это размер элемента, измеряемый вдоль основной оси.&lt;/p&gt;&#xA;&lt;p&gt;Исходный базовый размер — это размер, который флекс-элемент принимает без использования дополнительных функций флекс-модели. Он определяется стандартными свойствами блочной модели (например, &lt;code&gt;width&lt;/code&gt;, &lt;code&gt;height&lt;/code&gt;, &lt;code&gt;padding&lt;/code&gt;, &lt;code&gt;border&lt;/code&gt;) и содержимым элемента.&lt;/p&gt;&#xA;&lt;p&gt;Если основная ось расположена горизонтально, то на исходный базовый размер влияют:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Свойство align-content</title>
-      <link>https://elham.ru/align_content_css/</link>
+      <link>http://localhost:1313/align_content_css/</link>
       <pubDate>Sat, 23 Nov 2024 18:53:24 +0300</pubDate>
-      <guid>https://elham.ru/align_content_css/</guid>
+      <guid>http://localhost:1313/align_content_css/</guid>
       <description>&lt;p&gt;Лекция в HTML Academy про align-content&lt;/p&gt;&#xA;&lt;p&gt;Свойство &lt;code class=&#34;code_line&#34;&gt;justify-content&lt;/code&gt; управляет распределением флекс-элементов вдоль главной оси,&#xA;а &lt;code class=&#34;code_line&#34;&gt;align-content&lt;/code&gt; — выравниванием рядов флекс-элементов вдоль поперечной оси. Оба&#xA;свойства имеют схожие значения:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;1 &lt;code class=&#34;code_line&#34;&gt;flex-start&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;2 &lt;code class=&#34;code_line&#34;&gt;flex-end&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;3 &lt;code class=&#34;code_line&#34;&gt;center&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;4 &lt;code class=&#34;code_line&#34;&gt;space-between&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;5 &lt;code class=&#34;code_line&#34;&gt;stretch&lt;/code&gt; - доступно только для &lt;code class=&#34;code_line&#34;&gt;align-content&lt;/code&gt; и является значением по умолчанию.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Свойство &lt;code class=&#34;code_line&#34;&gt;align-content&lt;/code&gt; переопределяет значение &lt;code class=&#34;code_line&#34;&gt;align-items&lt;/code&gt;, которое управляет&#xA;выравниванием отдельных флекс-элементов вдоль поперечной оси. Это происходит как для&#xA;одного ряда флекс-элементов, так и для нескольких рядов.&lt;/p&gt;&#xA;&lt;p&gt;Однако есть один нюанс: &lt;code class=&#34;code_line&#34;&gt;align-content&lt;/code&gt; перестаёт работать, если для флекс-контейнера&#xA;установлено свойство &lt;code class=&#34;coe_line&#34;&gt;flex-wrap: nowrap&lt;/code&gt;. Это происходит потому, что в таком случае&#xA;высота строки равна высоте флекс-контейнера, и на поперечной оси не остаётся&#xA;свободного пространства.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Свойство justify-content</title>
-      <link>https://elham.ru/svoistvo_justify_content/</link>
+      <link>http://localhost:1313/svoistvo_justify_content/</link>
       <pubDate>Thu, 21 Nov 2024 18:53:24 +0300</pubDate>
-      <guid>https://elham.ru/svoistvo_justify_content/</guid>
+      <guid>http://localhost:1313/svoistvo_justify_content/</guid>
       <description>&lt;p&gt;&#xD;&#xA;                            Лекция от HTMLAcademy про justify-content&#xD;&#xA;                        &lt;/p&gt;&#xD;&#xA;                        &lt;p&gt;&#xD;&#xA;                            В Flexbox есть свойства justify-content,&#xD;&#xA;                            которые позволяют равномерно&#xD;&#xA;                            распределять элементы вдоль главной оси:&#xD;&#xA;                        &lt;/p&gt;&#xD;&#xA;                        &lt;ul&gt;&#xD;&#xA;                            &lt;li&gt;&#xD;&#xA;                                &#39;space-between&#39; — это значение,&#xD;&#xA;                                при котором расстояния между&#xD;&#xA;                                соседними элементами равны,&#xD;&#xA;                                а отступы между элементами и&#xD;&#xA;                                краями контейнера отсутствуют.&#xD;&#xA;                            &lt;/li&gt;&#xD;&#xA;                            &lt;li&gt;&#xD;&#xA;                                &#39;space-around&#39; — это значение,&#xD;&#xA;                                при котором расстояния между&#xD;&#xA;                                соседними элементами равны,&#xD;&#xA;                                а отступы между элементами и&#xD;&#xA;                                краями контейнера составляют половину&#xD;&#xA;                                расстояния между соседними элементами.&#xD;&#xA;                            &lt;/li&gt;&#xD;&#xA;                            &lt;li&gt;&#xD;&#xA;                                &#39;space-evenly&#39; — это значение,&#xD;&#xA;                                при котором расстояния&#xD;&#xA;                                между всеми элементами,&#xD;&#xA;                                включая края контейнера, равны.&#xD;&#xA;                            &lt;/li&gt;&#xD;&#xA;                        &lt;/ul&gt;&#xD;&#xA;                        &lt;p&gt;&#xD;&#xA;                            Свойство &#39;justify-content&#39; контролирует&#xD;&#xA;                            распределение элементов вдоль главной оси и&#xD;&#xA;                            принимает пять различных значений:&#xD;&#xA;                        &lt;/p&gt;</description>
     </item>
     <item>
       <title>Свойство flex-wrap </title>
-      <link>https://elham.ru/svoistvo_flex_wrap/</link>
+      <link>http://localhost:1313/svoistvo_flex_wrap/</link>
       <pubDate>Wed, 13 Nov 2024 18:53:24 +0300</pubDate>
-      <guid>https://elham.ru/svoistvo_flex_wrap/</guid>
+      <guid>http://localhost:1313/svoistvo_flex_wrap/</guid>
       <description>&lt;p&gt;Лекция из HTML Academy про свойство flex-wrap в CSS&lt;/p&gt;&#xD;&#xA;            &lt;p&gt;&#xD;&#xA;              Если флекс-элементов в контейнере станет больше чем он сможет вместить то произойдет&#xD;&#xA;              следющее:&#xD;&#xA;            &lt;/p&gt;&#xD;&#xA;            &lt;ul&gt;&#xD;&#xA;              &lt;li&gt;&#xD;&#xA;                &lt;p&gt;Элементы будут сжиматься до самого возможного минимального значения&lt;/p&gt;&#xD;&#xA;              &lt;/li&gt;&#xD;&#xA;              &lt;li&gt;&#xD;&#xA;                &lt;p&gt;&#xD;&#xA;                  Даже если указать явную величину ширины для элементов, механизм flexbox может их&#xD;&#xA;                  уменьшить&#xD;&#xA;                &lt;/p&gt;&#xD;&#xA;              &lt;/li&gt;&#xD;&#xA;              &lt;li&gt;&#xD;&#xA;                &lt;p&gt;&#xD;&#xA;                  Если элементы не умещаются в контейнер даже после уменьшения, они выйдут за его&#xD;&#xA;                  границы, но останутся в одном ряду.&#xD;&#xA;                &lt;/p&gt;&#xD;&#xA;              &lt;/li&gt;&#xD;&#xA;            &lt;/ul&gt;&#xD;&#xA;            &lt;p&gt;Это поведение можно изменить с помощью свойства flex-wrap у флекс-контейнера.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Поперечная ось flexbox</title>
-      <link>https://elham.ru/axis_flexbox/</link>
+      <link>http://localhost:1313/axis_flexbox/</link>
       <pubDate>Sun, 03 Nov 2024 18:53:24 +0300</pubDate>
-      <guid>https://elham.ru/axis_flexbox/</guid>
+      <guid>http://localhost:1313/axis_flexbox/</guid>
       <description>&lt;p&gt;Лекция из HTML Academy про поперечную ось flexbox в CSS&lt;/p&gt;&#xA;&lt;p&gt;Во флексбоксе вместо направлений «верх» и «низ» используется понятие «поперечная ось».&lt;/p&gt;&#xA;&lt;p&gt;Вдоль этой оси происходит «вертикальное» выравнивание элементов.&lt;/p&gt;&#xA;&lt;p&gt;Пример на картинке:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;../images/axis-flexbox.png&#34; alt=&#34;Поперечная ось flexbox&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Поперечная ось всегда перпендикулярна главной оси и поворачивается вместе с ней если:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;1 Главная ось направлена горизонтально, то поперечная ось смотрит вниз.&lt;/li&gt;&#xA;&lt;li&gt;2 Главная ось направлена вертикально, то поперечная ось смотрит направо.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Это поведение может показаться не совсем интуитивным, и к нему нужно привыкнуть.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Свойство flex-direction</title>
-      <link>https://elham.ru/svoistvo_flex_direction_flexbox/</link>
+      <link>http://localhost:1313/svoistvo_flex_direction_flexbox/</link>
       <pubDate>Sun, 03 Nov 2024 18:53:24 +0300</pubDate>
-      <guid>https://elham.ru/svoistvo_flex_direction_flexbox/</guid>
+      <guid>http://localhost:1313/svoistvo_flex_direction_flexbox/</guid>
       <description>&lt;p&gt;Лекция из HTML Academy про свойство &#34;flex-direction&#34;&lt;/p&gt;&#xD;&#xA;            &lt;p&gt;&#xD;&#xA;              В стандартной блочной модели направления «влево», «вправо», «вверх» и «вниз»&#xD;&#xA;              фиксированы.&#xD;&#xA;            &lt;/p&gt;&#xD;&#xA;            &lt;p&gt;Включаем flex&lt;/p&gt;&#xD;&#xA;            &lt;pre&gt;&lt;code&gt;display: flex;&lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;            &lt;p&gt;&#xD;&#xA;              Однако внутри флекс-контейнера эти понятия могут меняться, так как в нем можно&#xD;&#xA;              изменить обычное направление потока элементов.&#xD;&#xA;            &lt;/p&gt;&#xD;&#xA;            &lt;p&gt;Меняем направление&lt;/p&gt;&#xD;&#xA;            &lt;pre&gt;&lt;code&gt;flex-direction: row; // Значение по умолчанию   &lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;            &lt;p&gt;&#xD;&#xA;              Во флексбоксе вместо направлений «лево» и «право» используется понятие «главная ось».&#xD;&#xA;              Поток флекс-элементов проходит вдоль главной оси от её начала к её концу.&#xD;&#xA;            &lt;/p&gt;</description>
     </item>
     <item>
       <title>Flexbox начало</title>
-      <link>https://elham.ru/flexbox_nachlo/</link>
+      <link>http://localhost:1313/flexbox_nachlo/</link>
       <pubDate>Sun, 13 Oct 2024 18:53:24 +0300</pubDate>
-      <guid>https://elham.ru/flexbox_nachlo/</guid>
+      <guid>http://localhost:1313/flexbox_nachlo/</guid>
       <description>&lt;p&gt;Лекция в HTMLAcademy про flexbox &lt;/p&gt;&#xD;&#xA;            &lt;p&gt;&#xD;&#xA;              Чтобы воспользоваться уникальными свойствами флексов (от английского &#34;flexible&#34; —&#xD;&#xA;              «гибкий»), необходимо сначала с помощью свойства &#39;display&#39; изменить тип элемента:&#xD;&#xA;            &lt;/p&gt;&#xD;&#xA;            &lt;pre&gt;&lt;code&gt;display: flex;&lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;            &lt;p&gt;&#xD;&#xA;              Контейнер с типом &#39;flex&#39; называется флекс-контейнером, а его дочерние элементы —&#xD;&#xA;              флекс-элементами.&#xD;&#xA;            &lt;/p&gt;&#xD;&#xA;            &lt;p&gt;&#xD;&#xA;              Флекс-элементы автоматически располагаются вдоль главной оси. По умолчанию, главная&#xD;&#xA;              ось направлена слева направо.&#xD;&#xA;            &lt;/p&gt;&#xD;&#xA;            &lt;img src=&#34;../images/flex1.1.png&#34; /&gt;&#xD;&#xA;            &lt;p&gt;&#xD;&#xA;              По умолчанию, флекс-элементы не переносятся на новую строку и сжимаются до размера&#xD;&#xA;              своего содержимого. Из-за этой особенности, для флекс-элементов, которые используются&#xD;&#xA;              в сеточной структуре, рекомендуется явно задавать ширину.&#xD;&#xA;            &lt;/p&gt;</description>
     </item>
   </channel>

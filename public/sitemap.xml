@@ -2,244 +2,265 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://elham.ru/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-03-11T12:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-03-11T12:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/javascript/</loc>
+    <lastmod>2025-03-11T12:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/zamyekaniya_v_javascript/</loc>
+    <lastmod>2025-03-11T12:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/css/</loc>
     <lastmod>2025-02-20T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/css/</loc>
+    <loc>http://localhost:1313/partials_sass/</loc>
     <lastmod>2025-02-20T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/</loc>
-    <lastmod>2025-02-20T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>https://elham.ru/partials_sass/</loc>
-    <lastmod>2025-02-20T18:53:24+03:00</lastmod>
-  </url><url>
-    <loc>https://elham.ru/vlojennost_v_sass/</loc>
+    <loc>http://localhost:1313/vlojennost_v_sass/</loc>
     <lastmod>2025-02-18T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/javascript/</loc>
+    <loc>http://localhost:1313/dinamicheskaya_tipizasia_v_javascrit/</loc>
     <lastmod>2025-02-16T12:55:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/dinamicheskaya_tipizasia_v_javascrit/</loc>
-    <lastmod>2025-02-16T12:55:24+03:00</lastmod>
-  </url><url>
-    <loc>https://elham.ru/object_create_v_javascript/</loc>
+    <loc>http://localhost:1313/object_create_v_javascript/</loc>
     <lastmod>2025-02-15T12:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/setprototype_v_javascript/</loc>
+    <loc>http://localhost:1313/setprototype_v_javascript/</loc>
     <lastmod>2025-02-14T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/peremennye_v_sass/</loc>
+    <loc>http://localhost:1313/peremennye_v_sass/</loc>
     <lastmod>2025-02-10T12:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/vedenie_v_sass/</loc>
+    <loc>http://localhost:1313/vedenie_v_sass/</loc>
     <lastmod>2025-02-09T12:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/npm/</loc>
+    <loc>http://localhost:1313/npm/</loc>
     <lastmod>2025-02-08T12:00:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/npm/</loc>
+    <loc>http://localhost:1313/npm/</loc>
     <lastmod>2025-02-08T12:00:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/spread_v_javascript/</loc>
+    <loc>http://localhost:1313/spread_v_javascript/</loc>
     <lastmod>2025-02-07T12:00:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/method_of_arrays_javascript/</loc>
+    <loc>http://localhost:1313/method_of_arrays_javascript/</loc>
     <lastmod>2025-01-30T18:55:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/destructurisazia_objectov_javascript/</loc>
+    <loc>http://localhost:1313/destructurisazia_objectov_javascript/</loc>
     <lastmod>2025-01-25T12:55:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/pseudo_array_javascript/</loc>
+    <loc>http://localhost:1313/pseudo_array_javascript/</loc>
     <lastmod>2025-01-25T12:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/callback_function_javascript/</loc>
+    <loc>http://localhost:1313/callback_function_javascript/</loc>
     <lastmod>2025-01-22T12:55:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/python/</loc>
+    <loc>http://localhost:1313/python/</loc>
     <lastmod>2025-01-21T12:05:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/round_in_python/</loc>
+    <loc>http://localhost:1313/round_in_python/</loc>
     <lastmod>2025-01-21T12:05:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/numbers_in_python/</loc>
+    <loc>http://localhost:1313/numbers_in_python/</loc>
     <lastmod>2025-01-21T12:00:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/methods_of_str_and_numbers_javascript/</loc>
+    <loc>http://localhost:1313/methods_of_str_and_numbers_javascript/</loc>
     <lastmod>2025-01-16T19:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/svoistva_v_javascript/</loc>
+    <loc>http://localhost:1313/svoistva_v_javascript/</loc>
     <lastmod>2025-01-16T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/return_javascript/</loc>
+    <loc>http://localhost:1313/return_javascript/</loc>
     <lastmod>2025-01-15T19:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/argument_javascript/</loc>
+    <loc>http://localhost:1313/argument_javascript/</loc>
     <lastmod>2025-01-15T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/fuction_expression_javascript/</loc>
+    <loc>http://localhost:1313/fuction_expression_javascript/</loc>
     <lastmod>2025-01-14T19:55:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/function_declaration_javascript/</loc>
+    <loc>http://localhost:1313/function_declaration_javascript/</loc>
     <lastmod>2025-01-14T18:55:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/arrow_function_javascript/</loc>
+    <loc>http://localhost:1313/arrow_function_javascript/</loc>
     <lastmod>2025-01-14T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/loop_javascript/</loc>
+    <loc>http://localhost:1313/loop_javascript/</loc>
     <lastmod>2025-01-10T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/type_of_data_python/</loc>
+    <loc>http://localhost:1313/type_of_data_python/</loc>
     <lastmod>2025-01-09T20:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/operatory_sravneniya/</loc>
+    <loc>http://localhost:1313/operatory_sravneniya/</loc>
     <lastmod>2025-01-09T19:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/operators_in_javascript/</loc>
+    <loc>http://localhost:1313/operators_in_javascript/</loc>
     <lastmod>2025-01-09T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/interpolyasia/</loc>
+    <loc>http://localhost:1313/interpolyasia/</loc>
     <lastmod>2025-01-08T19:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/method_document_write/</loc>
+    <loc>http://localhost:1313/method_document_write/</loc>
     <lastmod>2025-01-08T18:55:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/typeof_javascript/</loc>
+    <loc>http://localhost:1313/typeof_javascript/</loc>
     <lastmod>2025-01-08T18:54:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/alert_promt_confirm_javascript/</loc>
+    <loc>http://localhost:1313/alert_promt_confirm_javascript/</loc>
     <lastmod>2025-01-08T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/c/</loc>
+    <loc>http://localhost:1313/c/</loc>
     <lastmod>2025-01-06T19:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/main_in_c/</loc>
+    <loc>http://localhost:1313/main_in_c/</loc>
     <lastmod>2025-01-06T19:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/hello_world_c/</loc>
+    <loc>http://localhost:1313/hello_world_c/</loc>
     <lastmod>2025-01-06T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/vim/</loc>
+    <loc>http://localhost:1313/cumleler_turkey/</loc>
+    <lastmod>2025-01-05T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/vim/</loc>
     <lastmod>2025-01-04T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/vimtutor/</loc>
+    <loc>http://localhost:1313/vimtutor/</loc>
     <lastmod>2025-01-04T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/grid/</loc>
+    <loc>http://localhost:1313/gitbook/</loc>
+    <lastmod>2024-12-30T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/linux/</loc>
+    <lastmod>2024-12-30T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/vimbook/</loc>
+    <lastmod>2024-12-30T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/grid/</loc>
     <lastmod>2024-12-26T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/grid_microsetki/</loc>
+    <loc>http://localhost:1313/grid_microsetki/</loc>
     <lastmod>2024-12-26T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/flexbox/</loc>
+    <loc>http://localhost:1313/flexbox/</loc>
     <lastmod>2024-12-25T01:40:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/base_weight_flexbox3/</loc>
+    <loc>http://localhost:1313/base_weight_flexbox3/</loc>
     <lastmod>2024-12-25T01:40:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/base_weight_flexbox2/</loc>
+    <loc>http://localhost:1313/base_weight_flexbox2/</loc>
     <lastmod>2024-12-25T01:29:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/base_weight_flexbox/</loc>
+    <loc>http://localhost:1313/base_weight_flexbox/</loc>
     <lastmod>2024-12-24T06:29:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/svoistvo_display_v_css/</loc>
+    <loc>http://localhost:1313/svoistvo_display_v_css/</loc>
     <lastmod>2024-12-14T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/html/</loc>
+    <loc>http://localhost:1313/me/</loc>
+    <lastmod>2024-12-12T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/links/</loc>
+    <lastmod>2024-12-12T18:53:24+03:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/html/</loc>
     <lastmod>2024-11-27T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/setki_stranits/</loc>
+    <loc>http://localhost:1313/setki_stranits/</loc>
     <lastmod>2024-11-27T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/map_v_javascript/</loc>
+    <loc>http://localhost:1313/map_v_javascript/</loc>
     <lastmod>2024-11-23T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/set_v_javascript/</loc>
+    <loc>http://localhost:1313/set_v_javascript/</loc>
     <lastmod>2024-11-23T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/align_content_css/</loc>
+    <loc>http://localhost:1313/align_content_css/</loc>
     <lastmod>2024-11-23T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/svoistvo_justify_content/</loc>
+    <loc>http://localhost:1313/svoistvo_justify_content/</loc>
     <lastmod>2024-11-21T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/arrays_in_javascript/</loc>
+    <loc>http://localhost:1313/arrays_in_javascript/</loc>
     <lastmod>2024-11-17T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/objects_v_javascript/</loc>
+    <loc>http://localhost:1313/objects_v_javascript/</loc>
     <lastmod>2024-11-17T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/svoistvo_flex_wrap/</loc>
+    <loc>http://localhost:1313/svoistvo_flex_wrap/</loc>
     <lastmod>2024-11-13T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/tipy_dannyh_v_javascript/</loc>
+    <loc>http://localhost:1313/tipy_dannyh_v_javascript/</loc>
     <lastmod>2024-11-12T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/boxmodul_v_css/</loc>
+    <loc>http://localhost:1313/boxmodul_v_css/</loc>
     <lastmod>2024-11-11T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/function_javascript/</loc>
+    <loc>http://localhost:1313/function_javascript/</loc>
     <lastmod>2024-11-11T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/axis_flexbox/</loc>
+    <loc>http://localhost:1313/axis_flexbox/</loc>
     <lastmod>2024-11-03T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/svoistvo_flex_direction_flexbox/</loc>
+    <loc>http://localhost:1313/svoistvo_flex_direction_flexbox/</loc>
     <lastmod>2024-11-03T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/peremennye_v_javascript/</loc>
+    <loc>http://localhost:1313/peremennye_v_javascript/</loc>
     <lastmod>2024-10-29T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/flexbox_nachlo/</loc>
+    <loc>http://localhost:1313/flexbox_nachlo/</loc>
     <lastmod>2024-10-13T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/grid_nachalo/</loc>
+    <loc>http://localhost:1313/grid_nachalo/</loc>
     <lastmod>2024-10-12T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/margin_and_padding/</loc>
+    <loc>http://localhost:1313/margin_and_padding/</loc>
     <lastmod>2024-10-12T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/edinitsi_izmereniy_v_css/</loc>
+    <loc>http://localhost:1313/edinitsi_izmereniy_v_css/</loc>
     <lastmod>2024-10-08T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/tipy_snacheniy_v_css/</loc>
+    <loc>http://localhost:1313/tipy_snacheniy_v_css/</loc>
     <lastmod>2024-10-08T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/vlojennost_selectorov_v_css/</loc>
+    <loc>http://localhost:1313/vlojennost_selectorov_v_css/</loc>
     <lastmod>2024-10-06T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/git/</loc>
+    <loc>http://localhost:1313/git/</loc>
     <lastmod>2024-10-03T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/git_branches/</loc>
+    <loc>http://localhost:1313/git_branches/</loc>
     <lastmod>2024-10-03T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/pervichnaya_nastroika_git/</loc>
+    <loc>http://localhost:1313/pervichnaya_nastroika_git/</loc>
     <lastmod>2024-10-03T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/selectory_v_css/</loc>
+    <loc>http://localhost:1313/selectory_v_css/</loc>
     <lastmod>2024-10-03T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/background_v_css_2/</loc>
+    <loc>http://localhost:1313/background_v_css_2/</loc>
     <lastmod>2024-09-30T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/background_v_css_1/</loc>
+    <loc>http://localhost:1313/background_v_css_1/</loc>
     <lastmod>2024-09-29T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/oformlenie_texta_v_css/</loc>
+    <loc>http://localhost:1313/oformlenie_texta_v_css/</loc>
     <lastmod>2024-06-29T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/switch_case_v_javascript/</loc>
+    <loc>http://localhost:1313/switch_case_v_javascript/</loc>
     <lastmod>2024-05-05T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/ternarny_operator_v_javascript/</loc>
+    <loc>http://localhost:1313/ternarny_operator_v_javascript/</loc>
     <lastmod>2024-05-02T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/if_else_v_javascript/</loc>
+    <loc>http://localhost:1313/if_else_v_javascript/</loc>
     <lastmod>2024-03-25T18:53:24+03:00</lastmod>
   </url><url>
-    <loc>https://elham.ru/logicheskie_operatory_v_javascript/</loc>
+    <loc>http://localhost:1313/logicheskie_operatory_v_javascript/</loc>
     <lastmod>2024-03-05T18:53:24+03:00</lastmod>
   </url>
 </urlset>
