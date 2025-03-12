@@ -33,7 +33,7 @@ hideDate = true
 <a href="/economy/">Economy</a> &rsaquo; Экономика
 </p>
 <p>
-<a href="/the_hollow_crown/">The Hollow Crown</a> &rsaquo; Пустая Корона 
+<a href="/the_hollow_crown/">The Hollow Crown</a> &rsaquo; Пустая Корона
 </p>
 <hr style="width: 100px;">
 <p>

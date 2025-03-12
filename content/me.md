@@ -11,8 +11,9 @@ hideDate = true
 Привет, это El'ham 👋
 </p>
 <p>
-И я Frontend разработчик.
+И я веб-разработчик.
 </p>
+<hr style="width: 100px;">
 <h3 class="mt2" style="padding-top: 20px;">profiles</h3>
 <p>
 <img class="logos" src="/images/Github-Dark.svg" width="22px" height="22px" /> <a href="https://github.com/e1hxm" target="_blank">Github</a> &rsaquo; Исходники 😊
@@ -23,6 +24,7 @@ hideDate = true
 <p>
 <img class="logos" src="/images/htmlacademy.png" width="22px" height="22px" /> <a href="https://htmlacademy.ru/profile/elham" target="_blank">HTMLAcademy</a> &rsaquo; 400+ Задач
 </p>
+<hr style="width: 100px;">
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">skills</h3>
 <p>
 Технологии которые я изучил или в процессе изучения
@@ -41,6 +43,7 @@ hideDate = true
     <img src="/images/tw.webp">
     <img src="/images/VSCode-Dark.svg">
 </div>
+<hr style="width: 100px;">
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">education</h3>
 <p>Прогресс обучения</p>
 <h4 class="mt2">February 2022</h4>
@@ -85,32 +88,12 @@ Udemy</a>
 "JavaScript + React"
 </li>
 </ul>
+<hr style="width: 100px;">
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">
 projects
 </h3>
 <p>
 Список проектов
-</p>
-<h3 class="mt2" style="padding-top: 20px">
-February 2025 (#8)
-</h3>
-<p>
-Сайт на Helloween от Bedimcode 😊 на HTML, CSS и 
-JavaScript. Мобильная версия, flexbox, grid и анимация.
-</p>
-<p class="post">
-<a href="https://e1hxm.github.io/nft-website/" target="_blank">
-<img src="/images/helloween.png" style="border-radius: 20px"/>
-</a>
-</p>
-<p style="padding-top: 10px">
-👉 <a href="https://youtu.be/eDm7l5ODWuU" target="_blank">
-Источник
-</a>
-</p>
-<p>👉 <a href="https://e1hxm.github.io/nft-website/" target="_blank">
-Моя верстка
-</a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
 February 2025 (#7)

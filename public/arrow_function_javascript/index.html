@@ -20,6 +20,37 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
+     
+    <a href="javascript:history.back()" class="back-button" id="back-button">
+        <i class="ri-arrow-drop-left-line"></i>
+    </a>
+    
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+           <li class="nav__item">
+              <a href="/" class="nav__link active-link">Home</a>
+           </li>
+
+           <li class="nav__item">
+              <a href="/me/" class="nav__link">About</a>
+           </li>
+
+           <li class="nav__item">
+              <a href="/links/" class="nav__link">Links</a>
+           </li>
+
+        </ul>
+
+        
+        <div class="nav__close" id="nav-close">
+           <i class="ri-close-line"></i>
+        </div> 
+     </div>
+     
+     <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-5-line"></i>
+     </div>
+    
     <div class="author">
         <a href="/">
         <img class="author-avatar" src="/images/ava.jpeg">
@@ -91,12 +122,72 @@
 <br />
 
 <a href="#" class="scrollup" id="scroll-up">
-    <i class="ri-arrow-up-line"></i>
+    <i class="ri-arrow-drop-up-line"></i>
  </a>
  
     </div>
     </div>
     </div>
-    <script src="/static/js/main.js"></script>
+    <script>
+          
+let scrollUp = () =>{
+	const scrollUp = document.getElementById('scroll-up')
+	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+						: scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
+
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+ 
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        document.body.classList.add('show-menu');
+    });
+}
+
+ 
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        document.body.classList.remove('show-menu');
+    });
+}
+
+
+const backButton = document.getElementById('back-button');
+
+
+if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    backButton.style.display = 'none'; 
+}
+
+
+
+const navLinks = document.querySelectorAll('.nav__link');
+
+
+const setActiveLink = () => {
+    const currentPath = window.location.pathname; 
+
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname; 
+
+        
+        if (linkPath === currentPath) {
+            link.classList.add('active-link'); 
+        } else {
+            link.classList.remove('active-link'); 
+        }
+    });
+};
+
+
+window.addEventListener('load', setActiveLink);
+
+
+window.addEventListener('popstate', setActiveLink);
+    </script>
 </body>
 </html>

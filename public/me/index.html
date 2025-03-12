@@ -20,6 +20,37 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 <body>
+     
+    <a href="javascript:history.back()" class="back-button" id="back-button">
+        <i class="ri-arrow-drop-left-line"></i>
+    </a>
+    
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+           <li class="nav__item">
+              <a href="/" class="nav__link active-link">Home</a>
+           </li>
+
+           <li class="nav__item">
+              <a href="/me/" class="nav__link">About</a>
+           </li>
+
+           <li class="nav__item">
+              <a href="/links/" class="nav__link">Links</a>
+           </li>
+
+        </ul>
+
+        
+        <div class="nav__close" id="nav-close">
+           <i class="ri-close-line"></i>
+        </div> 
+     </div>
+     
+     <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-5-line"></i>
+     </div>
+    
     <div class="author">
         <a href="/">
         <img class="author-avatar" src="/images/ava.jpeg">
@@ -51,8 +82,9 @@
 Привет, это El'ham 👋
 </p>
 <p>
-И я Frontend разработчик.
+И я веб-разработчик.
 </p>
+<hr style="width: 100px;">
 <h3 class="mt2" style="padding-top: 20px;">profiles</h3>
 <p>
 <img class="logos" src="/images/Github-Dark.svg" width="22px" height="22px" /> <a href="https://github.com/e1hxm" target="_blank">Github</a> &rsaquo; Исходники 😊
@@ -63,6 +95,7 @@
 <p>
 <img class="logos" src="/images/htmlacademy.png" width="22px" height="22px" /> <a href="https://htmlacademy.ru/profile/elham" target="_blank">HTMLAcademy</a> &rsaquo; 400+ Задач
 </p>
+<hr style="width: 100px;">
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">skills</h3>
 <p>
 Технологии которые я изучил или в процессе изучения
@@ -81,6 +114,7 @@
     <img src="/images/tw.webp">
     <img src="/images/VSCode-Dark.svg">
 </div>
+<hr style="width: 100px;">
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">education</h3>
 <p>Прогресс обучения</p>
 <h4 class="mt2">February 2022</h4>
@@ -125,32 +159,12 @@ Udemy</a>
 "JavaScript + React"
 </li>
 </ul>
+<hr style="width: 100px;">
 <h3 class="mt2" style="padding-top: 10px; padding-bottom: 0px">
 projects
 </h3>
 <p>
 Список проектов
-</p>
-<h3 class="mt2" style="padding-top: 20px">
-February 2025 (#8)
-</h3>
-<p>
-Сайт на Helloween от Bedimcode 😊 на HTML, CSS и 
-JavaScript. Мобильная версия, flexbox, grid и анимация.
-</p>
-<p class="post">
-<a href="https://e1hxm.github.io/nft-website/" target="_blank">
-<img src="/images/helloween.png" style="border-radius: 20px"/>
-</a>
-</p>
-<p style="padding-top: 10px">
-👉 <a href="https://youtu.be/eDm7l5ODWuU" target="_blank">
-Источник
-</a>
-</p>
-<p>👉 <a href="https://e1hxm.github.io/nft-website/" target="_blank">
-Моя верстка
-</a>
 </p>
 <h3 class="mt2" style="padding-top: 20px">
 February 2025 (#7)
@@ -329,11 +343,62 @@ JavaScript. Адаптивная версия под планшеты и моб�
           
 let scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
-    
 	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
 						: scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close');
+
+ 
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        document.body.classList.add('show-menu');
+    });
+}
+
+ 
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        document.body.classList.remove('show-menu');
+    });
+}
+
+
+const backButton = document.getElementById('back-button');
+
+
+if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    backButton.style.display = 'none'; 
+}
+
+
+
+const navLinks = document.querySelectorAll('.nav__link');
+
+
+const setActiveLink = () => {
+    const currentPath = window.location.pathname; 
+
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname; 
+
+        
+        if (linkPath === currentPath) {
+            link.classList.add('active-link'); 
+        } else {
+            link.classList.remove('active-link'); 
+        }
+    });
+};
+
+
+window.addEventListener('load', setActiveLink);
+
+
+window.addEventListener('popstate', setActiveLink);
     </script>
 </body>
 </html>
